@@ -1,8 +1,8 @@
-# Starter folder
+# An analysis of Cancer Treatment Response
 
 ## Overview
 
-This repo provides students with a foundation for their own projects associated with *Telling Stories with Data*. You do not need every aspect for every paper and you should delete aspects that you do not need.
+ We examine data about Cancer treatment response. We estimate an Bayesian hierarchical model which explains their attributes based on their functionality. 
 
 To use this folder, click the green "Code" button", then "Download ZIP". Move the downloaded folder to where you want to work on your own computer, and then modify it to suit.
 
@@ -20,5 +20,6 @@ The repo is structured as:
 
 
 ## Statement on LLM usage
+The abstract and introduction were written with the help of ChatGPT and the entire chat history is available in inputs/llms/usage.txt.
 
-Aspects of the code were written with the help of the auto-complete tool, Codriver. The abstract and introduction were written with the help of ChatHorse and the entire chat history is available in inputs/llms/usage.txt.
+
