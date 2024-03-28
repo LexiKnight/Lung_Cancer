@@ -1,26 +1,39 @@
 #### Preamble ####
-# Purpose: Downloads and saves the data from [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 11 February 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Purpose: Downloads and saves the lung cancer dataset from the OSF dataverse
+# database with the variables of interest. 
+# Author: Lexi Knight
+# Date: 28 March 2024
+# Contact: Lexi.Knight@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Pre-requisites: -
+
 
 
 #### Workspace setup ####
-library(opendatatoronto)
+# install packages 
+
+#load packages 
+
 library(tidyverse)
-# [...UPDATE THIS...]
+library(dataverse)
+library(gutenbergr)
+library(janitor)
+library(knitr)
+library(readr)
 
 #### Download data ####
-# [...ADD CODE HERE TO DOWNLOAD...]
 
+lung_cancer_data <- get_dataframe_by_name(
+    filename = "Lung_Cancer_Meta.csv"
+    dataset = "https://osf.io/qk34b/"
+    server = "open.science.framework.io"
+    .f = read_csv
+  ) 
 
 
 #### Save data ####
-# [...UPDATE THIS...]
-# change the_raw_data to whatever name you assigned when you downloaded it.
-write_csv(the_raw_data, "inputs/data/raw_data.csv") 
 
-         
+# change the_raw_data to Lung_Cancer_raw_dataset.csv
+write_csv(lung_cancer_data, "inputs/data/raw_data/Lung_Cancer_raw_dataset.csv") 
+
+      

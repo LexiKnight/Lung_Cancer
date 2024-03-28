@@ -1,26 +1,29 @@
 #### Preamble ####
-# Purpose: Tests... [...UPDATE THIS...]
+# Purpose: Tests the cleaned dataset
 # Author: Lexi Knight
 # Date: 28 March 2024
 # Contact: lexi.knight@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Pre-requisites: run 01-download_data.R as well as 02-data_cleaning.R in scripts in order to obtain raw and cleaned data. 
 
 
 #### Workspace setup ####
+
+#install packages 
+install.packages("tidyverse")
+install.packages("testthat")
+
+# load packages
 library(tidyverse)
+library(testthat)
 
 
 #### Test data ####
 
 
-
-# Testing the simulated table - * i think i should just move this to the testing file ****
-
 # Test if the dataset has 981 entries 
 test_that("Dataset has 981 entries", {
-  expect_equal(nrow(simualted_data), 981)
+  expect_equal(nrow(simulated_data), 981)
 })
 
 # Test if 'Pathogenic_Stage' contains the correct categories 
@@ -44,19 +47,21 @@ test_that("Tumor size variable is correct", {
 })
 
 # Test if 'Age_at_Diagnosis_in_Days is numeric 
-class(simulated_data$Age_at_Diagnosis_in_Days) == "numeric"
+test_that("Age at diagnosis variable is numeric", {
+  expect_true(is.numeric(simulated_data$Age_at_Diagnosis_in_Days))
+})
 
 # Test if 'Days_to_Death' is numeric 
 class(simulated_data$Days_to_Death) == "numeric"
 
 # Test if 'Race' contains the correct categories 
 test_that("Race variable is correct", {
-  expect_true(all(simulated_data$Race %in% c('not reported", "white", "american indian or alaska native", "asian", "black or african american')))
+  expect_true(all(simulated_data$Race %in% c('not reported', 'white','american indian or alaska native', 'asian', 'black or african american')))
 })
 
 # Test if 'Treatment_Type' only contains 'Pharmaceutical Therapy, NOS' and 'Radiation Therapy, NOS'
 test_that("Treatment type variable is correct", {
-  expect_true(all(simulated_dat$Treatment_Type %in% c('Pharmaceutical Therapy, NOS', 'Radiation Therapy, NOS')))
+  expect_true(all(simulated_data$Treatment_Type %in% c('Pharmaceutical Therapy, NOS', 'Radiation Therapy, NOS')))
 })
 
 # Test if 'Treatment_Decision" contains the correct categories 
