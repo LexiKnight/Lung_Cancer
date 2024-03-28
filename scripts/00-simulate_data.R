@@ -4,23 +4,16 @@
 # Date: 26 March 2024
 # Contact: lexi.knight@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: -
-# Any other information needed? -
+# Pre-requisites: N/A
 
 
 #### Workspace setup ####
+
 # install packages 
-install.packages("tidyverse")
-install.packages("conflicted")
-install.packages("dplyr")
-install.packages("magrittr")
+# install.packages("tidyverse")
 
 # load packages
 library(tidyverse)
-library(conflicted)
-library(testthat)
-library(dplyr)
-library(magrittr)
 
 
 #### Simulate data ####
@@ -45,7 +38,7 @@ simulated_data <- data.frame(
 ) 
 
 
-# Renaming variables for clarity - not sure if i should do this here or later ****
+# Renaming variables for clarity 
 simulated_data <- simulated_data %>%
   rename(
     Pathogenic_Stage = ajcc_pathologic_stage,
@@ -58,7 +51,6 @@ simulated_data <- simulated_data %>%
     Treatment_Type = treatment_type,
     Treatment_Decision = treatment
   )
-
 
 
 simulated_data <- simulated_data |> select( Pathogenic_Stage,
