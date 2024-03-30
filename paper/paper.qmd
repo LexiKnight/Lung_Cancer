@@ -1,5 +1,5 @@
 ---
-title: "From Theory to Practice: Investigating Treatment Responses in Breast Cancer"
+title: "Survival Compass: Statistical Insights into Lung Cancer Patients' Journey Post-Diagnosis"
 subtitle: "My subtitle if needed"
 author: 
   - First author
