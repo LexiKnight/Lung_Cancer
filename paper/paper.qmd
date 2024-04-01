@@ -1,12 +1,11 @@
 ---
 title: "Survival Compass: Statistical Insights into Lung Cancer Patients' Journey Post-Diagnosis"
-subtitle: "My subtitle if needed"
 author: 
-  - First author
-thanks: "Code and data are available at: LINK."
+  - Lexi Knight
+thanks: "Code and data are available at: https://github.com/LexiKnight/Lung_Cancer/tree/main"
 date: today
 date-format: long
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+abstract: "This study investigates the impact of pathogenic stage and treatment modalities on lung cancer survival post-diagnosis. Analysis of patient data reveals significant correlation between pathogenic stage, seeking treatment and survival outcomes. Notably, patients at advanced stages with metastases in distant sites beyond the lung, extensive lymph node involvement and tumors with extensive growth, invading nearby structures demonstrate lower survival rates. These findings underscore the critical importance of early detection, tailored treatment strategies and ongoing research efforts to enhance lung cancer survival rates globally."
 format: pdf
 number-sections: true
 bibliography: references.bib
@@ -17,8 +16,15 @@ bibliography: references.bib
 #| warning: false
 #| message: false
 
+# install packages
+install.packages("knitr")
+install.packages("kableExtra")
+
+# load packages
 library(tidyverse)
-library(palmerpenguins)
+library(knitr)
+library(kableExtra)
+
 ```
 
 
