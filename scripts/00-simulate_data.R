@@ -4,16 +4,17 @@
 # Date: 26 March 2024
 # Contact: lexi.knight@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: N/A
+# Pre-requisites: -
+# Any other information needed? -
 
 
 #### Workspace setup ####
-
 # install packages 
 # install.packages("tidyverse")
 
 # load packages
 library(tidyverse)
+
 
 
 #### Simulate data ####
@@ -31,7 +32,6 @@ simulated_data <- data.frame(
   ajcc_pathologic_t = sample(c("T1", "T1a", "T1b", "T2", "T2a", "T2b", "T3", "T4", "TX"), num_entries, replace = TRUE),
   age_at_diagnosis = round(runif(num_entries, min = 14681, max = 32872)),
   days_to_death = round(runif(num_entries, min = 0, max = 6236)),
-  race = sample(c("not reported", "white", "american indian or alaska native", "asian", "black or african american"), num_entries, replace = TRUE),
   ajcc_pathologic_stage = sample(c("Stage IA", "Stage IIA", "Stage IIIA", "Stage IB", "Stage IIB", "Stage IV", "Stage I"), num_entries, replace = TRUE),
   treatment_type = sample(c("Pharmaceutical Therapy, NOS", "Radiation Therapy, NOS"), num_entries, replace = TRUE),
   treatment = sample(c("yes", "no", "not reported"), num_entries, replace = TRUE)
@@ -47,7 +47,6 @@ simulated_data <- simulated_data %>%
     Tumor_Size = ajcc_pathologic_t,
     Age_at_Diagnosis_in_Days = age_at_diagnosis,
     Days_to_Death = days_to_death,
-    Race = race,
     Treatment_Type = treatment_type,
     Treatment_Decision = treatment
   )
@@ -57,7 +56,7 @@ simulated_data <- simulated_data |> select( Pathogenic_Stage,
                                             Lymph_Node_Involvement,
                                             Presence_of_Metastasis, Tumor_Size,
                                             Age_at_Diagnosis_in_Days,
-                                            Days_to_Death, Race, Treatment_Type,
+                                            Days_to_Death, Treatment_Type,
                                             Treatment_Decision)
 
 
@@ -67,4 +66,3 @@ head(simulated_data)
 
 # Show a summary of the data
 summary(simulated_data)
-
