@@ -1,0 +1,56 @@
+
+
+### Pathogenic Stage ###
+* stage is determined by tumor size, number of tumors found and where
+  the cancer has spread
+Stage I: cancer is found early, is in one lung, has not spread to LN. Localized
+Stage II: found early but has spread inside or just ouside of one lung
+  and may have spread to nearby LN on samde side of the body. Regional spread.
+Stage III: cancer found in one lung and has spread to the chest and LN
+  further further away from the lungs. Regional spread.
+Stage IV: advanced cancer and has spread to the lining or fluid around 
+  the heart or lungs, or has spread to distant parts of the body. 
+  Includes having tumors in both lungs, no matter the size of the tumors.
+
+### Tumor size ###
+TX: size cannot be assessed - too small for testing
+T1: <3cm diameter, only in lungs 
+T1a: <1cm, have not reached tissues surrounding lung/main branches of the
+  airways
+T1b: 1-2cm, have not reached tissues surrounding lung/main branches of the
+  airways
+T2: 3-5cm, grown into main bronchus/inner lining of lungs or caused lung 
+  collapse or swelling. 
+T2a: 3-4cm, grown into main airways and/or tissue around the lungs
+T2b: 4-5cm, grown into main airways and/or tissue around the lungs
+T3: 5-7cm, growth beyond primary site, into chest wall/ nearby site or
+  other tumors in the same lobe of the lung
+T4: >7cm, extensive tumor growth, invading nearby structures/organs. Growth
+  into center of chest, to the diaphragm, heart or its major blood vessels,
+  windpipe, esophagus, spine or other tumors in same lobe of the lung
+  
+### Presence of distant metastasis ###
+MX: not evaluated 
+M0: no distant metastasis, cancer not spread beyond site of origin/ nearby LN.
+  Localized.
+M1a: presence of metastasis to distant sites within the same lung/pleura.
+  Regional.
+M1b: metastasis to distant sites beyong lung and pleura, ex. brain, liver,
+  bones. Distant. 
+  
+### Lymph Node (LN) involvement ###
+NX: LN cannot be assessed
+N0: no regional LN metastasis, cancer not spread to LN
+N1: involvement of regional LN
+N2: more extensive LN involvement
+
+### Treatment type ###
+Pharmaceutical therapy 
+Radiation Therarpy (RT)
+
+(AJCC, 2017)
+Stage I = T1 to T2a, N0, M0
+Stage II = T1 to T3, N0 to N1, M0
+Stage III = T1 to T4, N0 to N3, M0
+Stage IV = Any T, Any N, M1s 
+
