@@ -1,16 +1,12 @@
-# An analysis of Cancer Treatment Response
+# An analysis of Lung Cancer Treatment Response Post-Diagnosis
 
 ## Overview
 
- We examine data about Cancer treatment response. We estimate an Bayesian hierarchical model which explains their attributes based on their functionality. 
-
-To use this folder, click the green "Code" button", then "Download ZIP". Move the downloaded folder to where you want to work on your own computer, and then modify it to suit.
-
+We examine data concering the response of lung caner patients to treatment post-diagnosis.Lung cancer, being one of the leading causes of cancer-related deaths worldwide, necessitates a comprehensive understanding of treatment effectiveness to improve patient outcomes and refine medical interventions. Our  objective is to analyze and model pathogenic stage and treatment type to patient survival. By leveraging statistical methodologies, specifically a Bayesian hierarchical model, we aim to elucidate the factors influencing greater survival and uncover insights into the effectiveness of different treatment approaches.
 
 ## File Structure
 
 The repo is structured as:
-
 -   `data/raw_data` contains the raw data as obtained from X.
 -   `data/analysis_data` contains the cleaned dataset that was constructed.
 -   `model` contains fitted models. 

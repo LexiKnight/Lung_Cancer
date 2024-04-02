@@ -17,28 +17,41 @@ bibliography: references.bib
 #| message: false
 
 # install packages
-install.packages("knitr")
-install.packages("kableExtra")
+# install.packages("knitr")
+# install.packages("kableExtra")
 
 # load packages
-library(tidyverse)
-library(knitr)
-library(kableExtra)
+# library(tidyverse)
+# library(knitr)
+# library(kableExtra)
 
 ```
 
 
 # Introduction
 
-You can and should cross-reference sections and sub-sections. We use @citeR and @rohan.
+Clinging to life amidst the shadows of lung cancer, where every breath becomes a battleground. Survival becomes not just a statistic but an interplay between several individual characteristics. We explore the hidden keys to defying the odds and emerging victorious against one of the deadliest adversaries of our time. Lung cancer is the leading cause of cancer-related deaths in the world (Park, 2017). It is a disease that develops in the lining of the airways in lung tissues. Non-small cell lung cancer (NSCLC) is the most common type, accounting for  80-85% of all lung cancers according to the American Cancer society (Markman, 2023). Staging is important for prognosis and making treatment decisions. Common treatments include surgery, radiation therapy and chemotherapy (Kai, 2021). Pathogenic stage is determined by presence of nearby metastasis, lymph node involvement as well as tumor spread and size (Markman, 2023). This paper investigates the relationship between lung cancer patients' survival and pathogenic stage. The estimand is the median survival time in days post-diagnosis. We also look at whether patients decided to have treatment and if so, which method; radiation therapy or chemotherapy. Through analysis of a dataset made up of  981 patients in Sydney, Australia, we offer insight into the prognostic markers. 
+ 
+Tumor size is often the main determinant of stage and treatment. As tumor categories increase, the tumor expands, invading nearby structures (Zhang, 2015). A study involving 52,287 patients diagnosed between the years 1998 and 2003 found tumor size to be an independent prognostic factor in estimating overall survival. The authors found that patients presenting with larger tumors predicted a worse prognosis and thus are associated with a decrease in survival. There is a similar relationship between extensive lymph node involvement and patient survival (Zhang, 2015). Initial spread of cancer cells are localized, then become regional, involving nearby lymph nodes and the most severe cases comprises expansion to other organs such as the brain, liver and bones (Markman, 2023).  A study looked at five year survival rates based on the severity of spread. 62.8% of patients with localized spread, 34.8% of patients with regional and 8% of patients with distant, advanced spread were found to survive for 5 years post diagnosis. More than half of these lung cancer patients have advanced spread to other organs when diagnosed(Markman, 2023) . 
+Overall, it is found that patients with no regional lymph node metastases, and smaller tumors are easier to be treated and thus are associated with improved survival rates (Zhang, 2015).
 
-The remainder of this paper is structured as follows. @sec-data....
+Presence of metastatic LN is one of the most important determinants of prognosis of NSCLC cases (Kai, 2021). In the early stage, cancer has not spread to lymph nodes. As severity increases, lymph node metastasis sequentially spreads to more distant lymph nodes such as mediastinal and there is severe lymph node involvement  (Park, 2017). Lymph node involvement, also termed lymph node ratio, is a crucial factor in guiding treatment options (Kai, 2021). A study made up of 97 patients with a mean age of 63 who have undergone surgery between the years 2009 and 2015 in Korea find that increased lymph node involvement is associated with a more advanced disease status and hence affiliated with prognosis (Park, 2017). 
+Another study looked at 11,341 NSCLC patients between the years 2004 to 2015, from 18 geographically diverse populations, covering approximately 28% of the population of the United States. These patients were treatment naive and underwent surgical resection of the tumor. Although 5757 patients died, the rest showed great results, with a median survival of 22 months (Kai, 2021). The authors found that patients with low lymph node involvement lead to higher survival compared to patients with high lymph node ratios. A regression analysis revealed that lymph node ratio is an independent and significant predictor of patient survival. The authors also observed that disease burden and anatomical location of the lymph nodes involved may influence the patients survival (Kai, 2021). 
+
+Presence of metastatic LN is one of the most important determinants of prognosis of NSCLC cases (Kai, 2021). In the early stage, cancer has not spread to lymph nodes. As severity increases, lymph node metastasis sequentially spreads to more distant lymph nodes such as mediastinal and there is severe lymph node involvement  (Park, 2017). Lymph node involvement, also termed lymph node ratio, is a crucial factor in guiding treatment options (Kai, 2021). A study made up of 97 patients with a mean age of 63 who have undergone surgery between the years 2009 and 2015 in Korea find that increased lymph node involvement is associated with a more advanced disease status and hence affiliated with prognosis (Park, 2017). 
+
+Another study looked at 11,341 NSCLC patients between the years 2004 to 2015, from 18 geographically diverse populations, covering approximately 28% of the population of the United States. These patients were treatment naive and underwent surgical resection of the tumor. Although 5757 patients died, the rest showed great results, with a median survival of 22 months (Kai, 2021). The authors found that patients with low lymph node involvement lead to higher survival compared to patients with high lymph node ratios. A regression analysis revealed that lymph node ratio is an independent and significant predictor of patient survival. The authors also observed that disease burden and anatomical location of the lymph nodes involved may influence the patients survival (Kai, 2021). 
+
+After tumor size, LN involvement and presence of distant metastasis are categorized, the pathogenic stage of the cancer is then determined (Eldridge, 2022). The most valuable prognostic factor in non-small cell lung cancer is the pathogenic stage (Park, 2017) .Stage is determined by tumor size, number of tumors  and where the cancer has spread. Stage 1 is localized spread, stage 2 and 3 is regional spread while stage 4 is distant spread of the tumor (Eldridge, 2022). Cancer stage was determined using the seventh American Joint Committee on Cancer staging system (AJCC) (Park, 2017). A study done in Australia including 2119 lung cancer patients illustrated those with stage IV disease, the most advanced stage,  showed shorter survival than those at lower stages (Denton, 2016). The earlier the cancer is found, that is the lower the pathogenic stage, the greater the likelihood curative radiation therapy is an effective treatment (Eldridge, 2022).
+
+However, there is minimal literature looking at post-diagnosis survival rates based on pathogenic stage and method of treatment. The extent of this disease illustrates the importance of living a healthy lifestyle, undergoing regular screening and development of improved treatment methods. Over the past decade, there has been great improvement of lymph node assessment in cancer patients (Kai, 2021). Experts hope survival rates continue to improve with  new therapies and treatment approaches  (Markman, 2023). 
 
 
+The remainder of this paper is structured as follows. In @sec-data, we visualize the exploration of variables constituting the pathogenic stage and treatment types. @sec-model, outlines the model employed to analyze the relationship between these variables and the duration of survival post-diagnosis. Moreover, @sec-results offers visual depictions of the study's outcomes. Finally, in @sec-discussion, we summarize the primary findings, propose avenues for enhancement, and identify potential areas for future research.
 
 # Data {#sec-data}
 
-Some of our data is of penguins (@fig-bills), from @palmerpenguins.
+Our data is 
 
 ```{r}
 #| label: fig-bills
@@ -49,7 +62,7 @@ Some of our data is of penguins (@fig-bills), from @palmerpenguins.
 
 Talk more about it.
 
-And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
+
 
 ```{r}
 #| label: fig-planes
@@ -64,11 +77,13 @@ Talk way more about it.
 
 
 
-# Model
+# Model {#sec-model}
 
-The goal of our modelling strategy is twofold. Firstly,...
+The goal of our modeling strategy is twofold. Firstly, we aim to investigate the post-diagnosis survival outcomes of lung cancer patients, considering the pathogenic stage. Secondly, we seek to assess the efficacy of two common treatment modalities, radiation therapy and chemotherapy, in improving survival chances across different pathogenic stages.
 
-Here we briefly describe the Bayesian analysis model used to investigate... Background details and diagnostics are included in [Appendix -@sec-model-details].
+Here, we briefly describe the Bayesian analysis model used to investigate survival outcomes in lung cancer patients based on pathogenic stage and treatment modality. Detailed background information and diagnostic assessments are provided in the [Appendix -@].
+
+Our Bayesian analysis model is tailored to capture the complex relationships between pathogenic stage, treatment modality, and post-diagnosis survival outcomes in lung cancer patients. The model accounts for the multifaceted nature of cancer progression, incorporating tumor size, metastatic spread, and lymph node involvement to characterize pathogenic stage.
 
 ## Model set-up
 
@@ -92,10 +107,12 @@ We expect a positive relationship between the size of the wings and time spent a
 
 We can use maths by including latex between dollar signs, for instance $\theta$.
 
+The Bayesian analysis model serves as a powerful tool for investigating post-diagnosis survival outcomes in lung cancer patients. By incorporating pathogenic stage information and treatment modalities into the analysis, we aim to elucidate the factors influencing patient prognosis and provide insights to guide personalized treatment decisions.
 
-# Results
 
-Our results are summarized in @tbl-modelresults.
+# Results {#sec-results}
+
+Our results are summarized in @.
 
 ```{r}
 #| echo: false
@@ -117,12 +134,9 @@ Our results are summarized in @tbl-modelresults.
 
 
 
-
-# Discussion
+# Discussion {#sec-discussion}
 
 ## First discussion point {#sec-first-point}
-
-If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
 
 ## Second discussion point
 
@@ -130,19 +144,19 @@ If my paper were 10 pages, then should be be at least 2.5 pages. The discussion 
 
 ## Weaknesses and next steps
 
-Weaknesses and next steps should also be included.
+
 
 \newpage
 
 \appendix
 
-# Appendix {-}
+# Appendix {#sec-appendix}
 
 
 # Additional data details
 
 # Model details {#sec-model-details}
-rior-2 we compare the posterior with the prior. This shows... 
+we compare the posterior with the prior. This shows... 
 
 ```{r}
 #| eval: true
@@ -158,7 +172,7 @@ rior-2 we compare the posterior with the prior. This shows...
 ```
 
 ## Diagnostics
-
+Is this needed?
 
 ```{r}
 #| echo: false
