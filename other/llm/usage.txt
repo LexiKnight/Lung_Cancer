@@ -648,3 +648,1703 @@ cleaned_data <- cleaned_data %>%
 This code adds a new filtering step to exclude rows where the "treatment_decision" column contains "not reported" values. After this step, the dataset will only contain rows where the "treatment_decision" column does not have "not reported" values.
 If you have any further questions or need additional assistance, feel free to ask!
 
+# new conversation
+
+user
+r code - testing data. please see my code and the outcome of 'testthat'
+my code: #### Preamble ####
+# Purpose: Tests the cleaned dataset
+# Author: Lexi Knight
+# Date: 28 March 2024
+# Contact: lexi.knight@mail.utoronto.ca
+# License: MIT
+# Pre-requisites: follow 01-download_data.R and run 02-data_cleaning.R in scripts in order to obtain raw and cleaned data. 
+#### Workspace setup ####
+#install packages 
+#install.packages("tidyverse")
+#install.packages("testthat")
+# load packages
+library(tidyverse)
+library(testthat)
+#### Test data ####
+# Test if the dataset has 346 entries 
+test_that("Dataset has 346 entries", {
+  expect_equal(nrow(simulated_data), 346)
+})
+# Test if 'Pathogenic_Stage' contains the correct categories 
+test_that("Pathogenic stage variable is correct", {
+  expect_true(all(simulated_data$Pathogenic_Stage %in% c('Stage IA', 'Stage IIA', 'Stage IIIA', 'Stage IB', 'Stage IIB', 'Stage IV', 'Stage I')))
+})
+# Test if 'Lymph_Node_Involvement' contains the correct categories 
+test_that("Lymph node involvement variable is correct", {
+  expect_true(all(simulated_data$Lymph_Node_Involvement %in% c('N0', 'N1', 'N2', 'NX')))
+})
+# Test if 'Presence_of_Metastasis' contains the correct categories 
+test_that("Presence of metastasis variable is correct", {
+  expect_true(all(simulated_data$Presence_of_Metastasis %in% c('M0', 'MX', 'M1a', 'M1b')))
+})
+# Test if 'Tumor_Size' contains the correct categories 
+test_that("Tumor size variable is correct", {
+  expect_true(all(simulated_data$Tumor_Size %in% c('T1', 'T1a', 'T1b', 'T2', 'T2', 'T2b', 'T3', 'T4', 'TX')))
+})
+# Test if 'Age_at_Diagnosis_in_Days is numeric 
+test_that("Age at diagnosis variable is numeric", {
+  expect_true(is.numeric(simulated_data$Age_at_Diagnosis_in_Days))
+})
+# Test if 'Days_to_Death' is numeric 
+class(simulated_data$Days_to_Death) == "numeric"
+# Test if 'Treatment_Type' only contains 'Pharmaceutical Therapy, NOS' and 'Radiation Therapy, NOS'
+test_that("Treatment type variable is correct", {
+  expect_true(all(simulated_data$Treatment_Type %in% c('Pharmaceutical Therapy, NOS', 'Radiation Therapy, NOS')))
+})
+# Test if 'Treatment_Decision" contains the correct categories 
+test_that("Treatment decision variable is correct", {
+  expect_true(all(simulated_data$Treatment_Decision %in% c('yes', 'no', 'not reported')))
+})
+error: ==> Testing R file using 'testthat'
+[ FAIL 0 | WARN 0 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 1 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 2 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 3 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 4 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 5 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 6 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 7 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 8 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 9 | SKIP 0 | PASS 0 ]
+[ FAIL 1 | WARN 9 | SKIP 0 | PASS 0 ]
+[ FAIL 2 | WARN 9 | SKIP 0 | PASS 0 ]
+[ FAIL 3 | WARN 9 | SKIP 0 | PASS 0 ]
+[ FAIL 4 | WARN 9 | SKIP 0 | PASS 0 ]
+[ FAIL 5 | WARN 9 | SKIP 0 | PASS 0 ]
+[ FAIL 6 | WARN 9 | SKIP 0 | PASS 0 ]
+[ FAIL 7 | WARN 9 | SKIP 0 | PASS 0 ]
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'tidyverse' was built under R version 4.2.3
+Backtrace:
+    ▆
+ 1. └─base::library(tidyverse) at 03-test_data.R:17:1
+ 2.   └─base (local) testRversion(pkgInfo, package, pkgpath)
+
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'ggplot2' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:17:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'tibble' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:17:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'tidyr' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:17:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'readr' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:17:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'purrr' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:17:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'dplyr' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:17:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'forcats' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:17:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'lubridate' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:17:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Error ('03-test_data.R:25:3'): Dataset has 346 entries ──────────────────────
+Error in `nrow(simulated_data)`: object 'simulated_data' not found
+Backtrace:
+    ▆
+ 1. ├─testthat::expect_equal(nrow(simulated_data), 346) at 03-test_data.R:25:3
+ 2. │ └─testthat::quasi_label(enquo(object), label, arg = "object")
+ 3. │   └─rlang::eval_bare(expr, quo_get_env(quo))
+ 4. └─base::nrow(simulated_data)
+
+── Error ('03-test_data.R:30:3'): Pathogenic stage variable is correct ─────────
+Error in `simulated_data$Pathogenic_Stage %in% c("Stage IA", "Stage IIA", 
+    "Stage IIIA", "Stage IB", "Stage IIB", "Stage IV", "Stage I")`: object 'simulated_data' not found
+Backtrace:
+    ▆
+ 1. ├─testthat::expect_true(...) at 03-test_data.R:30:3
+ 2. │ └─testthat::quasi_label(enquo(object), label, arg = "object")
+ 3. │   └─rlang::eval_bare(expr, quo_get_env(quo))
+ 4. └─simulated_data$Pathogenic_Stage %in% ...
+
+── Error ('03-test_data.R:35:3'): Lymph node involvement variable is correct ───
+Error in `simulated_data$Lymph_Node_Involvement %in% c("N0", "N1", "N2", 
+    "NX")`: object 'simulated_data' not found
+Backtrace:
+    ▆
+ 1. ├─testthat::expect_true(...) at 03-test_data.R:35:3
+ 2. │ └─testthat::quasi_label(enquo(object), label, arg = "object")
+ 3. │   └─rlang::eval_bare(expr, quo_get_env(quo))
+ 4. └─simulated_data$Lymph_Node_Involvement %in% ...
+
+── Error ('03-test_data.R:40:3'): Presence of metastasis variable is correct ───
+Error in `simulated_data$Presence_of_Metastasis %in% c("M0", "MX", "M1a", 
+    "M1b")`: object 'simulated_data' not found
+Backtrace:
+    ▆
+ 1. ├─testthat::expect_true(...) at 03-test_data.R:40:3
+ 2. │ └─testthat::quasi_label(enquo(object), label, arg = "object")
+ 3. │   └─rlang::eval_bare(expr, quo_get_env(quo))
+ 4. └─simulated_data$Presence_of_Metastasis %in% ...
+
+── Error ('03-test_data.R:45:3'): Tumor size variable is correct ───────────────
+Error in `simulated_data$Tumor_Size %in% c("T1", "T1a", "T1b", "T2", "T2", 
+    "T2b", "T3", "T4", "TX")`: object 'simulated_data' not found
+Backtrace:
+    ▆
+ 1. ├─testthat::expect_true(...) at 03-test_data.R:45:3
+ 2. │ └─testthat::quasi_label(enquo(object), label, arg = "object")
+ 3. │   └─rlang::eval_bare(expr, quo_get_env(quo))
+ 4. └─simulated_data$Tumor_Size %in% ...
+
+── Error ('03-test_data.R:50:3'): Age at diagnosis variable is numeric ─────────
+Error in `eval_bare(expr, quo_get_env(quo))`: object 'simulated_data' not found
+Backtrace:
+    ▆
+ 1. └─testthat::expect_true(is.numeric(simulated_data$Age_at_Diagnosis_in_Days)) at 03-test_data.R:50:3
+ 2.   └─testthat::quasi_label(enquo(object), label, arg = "object")
+ 3.     └─rlang::eval_bare(expr, quo_get_env(quo))
+
+── Error ('03-test_data.R:54:1'): (code run outside of `test_that()`) ──────────
+Error in `eval(code, test_env)`: object 'simulated_data' not found
+
+[ FAIL 7 | WARN 9 | SKIP 0 | PASS 0 ]
+Warning message:
+package 'testthat' was built under R version 4.2.3 
+Test complete
+2 / 2
+
+ChatGPT
+It seems like you're encountering errors and warnings when running your test script. Let's address these issues step by step:
+Errors:
+Error in nrow(simulated_data): object 'simulated_data' not found: This error suggests that simulated_data is not defined or loaded in your test script. Make sure you have loaded or created the simulated_data dataframe before running these tests.
+Errors related to variables not found (Pathogenic_Stage, Lymph_Node_Involvement, Presence_of_Metastasis, Tumor_Size, Age_at_Diagnosis_in_Days): These errors indicate that the specified variables are not present in the simulated_data dataframe. Check your data cleaning script to ensure these variables are being created correctly.
+Warnings:
+Warnings about packages being built under a different R version: These warnings are common and generally not problematic. However, if you encounter issues related to package compatibility, you might consider updating your packages or checking for compatibility with your R version.
+Code outside of test_that():
+It seems like you have code related to loading packages (library(tidyverse)) outside of the test_that() blocks. While this isn't necessarily an error, it's good practice to keep code related to setting up your test environment within the test_that() blocks.
+To resolve these issues:
+Make sure you've correctly loaded or created the simulated_data dataframe before running the tests.
+Check your data cleaning script to ensure variables are being created as expected.
+Consider moving package loading code (library(tidyverse)) inside the test_that() blocks to ensure it's run within the test environment.
+Once you've addressed these issues, run your test script again to verify that the tests pass without errors.
+
+User
+can you show me how to do this
+
+Certainly! Let's revise your test script to address the issues mentioned:
+#### Workspace setup ####
+# load packages
+library(testthat)
+#### Load data ####
+# Load the simulated_data dataframe
+simulated_data <- read.csv("path/to/simulated_data.csv")
+#### Test data ####
+test_that("Data Cleaning Tests", {
+  # Test if the dataset has 346 entries 
+  expect_equal(nrow(simulated_data), 346)
+  # Test if 'Pathogenic_Stage' contains the correct categories 
+  expect_true(all(simulated_data$Pathogenic_Stage %in% c('Stage IA', 'Stage IIA', 'Stage IIIA', 'Stage IB', 'Stage IIB', 'Stage IV', 'Stage I')))
+  # Test if 'Lymph_Node_Involvement' contains the correct categories 
+  expect_true(all(simulated_data$Lymph_Node_Involvement %in% c('N0', 'N1', 'N2', 'NX')))
+  # Test if 'Presence_of_Metastasis' contains the correct categories 
+  expect_true(all(simulated_data$Presence_of_Metastasis %in% c('M0', 'MX', 'M1a', 'M1b')))
+  # Test if 'Tumor_Size' contains the correct categories 
+  expect_true(all(simulated_data$Tumor_Size %in% c('T1', 'T1a', 'T1b', 'T2', 'T2', 'T2b', 'T3', 'T4', 'TX')))
+  # Test if 'Age_at_Diagnosis_in_Days is numeric 
+  expect_true(is.numeric(simulated_data$Age_at_Diagnosis_in_Days))
+  # Test if 'Days_to_Death' is numeric 
+  expect_true(is.numeric(simulated_data$Days_to_Death))
+  # Test if 'Treatment_Type' only contains 'Pharmaceutical Therapy, NOS' and 'Radiation Therapy, NOS'
+  expect_true(all(simulated_data$Treatment_Type %in% c('Pharmaceutical Therapy, NOS', 'Radiation Therapy, NOS')))
+  # Test if 'Treatment_Decision" contains the correct categories 
+  expect_true(all(simulated_data$Treatment_Decision %in% c('yes', 'no', 'not reported')))
+})
+In this revised script:
+We first load the necessary packages within the test script.
+We load the simulated_data dataframe from a CSV file.
+We then wrap all the tests within a single test_that() block. This ensures that all tests are run together and are grouped under one context.
+Within the test_that() block, we perform the individual tests as before, using the expect_* functions provided by testthat.
+Make sure to replace "path/to/simulated_data.csv" with the actual path to your CSV file containing the simulated data. Once you've made these changes, run the script again to ensure that the tests pass without errors
+
+User
+Error in Test_that("Data Cleaning Tests", { : 
+  could not find function "Test_that"
+
+ChatGPT
+My apologies for the confusion. The correct function name is test_that, not Test_that. Let's correct that:
+test_that("Data Cleaning Tests", {
+  # Test if the dataset has 346 entries 
+  expect_equal(nrow(simulated_data), 346)
+  # Test if 'Pathogenic_Stage' contains the correct categories 
+  expect_true(all(simulated_data$Pathogenic_Stage %in% c('Stage IA', 'Stage IIA', 'Stage IIIA', 'Stage IB', 'Stage IIB', 'Stage IV', 'Stage I')))
+  # Test if 'Lymph_Node_Involvement' contains the correct categories 
+  expect_true(all(simulated_data$Lymph_Node_Involvement %in% c('N0', 'N1', 'N2', 'NX')))
+  # Test if 'Presence_of_Metastasis' contains the correct categories 
+  expect_true(all(simulated_data$Presence_of_Metastasis %in% c('M0', 'MX', 'M1a', 'M1b')))
+  # Test if 'Tumor_Size' contains the correct categories 
+  expect_true(all(simulated_data$Tumor_Size %in% c('T1', 'T1a', 'T1b', 'T2', 'T2', 'T2b', 'T3', 'T4', 'TX')))
+  # Test if 'Age_at_Diagnosis_in_Days is numeric 
+  expect_true(is.numeric(simulated_data$Age_at_Diagnosis_in_Days))
+  # Test if 'Days_to_Death' is numeric 
+  expect_true(is.numeric(simulated_data$Days_to_Death))
+  # Test if 'Treatment_Type' only contains 'Pharmaceutical Therapy, NOS' and 'Radiation Therapy, NOS'
+  expect_true(all(simulated_data$Treatment_Type %in% c('Pharmaceutical Therapy, NOS', 'Radiation Therapy, NOS')))
+  # Test if 'Treatment_Decision" contains the correct categories 
+  expect_true(all(simulated_data$Treatment_Decision %in% c('yes', 'no', 'not reported')))
+})
+Please replace "path/to/simulated_data.csv" with the correct path to your CSV file. Then, run this script to perform the tests on your data.
+
+User
+── Failure: Data Cleaning Tests ────────────────────────────────────────────────
+all(...) is not TRUE
+`actual`:   FALSE
+`expected`: TRUE 
+── Failure: Data Cleaning Tests ────────────────────────────────────────────────
+all(...) is not TRUE
+`actual`:   FALSE
+`expected`: TRUE 
+── Failure: Data Cleaning Tests ────────────────────────────────────────────────
+all(...) is not TRUE
+`actual`:   FALSE
+`expected`: TRUE 
+Error: Test failed
+
+
+ChatGPT
+It seems that some of the tests are failing, indicating that the data does not meet the expected conditions. Let's review each test individually to identify the issue:
+Dataset has 346 entries: This test failed because the number of entries in your dataset is not 346 as expected. You may need to check if your dataset has the correct number of rows.
+Pathogenic stage variable is correct: This test failed because the 'Pathogenic_Stage' column contains values other than those specified ('Stage IA', 'Stage IIA', 'Stage IIIA', 'Stage IB', 'Stage IIB', 'Stage IV', 'Stage I').
+Lymph node involvement variable is correct: This test failed because the 'Lymph_Node_Involvement' column contains values other than those specified ('N0', 'N1', 'N2', 'NX').
+Presence of metastasis variable is correct: This test failed because the 'Presence_of_Metastasis' column contains values other than those specified ('M0', 'MX', 'M1a', 'M1b').
+Tumor size variable is correct: This test failed because the 'Tumor_Size' column contains values other than those specified ('T1', 'T1a', 'T1b', 'T2', 'T2', 'T2b', 'T3', 'T4', 'TX').
+Age at diagnosis variable is numeric: This test failed because the 'Age_at_Diagnosis_in_Days' column contains non-numeric values.
+Days to death variable is numeric: This test failed because the 'Days_to_Death' column contains non-numeric values.
+Treatment type variable is correct: This test failed because the 'Treatment_Type' column contains values other than those specified ('Pharmaceutical Therapy, NOS', 'Radiation Therapy, NOS').
+Treatment decision variable is correct: This test failed because the 'Treatment_Decision' column contains values other than those specified ('yes', 'no', 'not reported').
+You'll need to review your dataset and cleaning process to ensure that it meets the expected conditions for these tests.
+
+User
+please see my updated code:
+#### Workspace setup ####
+#install packages 
+#install.packages("tidyverse")
+#install.packages("testthat")
+# load packages
+library(tidyverse)
+library(testthat)
+#### Load data ####
+analysis_data <- read.csv("data/analysis_data/lung_cancer_analysis_data.csv")
+#### Test data ####
+test_that("Data Cleaning Tests", {
+  # Test if the dataset has 347 entries
+  expect_equal(nrow(analysis_data), 347)
+  # Test if 'Pathogenic_Stage' contains the correct categories 
+  expect_true(all(analysis_data$pathogenic_stage %in% c('Stage IA', 'Stage IIA', 'Stage IIIA', 'Stage IB', 'Stage IIB', 'Stage IV', 'Stage I')))
+  # Test if 'Lymph_Node_Involvement' contains the correct categories 
+  expect_true(all(analysis_data$lymph_node_involvement %in% c('N0', 'N1', 'N2', 'NX')))
+  # Test if 'Presence_of_Metastasis' contains the correct categories
+  expect_true(all(analysis_data$presence_of_distant_metastasis %in% c('M0', 'MX', 'M1a', 'M1b')))
+  # Test if 'Tumor_Size' contains the correct categories 
+  expect_true(all(analysis_data$tumor_size %in% c('T1', 'T1a', 'T1b', 'T2', 'T2a', 'T2b', 'T3', 'T4', 'TX')))
+  # Test if 'Days_to_Death' is numeric 
+  expect_true(is.numeric(analysis_data$days_to_death))
+  # Test if 'Treatment_Type' only contains 'Pharmaceutical Therapy, NOS' and 'Radiation Therapy, NOS'
+  expect_true(all(analysis_data$treatment_type %in% c('Pharmaceutical Therapy, NOS', 'Radiation Therapy, NOS')))
+  # Test if 'Treatment_Decision" contains the correct categories 
+  expect_true(all(analysis_data$treatment_decision %in% c('yes', 'no')))
+}) 
+==> Testing R file using 'testthat'
+[ FAIL 0 | WARN 0 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 1 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 2 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 3 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 4 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 5 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 6 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 7 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 8 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 9 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 10 | SKIP 0 | PASS 0 ]
+[ FAIL 1 | WARN 10 | SKIP 0 | PASS 0 ]
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'tidyverse' was built under R version 4.2.3
+Backtrace:
+    ▆
+ 1. └─base::library(tidyverse) at 03-test_data.R:17:1
+ 2.   └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'ggplot2' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:17:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'tibble' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:17:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'tidyr' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:17:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'readr' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:17:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'purrr' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:17:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'dplyr' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:17:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'forcats' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:17:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'lubridate' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:17:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:21:1'): (code run outside of `test_that()`) ────────
+cannot open file 'data/analysis_data/lung_cancer_analysis_data.csv': No such file or directory
+Backtrace:
+    ▆
+ 1. └─utils::read.csv("data/analysis_data/lung_cancer_analysis_data.csv") at 03-test_data.R:21:1
+ 2.   └─utils::read.table(...)
+ 3.     └─base::file(file, "rt")
+── Error ('03-test_data.R:21:1'): (code run outside of `test_that()`) ──────────
+Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    ▆
+ 1. └─utils::read.csv("data/analysis_data/lung_cancer_analysis_data.csv") at 03-test_data.R:21:1
+ 2.   └─utils::read.table(...)
+ 3.     └─base::file(file, "rt")
+[ FAIL 1 | WARN 10 | SKIP 0 | PASS 0 ]
+
+ChatGPT
+Warning message:
+package 'testthat' was built under R version 4.2.3 
+Test complete
+It seems there are multiple warnings and errors in your test script:
+Warnings:
+There are warnings indicating that the packages (tidyverse, ggplot2, tibble, tidyr, readr, purrr, dplyr, forcats, lubridate) were built under a different R version. While these warnings may not directly affect your tests, it's recommended to ensure that the packages are compatible with your current R version to avoid potential issues.
+There's also a warning indicating that the file data/analysis_data/lung_cancer_analysis_data.csv could not be found. This suggests that the file path might be incorrect or the file is missing.
+Error:
+There's an error stating that the file data/analysis_data/lung_cancer_analysis_data.csv cannot be opened because it does not exist. This confirms that the file path specified in your script is incorrect or the file is not present in the specified location.
+Action:
+Check the file path specified in your script to ensure it is correct. Make sure that the CSV file lung_cancer_analysis_data.csv exists in the specified location.
+If the file exists but is not in the specified location, update the file path accordingly.
+If the file does not exist, verify whether it was generated by a previous script or if there were any issues during data generation or saving.
+Once you've corrected the file path and ensured that the file exists, rerun the tests to verify if the issues are resolved.
+Additional Consideration:
+It's good practice to handle package version warnings by ensuring that the packages you use are up-to-date and compatible with your R version. Updating packages to their latest versions can help avoid potential conflicts or issues.
+If you need further assistance, feel free to ask!
+
+User
+i have made some changes. see my updated code
+ChatGPT
+It seems I didn't receive the updated code. Could you please provide the changes you've made so I can assist you further?
+#### Load data ####
+analysis_data <- read.csv("data/analysis_data/lung_cancer_analysis_data.csv")
+#### Test data ####
+test_that("Data Cleaning Tests", {
+  # Test if the dataset has 345 entries
+  expect_equal(nrow(analysis_data), 345)
+  # Test if 'Pathogenic_Stage' contains the correct categories 
+  expect_true(all(analysis_data$pathogenic_stage %in% c('Stage I', 'Stage IA', 'Stage IIA', 'Stage IIIA', 'Stage IB', 'Stage IIB', 'Stage IIIB', 'Stage IV')))
+  # Test if 'Lymph_Node_Involvement' contains the correct categories 
+  expect_true(all(analysis_data$lymph_node_involvement %in% c('N0', 'N1', 'N2', 'NX')))
+  # Test if 'Presence_of_Metastasis' contains the correct categories
+  expect_true(all(analysis_data$presence_of_distant_metastasis %in% c('MX', 'M0', 'M1', 'M1a', 'M1b')))
+  # Test if 'Tumor_Size' contains the correct categories 
+  expect_true(all(analysis_data$tumor_size %in% c('T1', 'T1a', 'T1b', 'T2', 'T2a', 'T2b', 'T3', 'T4', 'TX')))
+  # Test if 'Days_to_Death' is numeric 
+  expect_true(is.numeric(analysis_data$days_to_death))
+  # Test if 'Treatment_Type' only contains 'Pharmaceutical Therapy, NOS' and 'Radiation Therapy, NOS'
+  expect_true(all(analysis_data$treatment_type %in% c('Pharmaceutical Therapy, NOS', 'Radiation Therapy, NOS')))
+  # Test if 'Treatment_Decision" only contains 'yes' and 'no' 
+  expect_true(all(analysis_data$treatment_decision %in% c('yes', 'no')))
+}) 
+It seems there are multiple warnings and errors in your test script:
+Warnings:
+There are warnings indicating that the packages (tidyverse, ggplot2, tibble, tidyr, readr, purrr, dplyr, forcats, lubridate) were built under a different R version. While these warnings may not directly affect your tests, it's recommended to ensure that the packages are compatible with your current R version to avoid potential issues.
+There's also a warning indicating that the file data/analysis_data/lung_cancer_analysis_data.csv could not be found. This suggests that the file path might be incorrect or the file is missing.
+Error:
+There's an error stating that the file data/analysis_data/lung_cancer_analysis_data.csv cannot be opened because it does not exist. This confirms that the file path specified in your script is incorrect or the file is not present in the specified location.
+Action:
+Check the file path specified in your script to ensure it is correct. Make sure that the CSV file lung_cancer_analysis_data.csv exists in the specified location.
+If the file exists but is not in the specified location, update the file path accordingly.
+If the file does not exist, verify whether it was generated by a previous script or if there were any issues during data generation or saving.
+Once you've corrected the file path and ensured that the file exists, rerun the tests to verify if the issues are resolved.
+Additional Consideration:
+It's good practice to handle package version warnings by ensuring that the packages you use are up-to-date and compatible with your R version. Updating packages to their latest versions can help avoid potential conflicts or issues.
+If you need further assistance, feel free to ask!
+
+User
+i have made some changes. see my updated code
+# load packages
+library(tidyverse)
+library(testthat)
+#### Load data ####
+analysis_data <- read.csv("data/analysis_data/lung_cancer_analysis_data.csv")
+#### Test data ####
+test_that("Data Cleaning Tests", {
+  # Test if the dataset has 345 entries
+  expect_equal(nrow(analysis_data), 345)
+  # Test if 'Pathogenic_Stage' contains the correct categories 
+  expect_true(all(analysis_data$pathogenic_stage %in% c('Stage I', 'Stage IA', 'Stage IIA', 'Stage IIIA', 'Stage IB', 'Stage IIB', 'Stage IIIB', 'Stage IV')))
+  # Test if 'Lymph_Node_Involvement' contains the correct categories 
+  expect_true(all(analysis_data$lymph_node_involvement %in% c('N0', 'N1', 'N2', 'NX')))
+  # Test if 'Presence_of_Metastasis' contains the correct categories
+  expect_true(all(analysis_data$presence_of_distant_metastasis %in% c('MX', 'M0', 'M1', 'M1a', 'M1b')))
+  # Test if 'Tumor_Size' contains the correct categories 
+  expect_true(all(analysis_data$tumor_size %in% c('T1', 'T1a', 'T1b', 'T2', 'T2a', 'T2b', 'T3', 'T4', 'TX')))
+  # Test if 'Days_to_Death' is numeric 
+  expect_true(is.numeric(analysis_data$days_to_death))
+  # Test if 'Treatment_Type' only contains 'Pharmaceutical Therapy, NOS' and 'Radiation Therapy, NOS'
+  expect_true(all(analysis_data$treatment_type %in% c('Pharmaceutical Therapy, NOS', 'Radiation Therapy, NOS')))
+  # Test if 'Treatment_Decision" only contains 'yes' and 'no' 
+  expect_true(all(analysis_data$treatment_decision %in% c('yes', 'no')))
+}) 
+what does this mean? where are the errors and how to fix? ==> Testing R file using 'testthat'
+[ FAIL 0 | WARN 0 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 1 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 2 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 3 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 4 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 5 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 6 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 7 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 8 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 9 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 10 | SKIP 0 | PASS 0 ]
+[ FAIL 1 | WARN 10 | SKIP 0 | PASS 0 ]
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'tidyverse' was built under R version 4.2.3
+Backtrace:
+    ▆
+ 1. └─base::library(tidyverse) at 03-test_data.R:17:1
+ 2.   └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'ggplot2' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:17:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'tibble' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:17:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'tidyr' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:17:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'readr' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:17:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'purrr' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:17:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'dplyr' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:17:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'forcats' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:17:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+package 'lubridate' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:17:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:21:1'): (code run outside of `test_that()`) ────────
+cannot open file 'data/analysis_data/lung_cancer_analysis_data.csv': No such file or directory
+Backtrace:
+    ▆
+ 1. └─utils::read.csv("data/analysis_data/lung_cancer_analysis_data.csv") at 03-test_data.R:21:1
+ 2.   └─utils::read.table(...)
+ 3.     └─base::file(file, "rt")
+── Error ('03-test_data.R:21:1'): (code run outside of `test_that()`) ──────────
+Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    ▆
+ 1. └─utils::read.csv("data/analysis_data/lung_cancer_analysis_data.csv") at 03-test_data.R:21:1
+ 2.   └─utils::read.table(...)
+ 3.     └─base::file(file, "rt")
+[ FAIL 1 | WARN 10 | SKIP 0 | PASS 0 ]
+Warning message:
+package 'testthat' was built under R version 4.2.3 
+Test complete
+
+ChatGPT
+The output you provided indicates that there are warnings and errors encountered during the testing process. Let's break down each part:
+Warnings:
+Package Loading Warnings: There are warnings indicating that several packages from the tidyverse (e.g., ggplot2, tibble, tidyr, readr, purrr, dplyr, forcats, lubridate) were loaded outside of the test_that() function. These warnings are not critical but indicate that package loading should ideally occur within test contexts to ensure reproducibility and independence of tests.
+File Not Found Warning: There's a warning indicating that the file 'data/analysis_data/lung_cancer_analysis_data.csv' could not be found. This suggests that the test script is unable to locate the CSV file containing the analysis data. Ensure that the file path is correct and that the file exists in the specified location.
+Errors:
+File Opening Error: There's an error stating that the file 'data/analysis_data/lung_cancer_analysis_data.csv' cannot be opened. This error is likely caused by the file not being found in the specified location or due to incorrect file permissions. Double-check the file path and ensure that the file is accessible to the script.
+To address these issues:
+Move the package loading commands (library(tidyverse), etc.) inside the test_that() function to avoid the package loading warnings.
+Ensure that the file 'data/analysis_data/lung_cancer_analysis_data.csv' exists in the specified location and that the file path is correct.
+Verify the file permissions to ensure that the script can access the CSV file.
+Once these adjustments are made, rerun the test script to verify if the warnings and errors are resolved.
+
+user
+==> Testing R file using 'testthat'
+[ FAIL 0 | WARN 0 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 1 | SKIP 0 | PASS 0 ]
+[ FAIL 1 | WARN 1 | SKIP 0 | PASS 0 ]
+── Warning ('03-test_data.R:17:1'): (code run outside of `test_that()`) ────────
+cannot open file 'data/analysis_data/lung_cancer_analysis_data.csv': No such file or directory
+Backtrace:
+    ▆
+ 1. └─utils::read.csv("data/analysis_data/lung_cancer_analysis_data.csv") at 03-test_data.R:17:1
+ 2.   └─utils::read.table(...)
+ 3.     └─base::file(file, "rt")
+── Error ('03-test_data.R:17:1'): (code run outside of `test_that()`) ──────────
+Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    ▆
+ 1. └─utils::read.csv("data/analysis_data/lung_cancer_analysis_data.csv") at 03-test_data.R:17:1
+ 2.   └─utils::read.table(...)
+ 3.     └─base::file(file, "rt")
+[ FAIL 1 | WARN 1 | SKIP 0 | PASS 0 ]
+Warning message:
+package 'testthat' was built under R version 4.2.3 
+Test complete
+
+ChatGPT
+It seems that the test failed due to being unable to find the file data/analysis_data/lung_cancer_analysis_data.csv.
+This error indicates that the file path specified in the read.csv() function does not exist or is incorrect. Make sure that the file path is accurate and that the file exists in the specified location relative to the directory where the test script is executed.
+Here are a few steps you can take to troubleshoot and fix the issue:
+Verify the file path: Double-check the file path to ensure it is correct. It should point to the location where the lung_cancer_analysis_data.csv file is stored.
+Check the file location: Make sure that the lung_cancer_analysis_data.csv file is present in the specified location. If it's not, you may need to move or copy the file to the correct directory.
+Update the file path: If the file is located in a different directory, update the file path in the read.csv() function to point to the correct location.
+Once you've addressed the issue with the file path, rerun the test to verify if the error has been resolved.
+
+User
+#### Workspace setup ####
+#install packages 
+#install.packages("tidyverse")
+#install.packages("testthat")
+#install.packages("here")
+# load packages
+library(tidyverse)
+library(testthat)
+library(here)
+#### Load data ####
+test_that("Data Cleaning Tests", {
+  # load data
+  analysis_data <- read.csv(file = here::here("data/analysis_data/lung_cancer_analysis_data.csv"))
+  # Test if the dataset has 346 entries
+  expect_equal(nrow(analysis_data), 346)
+  # Test if 'Pathogenic_Stage' contains the correct categories 
+  expect_true(all(analysis_data$pathogenic_stage %in% c('Stage I', 'Stage IA', 'Stage IIA', 'Stage IIIA', 'Stage IB', 'Stage IIB', 'Stage IIIB', 'Stage IV')))
+  # Test if 'Lymph_Node_Involvement' contains the correct categories 
+  expect_true(all(analysis_data$lymph_node_involvement %in% c('N0', 'N1', 'N2', 'NX')))
+  # Test if 'Presence_of_Metastasis' contains the correct categories
+  expect_true(all(analysis_data$presence_of_distant_metastasis %in% c('MX', 'M0', 'M1', 'M1a', 'M1b')))
+  # Test if 'Tumor_Size' contains the correct categories 
+  expect_true(all(analysis_data$tumor_size %in% c('T1', 'T1a', 'T1b', 'T2', 'T2a', 'T2b', 'T3', 'T4', 'TX')))
+  # Test if 'Days_to_Death' is numeric 
+  expect_true(is.numeric(analysis_data$days_to_death))
+  # Test if 'Treatment_Type' only contains 'Pharmaceutical Therapy, NOS' and 'Radiation Therapy, NOS'
+  expect_true(all(analysis_data$treatment_type %in% c('Pharmaceutical Therapy, NOS', 'Radiation Therapy, NOS')))
+  # Test if 'Treatment_Decision" only contains 'yes' and 'no' 
+  expect_true(all(analysis_data$treatment_decision %in% c('yes', 'no')))
+}) 
+==> Testing R file using 'testthat'
+[ FAIL 0 | WARN 0 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 1 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 2 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 3 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 4 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 5 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 6 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 7 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 8 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 9 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 10 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 10 | SKIP 0 | PASS 1 ]
+[ FAIL 1 | WARN 10 | SKIP 0 | PASS 1 ]
+[ FAIL 1 | WARN 10 | SKIP 0 | PASS 2 ]
+[ FAIL 1 | WARN 10 | SKIP 0 | PASS 3 ]
+[ FAIL 1 | WARN 10 | SKIP 0 | PASS 4 ]
+[ FAIL 1 | WARN 10 | SKIP 0 | PASS 5 ]
+[ FAIL 1 | WARN 10 | SKIP 0 | PASS 6 ]
+[ FAIL 1 | WARN 10 | SKIP 0 | PASS 7 ]
+── Warning ('03-test_data.R:18:1'): (code run outside of `test_that()`) ────────
+package 'tidyverse' was built under R version 4.2.3
+Backtrace:
+    ▆
+ 1. └─base::library(tidyverse) at 03-test_data.R:18:1
+ 2.   └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:18:1'): (code run outside of `test_that()`) ────────
+package 'ggplot2' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:18:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:18:1'): (code run outside of `test_that()`) ────────
+package 'tibble' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:18:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:18:1'): (code run outside of `test_that()`) ────────
+package 'tidyr' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:18:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:18:1'): (code run outside of `test_that()`) ────────
+package 'readr' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:18:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:18:1'): (code run outside of `test_that()`) ────────
+package 'purrr' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:18:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:18:1'): (code run outside of `test_that()`) ────────
+package 'dplyr' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:18:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:18:1'): (code run outside of `test_that()`) ────────
+package 'forcats' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:18:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:18:1'): (code run outside of `test_that()`) ────────
+package 'lubridate' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:18:1
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:20:1'): (code run outside of `test_that()`) ────────
+package 'here' was built under R version 4.2.3
+Backtrace:
+    ▆
+ 1. └─base::library(here) at 03-test_data.R:20:1
+ 2.   └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Failure ('03-test_data.R:32:3'): Data Cleaning Tests ────────────────────────
+all(...) is not TRUE
+`actual`:   FALSE
+`expected`: TRUE 
+[ FAIL 1 | WARN 10 | SKIP 0 | PASS 7 ]
+Warning message:
+package 'testthat' was built under R version 4.2.3 
+Test complete
+
+ChaGPT
+The test script 03-test_data.R encountered warnings and one failure. Let's address them:
+Warnings:
+Multiple warnings about packages being built under R version 4.2.3: These warnings indicate that the packages were built under a different version of R than the one currently being used. While these warnings are not critical, it's generally a good idea to ensure that your packages are up to date with the version of R you're using to avoid potential compatibility issues in the future.
+Warning about the here package: This warning suggests that the here package was loaded outside of a test_that() block. While loading packages outside of a test_that() block is not necessarily an issue, it's good practice to keep package loading within relevant testing blocks for better organization.
+Failure:
+Data Cleaning Tests: The failure occurred in the test for the presence of correct categories in the 'Pathogenic_Stage' variable. The actual result did not match the expected result. It seems like the categories in the 'pathogenic_stage' variable are not correctly specified in the dataset. This could be due to various reasons such as misspellings or inconsistencies in the data.
+To resolve these issues:
+Check the data to ensure that the categories in the 'Pathogenic_Stage' variable match the expected categories specified in the test.
+Review the data cleaning process to ensure that it correctly handles the 'Pathogenic_Stage' variable and assigns the appropriate categories.
+Update the test to reflect any changes made to the data cleaning process or adjust the expectations if necessary.
+Once these issues are addressed, rerun the test script to ensure that all tests pass without warnings or failures.
+
+user
+ok but which tests failed and why??
+
+ChatGPT
+The test that failed is the one checking if all the values in a particular column contain the correct categories. Here's the failing test:
+# Test if 'Pathogenic_Stage' contains the correct categories 
+expect_true(all(analysis_data$pathogenic_stage %in% c('Stage I', 'Stage IA', 'Stage IIA', 'Stage IIIA', 'Stage IB', 'Stage IIB', 'Stage IIIB', 'Stage IV')))
+This test is checking whether all the values in the pathogenic_stage column of the analysis_data dataframe are within the specified categories: 'Stage I', 'Stage IA', 'Stage IIA', 'Stage IIIA', 'Stage IB', 'Stage IIB', 'Stage IIIB', 'Stage IV'.
+The reason this test might fail could be because the data in the pathogenic_stage column contains values that are not among these categories. To identify which values are causing the failure, you can examine the unique values in the pathogenic_stage column of your dataset. You can do this using the unique() function:
+unique_values <- unique(analysis_data$pathogenic_stage)
+print(unique_values)
+This will print out all unique values in the pathogenic_stage column. You can then compare these values with the expected categories to identify which values are not within the specified categories. Once you identify these values, you can decide how to handle them, either by removing them or updating the test expectation accordingly.
+
+User
+ok i updated this: # Test if 'Pathogenic_Stage' contains the correct categories 
+  expect_true(all(analysis_data$pathogenic_stage %in% c('Stage I', 'Stage IA', 'Stage IB', 'Stage II', 'Stage IIA', 'Stage IIB', 'Stage III', 'Stage IIIA', 'Stage IIIB', 'Stage IV')))
+  
+ChatGPT
+Great! By updating the test expectation to include 'Stage II' and 'Stage III', you're covering a broader range of potential categories in the pathogenic_stage column. Now, rerun the tests to ensure that this change resolves the failure. If the test passes after the update, it indicates that all the values in the pathogenic_stage column are within the specified categories. If it still fails, you might need to investigate further to identify any unexpected values in the column.
+
+User
+==> Testing R file using 'testthat'
+[ FAIL 0 | WARN 0 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 1 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 2 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 3 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 4 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 5 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 6 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 7 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 8 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 9 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 10 | SKIP 0 | PASS 0 ]
+[ FAIL 0 | WARN 10 | SKIP 0 | PASS 1 ]
+[ FAIL 0 | WARN 10 | SKIP 0 | PASS 2 ]
+[ FAIL 0 | WARN 10 | SKIP 0 | PASS 3 ]
+[ FAIL 0 | WARN 10 | SKIP 0 | PASS 4 ]
+[ FAIL 0 | WARN 10 | SKIP 0 | PASS 5 ]
+[ FAIL 0 | WARN 10 | SKIP 0 | PASS 6 ]
+[ FAIL 0 | WARN 10 | SKIP 0 | PASS 7 ]
+[ FAIL 0 | WARN 10 | SKIP 0 | PASS 8 ]
+── Warning ('03-test_data.R:26:3'): Data Cleaning Tests ────────────────────────
+package 'tidyverse' was built under R version 4.2.3
+Backtrace:
+    ▆
+ 1. └─base::library(tidyverse) at 03-test_data.R:26:3
+ 2.   └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:26:3'): Data Cleaning Tests ────────────────────────
+package 'ggplot2' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:26:3
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:26:3'): Data Cleaning Tests ────────────────────────
+package 'tibble' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:26:3
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:26:3'): Data Cleaning Tests ────────────────────────
+package 'tidyr' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:26:3
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:26:3'): Data Cleaning Tests ────────────────────────
+package 'readr' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:26:3
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:26:3'): Data Cleaning Tests ────────────────────────
+package 'purrr' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:26:3
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:26:3'): Data Cleaning Tests ────────────────────────
+package 'dplyr' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:26:3
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:26:3'): Data Cleaning Tests ────────────────────────
+package 'forcats' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:26:3
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:26:3'): Data Cleaning Tests ────────────────────────
+package 'lubridate' was built under R version 4.2.3
+Backtrace:
+     ▆
+  1. └─base::library(tidyverse) at 03-test_data.R:26:3
+  2.   ├─base::tryCatch(...)
+  3.   │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+  4.   │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+  5.   │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+  6.   └─base::attachNamespace(ns, pos = pos, deps, exclude, include.only)
+  7.     └─base (local) runHook(".onAttach", ns, dirname(nspath), nsname)
+  8.       ├─base::tryCatch(fun(libname, pkgname), error = identity)
+  9.       │ └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+ 10.       │   └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+ 11.       │     └─base (local) doTryCatch(return(expr), name, parentenv, handler)
+ 12.       └─tidyverse (local) fun(libname, pkgname)
+ 13.         └─tidyverse:::tidyverse_attach()
+ 14.           ├─base::suppressPackageStartupMessages(lapply(to_load, same_library))
+ 15.           │ └─base::withCallingHandlers(expr, packageStartupMessage = function(c) tryInvokeRestart("muffleMessage"))
+ 16.           └─base::lapply(to_load, same_library)
+ 17.             └─tidyverse (local) FUN(X[[i]], ...)
+ 18.               └─base::library(pkg, lib.loc = loc, character.only = TRUE, warn.conflicts = FALSE)
+ 19.                 └─base (local) testRversion(pkgInfo, package, pkgpath)
+── Warning ('03-test_data.R:28:3'): Data Cleaning Tests ────────────────────────
+package 'here' was built under R version 4.2.3
+Backtrace:
+    ▆
+ 1. └─base::library(here) at 03-test_data.R:28:3
+ 2.   └─base (local) testRversion(pkgInfo, package, pkgpath)
+[ FAIL 0 | WARN 10 | SKIP 0 | PASS 8 ]
+Warning message:
+package 'testthat' was built under R version 4.2.3 
+Test complete
+
+ChatGPT
+The warnings you're seeing are related to loading packages in your test file. They're not necessarily indicating errors in your code but rather informing you that certain packages were built under a different version of R. This typically shouldn't cause any major issues, but it's good practice to ensure that your packages are up to date to avoid potential compatibility problems.
+As for the test results, it seems that all tests have passed successfully (PASS 8), which is great news! You've addressed the previous failures, and now your data cleaning tests are passing without any issues. You can proceed with confidence knowing that your updates have been successful. If you have any further questions or need assistance with anything else, feel free to ask!
+
+
+# new conversation 
+
+User
+so i am writing a stats paper on lung cancer survival post diagnosis, specifically looking at the number of days patients survive after they are diagnosed and their pathogenic stage, whether they received treatment and the treatment type. i have a cleaned dataset. can you suggest what kind of figures to include in the data section and which ones to include in the results section?
+
+ChatGPT 
+Certainly! In the "Data" section of your paper, you should include figures that provide descriptive statistics and visualizations to help readers understand the characteristics of your dataset. Here are some figures you might consider including:
+Data Section:
+Histograms or Boxplots of Survival Time:
+Show the distribution of survival time for all patients.
+You might want to create separate plots for different pathogenic stages and treatment types if they vary significantly.
+Bar Charts of Categorical Variables:
+Display the counts or percentages of patients in each pathogenic stage and treatment type category.
+You could have one bar chart for pathogenic stage and another for treatment type.
+Summary Statistics Table:
+Include mean, median, standard deviation, minimum, and maximum values of survival time for the entire dataset and broken down by pathogenic stage and treatment type.
+Correlation Heatmap:
+Show correlations between survival time and other relevant variables such as pathogenic stage and treatment type.
+This can help identify potential relationships between variables.
+Results Section:
+In the "Results" section, you should present the findings of your analysis and any statistical tests you conducted to investigate relationships between variables. Here are some figures you might consider including:
+Kaplan-Meier Survival Curves:
+Plot survival curves for different pathogenic stages and treatment types to visually compare survival probabilities over time.
+Cox Proportional Hazards Model Results:
+If you conducted a Cox regression analysis, present the hazard ratios and confidence intervals for pathogenic stage and treatment type.
+You could include forest plots to visualize these results.
+Adjusted Survival Curves:
+If you adjusted for other variables in your analysis, present survival curves for different pathogenic stages and treatment types after controlling for these variables.
+Interaction Plots:
+If you found significant interactions between variables (e.g., pathogenic stage and treatment type), plot interaction effects to demonstrate how the relationship between survival time and one variable changes across levels of another variable.
+Subgroup Analysis:
+If you conducted subgroup analyses based on specific characteristics (e.g., age, gender), present relevant survival curves or summary statistics for these subgroups.
+Remember to provide clear and concise captions for each figure, explaining what it represents and any key findings or trends observed. Additionally, make sure to refer to each figure in the text of your paper to guide readers through your analysis and interpretation of the data.
+
+User
+how can i write r code to Show the distribution of survival time for all patients.
+
+ChatGPT
+You can use R to create a histogram or a boxplot to show the distribution of survival time for all patients in your dataset. Here's how you can do it using base R graphics:
+# Assuming your dataset is called 'lung_cancer_data' and it contains a column named 'survival_time' for survival time
+# Histogram of survival time
+hist(lung_cancer_data$survival_time, 
+     main = "Distribution of Survival Time", 
+     xlab = "Survival Time (days)", 
+     ylab = "Frequency")
+# Boxplot of survival time
+boxplot(lung_cancer_data$survival_time, 
+        main = "Distribution of Survival Time", 
+        ylab = "Survival Time (days)")
+If you prefer using ggplot2 for more customized and visually appealing plots, you can do so as well:
+library(ggplot2)
+# Histogram of survival time
+ggplot(lung_cancer_data, aes(x = survival_time)) +
+  geom_histogram(binwidth = 50, fill = "skyblue", color = "black") +
+  labs(title = "Distribution of Survival Time", x = "Survival Time (days)", y = "Frequency") +
+  theme_minimal()
+# Boxplot of survival time
+ggplot(lung_cancer_data, aes(y = survival_time)) +
+  geom_boxplot(fill = "lightgreen", color = "black") +
+  labs(title = "Distribution of Survival Time", y = "Survival Time (days)") +
+  theme_minimal()
+These codes will generate histograms and boxplots to visualize the distribution of survival time for all patients in your dataset. Make sure to replace 'lung_cancer_data' with the actual name of your dataset and 'survival_time' with the appropriate column name containing survival time data. Adjust binwidth in the histogram plot according to your data distribution for better visualization.
+
+User
+can you help me write R code for this: Bar Charts of Categorical Variables:
+Display the counts or percentages of patients in each pathogenic stage and treatment type category.
+You could have one bar chart for pathogenic stage and another for treatment type.  I also have data on presence of distant metastasis, lymph node involvement and tumor growth 
+
+ChatGPT
+Certainly! You can use R to create bar charts to display the counts or percentages of patients in each categorical variable, such as pathogenic stage, treatment type, presence of distant metastasis, lymph node involvement, and tumor growth. Here's how you can do it:
+# Assuming your dataset is called 'lung_cancer_data' and it contains columns for the variables mentioned
+# Load necessary libraries
+library(ggplot2)
+library(dplyr)
+# Create bar chart for pathogenic stage
+pathogenic_stage_counts <- lung_cancer_data %>%
+  group_by(pathogenic_stage) %>%
+  summarise(count = n()) %>%
+  mutate(percentage = count / sum(count) * 100) %>%
+  arrange(desc(pathogenic_stage))
+ggplot(pathogenic_stage_counts, aes(x = pathogenic_stage, y = count)) +
+  geom_bar(stat = "identity", fill = "skyblue") +
+  labs(title = "Distribution of Patients by Pathogenic Stage",
+       x = "Pathogenic Stage",
+       y = "Count") +
+  theme_minimal()
+ggplot(pathogenic_stage_counts, aes(x = pathogenic_stage, y = percentage)) +
+  geom_bar(stat = "identity", fill = "skyblue") +
+  labs(title = "Percentage of Patients by Pathogenic Stage",
+       x = "Pathogenic Stage",
+       y = "Percentage") +
+  theme_minimal()
+# Create bar chart for treatment type
+treatment_type_counts <- lung_cancer_data %>%
+  group_by(treatment_type) %>%
+  summarise(count = n()) %>%
+  mutate(percentage = count / sum(count) * 100) %>%
+  arrange(desc(treatment_type))
+ggplot(treatment_type_counts, aes(x = treatment_type, y = count)) +
+  geom_bar(stat = "identity", fill = "lightgreen") +
+  labs(title = "Distribution of Patients by Treatment Type",
+       x = "Treatment Type",
+       y = "Count") +
+  theme_minimal()
+ggplot(treatment_type_counts, aes(x = treatment_type, y = percentage)) +
+  geom_bar(stat = "identity", fill = "lightgreen") +
+  labs(title = "Percentage of Patients by Treatment Type",
+       x = "Treatment Type",
+       y = "Percentage") +
+  theme_minimal()
+# Similarly, you can create bar charts for other categorical variables like presence of distant metastasis, lymph node involvement, and tumor growth
+Replace 'lung_cancer_data' with the actual name of your dataset, and adjust the column names ('pathogenic_stage', 'treatment_type', etc.) according to your dataset structure. These codes will generate bar charts displaying the counts and percentages of patients in each category for the specified categorical variables.
+
+User
+so i really like the idea of creating a figure for percentage of patients by treatment type however i dont think  a bar chart is the best way to present the data as there are only two treatment types. can you suggest a more visually appealing way to present this data?
+
+ChatGPT
+If you're looking for a different visualization approach, you might consider using a donut chart, which is similar to a pie chart but with a hole in the center. Another option could be a waffle chart, which represents data using small squares that resemble a waffle. Here's how you can create these visualizations in R:
+Donut Chart:
+# Donut chart for percentage of patients by treatment type
+ggplot(treatment_type_counts, aes(x = "", y = percentage, fill = treatment_type)) +
+  geom_bar(stat = "identity", width = 1, color = "white") +
+  coord_polar("y", start = 0) +
+  labs(title = "Percentage of Patients by Treatment Type",
+       fill = "Treatment Type",
+       x = NULL,
+       y = NULL) +
+  theme_void() +
+  theme(legend.position = "right") +  # Adjust legend position if necessary
+  annotate("text", x = 0, y = 0, label = "Total", size = 10, color = "black")  # Add label for total in the center
+Waffle Chart:
+# Waffle chart for percentage of patients by treatment type
+library(waffle)
+# Prepare data for waffle chart
+waffle_data <- treatment_type_counts %>%
+  mutate(squares = percentage / 2)  # Adjust scale if needed for better visualization
+# Create waffle chart
+waffle(waffle_data$squares, rows = 10, size = 0.6, colors = c("lightblue", "lightgreen"),
+       title = "Percentage of Patients by Treatment Type", 
+       xlab = "1 square = 2%", 
+       pad = 1)  # Adjust padding between squares if necessary
+These approaches offer visually distinct ways to represent the percentage of patients by treatment type. You can choose the one that best suits your preferences and effectively communicates your data to your audience.
+
+

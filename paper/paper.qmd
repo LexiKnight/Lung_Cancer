@@ -46,8 +46,121 @@ Our data is
 
 ```{r}
 #| label: fig-bills
-#| fig-cap: Bills of penguins
+#| fig-cap: bb
 #| echo: false
+
+# install.packages
+# install.packages("ggplot2")
+# install.packages("dplyr")
+
+# load packaged
+library(ggplot2)
+library(dplyr)
+
+# Histogram of lung cancer patients survival time in days, post-diagnosis
+ggplot(analysis_data, aes(x = days_to_death)) +
+  geom_histogram(binwidth = 50, fill = "forestgreen", color = "black") +
+  labs(title = "Distribution of Survial Time in Lung Cancer Patients Post-Diagnosis", x = "Survival Time (days)", y = "Frequency") + theme_minimal()
+
+# create bar chart for pathogenic stage
+pathogenic_stage_counts <- analysis_data %>%
+  group_by(pathogenic_stage) %>%
+  summarise(count = n ()) %>%
+  mutate(percentage = count / sum(count) * 100) %>%
+  arrange(desc(pathogenic_stage))
+
+ggplot(pathogenic_stage_counts, aes(x = pathogenic_stage, y = percentage)) +
+  geom_bar(stat = "identity", fill = "forestgreen") +
+  labs(title = "Percentage of Patients by Pathogenic Stage",
+       x = "Pathogenic Stage",
+       y = "Percentage") +
+  theme_minimal()
+
+
+# Create bar chart for treatment type
+treatment_type_counts <- analysis_data %>%
+  group_by(treatment_type) %>%
+  summarise(count = n()) %>%
+  mutate(percentage = count / sum(count) * 100) %>%
+  arrange(desc(treatment_type))
+
+ggplot(treatment_type_counts, aes(x = treatment_type, y = count)) +
+  geom_bar(stat = "identity", fill = "forestgreen") +
+  labs(title = "Distribution of Patients by Treatment Type",
+       x = "Treatment Type",
+       y = "Count") +
+  theme_minimal()
+
+ggplot(treatment_type_counts, aes(x = treatment_type, y = percentage)) +
+  geom_bar(stat = "identity", fill = "forestgreen") +
+  labs(title = "Percentage of Patients by Treatment Type",
+       x = "Treatment Type",
+       y = "Percentage") +
+  theme_minimal()
+
+
+# trying to represent percentage of pts by treatment type in a different way 
+
+# Calculate counts and percentages of patients by treatment type
+treatment_type_counts <- analysis_data %>%
+  group_by(treatment_type) %>%
+  summarise(count = n()) %>%
+  mutate(percentage = count / sum(count) * 100)
+
+# Pie chart for percentage of patients by treatment type
+ggplot(treatment_type_counts, aes(x = "", y = percentage, fill = treatment_type)) +
+  geom_bar(stat = "identity", width = 1, color = "white") +
+  coord_polar("y", start = 0) +
+  labs(title = "Percentage of Patients by Treatment Type",
+       fill = "Treatment Type",
+       x = NULL,
+       y = NULL) +
+  theme_void()
+
+# Stacked bar chart for percentage of patients by treatment type
+ggplot(treatment_type_counts, aes(x = "", y = percentage, fill = treatment_type)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Percentage of Patients by Treatment Type",
+       x = NULL,
+       y = "Percentage") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+
+
+# dont like those either 
+
+
+# Donut chart for percentage of patients by treatment type
+ggplot(treatment_type_counts, aes(x = "", y = percentage, fill = treatment_type)) +
+  geom_bar(stat = "identity", width = 1, color = "white") +
+  coord_polar("y", start = 0) +
+  labs(title = "Percentage of Patients by Treatment Type",
+       fill = "Treatment Type",
+       x = NULL,
+       y = NULL) +
+  theme_void() +
+  theme(legend.position = "right") +  # Adjust legend position if necessary
+  annotate("text", x = 0, y = 0, label = "Total", size = 10, color = "black")  # Add label for total in the center
+
+# hmm maybe donut was cuter
+
+
+
+# Waffle chart for percentage of patients by treatment type
+# install.packages("waffle")
+library(waffle)
+
+# Prepare data for waffle chart
+waffle_data <- treatment_type_counts %>%
+  mutate(squares = percentage / 2)  # Adjust scale if needed for better visualization
+
+# Create waffle chart
+waffle(waffle_data$squares, rows = 10, size = 0.6, colors = c("lightblue", "lightgreen"),
+       title = "Percentage of Patients by Treatment Type", 
+       xlab = "1 square = 2%", 
+       pad = 1)  # Adjust padding between squares if necessary
+
+# idea for the morning - sub in presence of distant metastasis, lymph node involvement and tumor size for pathogenic stage (frist graph)
 
 ```
 
