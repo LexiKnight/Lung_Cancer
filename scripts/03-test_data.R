@@ -12,56 +12,44 @@
 #install packages 
 #install.packages("tidyverse")
 #install.packages("testthat")
-
-# load packages
-library(tidyverse)
-library(testthat)
+#install.packages("here")
 
 
-#### Test data ####
 
-# Test if the dataset has 981 entries 
-test_that("Dataset has 981 entries", {
-  expect_equal(nrow(simulated_data), 981)
-})
+#### Load data ####
 
-# Test if 'Pathogenic_Stage' contains the correct categories 
-test_that("Pathogenic stage variable is correct", {
-  expect_true(all(simulated_data$Pathogenic_Stage %in% c('Stage IA', 'Stage IIA', 'Stage IIIA', 'Stage IB', 'Stage IIB', 'Stage IV', 'Stage I')))
-})
-
-# Test if 'Lymph_Node_Involvement' contains the correct categories 
-test_that("Lymph node involvement variable is correct", {
-  expect_true(all(simulated_data$Lymph_Node_Involvement %in% c('N0', 'N1', 'N2', 'NX')))
-})
-
-# Test if 'Presence_of_Metastasis' contains the correct categories 
-test_that("Presence of metastasis variable is correct", {
-  expect_true(all(simulated_data$Presence_of_Metastasis %in% c('M0', 'MX', 'M1a', 'M1b')))
-})
-
-# Test if 'Tumor_Size' contains the correct categories 
-test_that("Tumor size variable is correct", {
-  expect_true(all(simulated_data$Tumor_Size %in% c('T1', 'T1a', 'T1b', 'T2', 'T2', 'T2b', 'T3', 'T4', 'TX')))
-})
-
-# Test if 'Age_at_Diagnosis_in_Days is numeric 
-test_that("Age at diagnosis variable is numeric", {
-  expect_true(is.numeric(simulated_data$Age_at_Diagnosis_in_Days))
-})
-
-# Test if 'Days_to_Death' is numeric 
-class(simulated_data$Days_to_Death) == "numeric"
-
-# Test if 'Treatment_Type' only contains 'Pharmaceutical Therapy, NOS' and 'Radiation Therapy, NOS'
-test_that("Treatment type variable is correct", {
-  expect_true(all(simulated_data$Treatment_Type %in% c('Pharmaceutical Therapy, NOS', 'Radiation Therapy, NOS')))
-})
-
-# Test if 'Treatment_Decision" contains the correct categories 
-test_that("Treatment decision variable is correct", {
-  expect_true(all(simulated_data$Treatment_Decision %in% c('yes', 'no', 'not reported')))
-})
-
+test_that("Data Cleaning Tests", {
+  # load data
+  analysis_data <- read.csv(file = here::here("data/analysis_data/lung_cancer_analysis_data.csv"))
+  
+  # load packages
+  library(tidyverse)
+  library(testthat)
+  library(here)
+  
+  # Test if the dataset has 346 entries
+  expect_equal(nrow(analysis_data), 346)
+  
+  # Test if 'Pathogenic_Stage' contains the correct categories 
+  expect_true(all(analysis_data$pathogenic_stage %in% c('Stage I', 'Stage IA', 'Stage IB', 'Stage II', 'Stage IIA', 'Stage IIB', 'Stage III', 'Stage IIIA', 'Stage IIIB', 'Stage IV')))
+  
+  # Test if 'Lymph_Node_Involvement' contains the correct categories 
+  expect_true(all(analysis_data$lymph_node_involvement %in% c('N0', 'N1', 'N2', 'NX')))
+  
+  # Test if 'Presence_of_Metastasis' contains the correct categories
+  expect_true(all(analysis_data$presence_of_distant_metastasis %in% c('MX', 'M0', 'M1', 'M1a', 'M1b')))
+  
+  # Test if 'Tumor_Size' contains the correct categories 
+  expect_true(all(analysis_data$tumor_size %in% c('T1', 'T1a', 'T1b', 'T2', 'T2a', 'T2b', 'T3', 'T4', 'TX')))
+  
+  # Test if 'Days_to_Death' is numeric 
+  expect_true(is.numeric(analysis_data$days_to_death))
+  
+  # Test if 'Treatment_Type' only contains 'Pharmaceutical Therapy, NOS' and 'Radiation Therapy, NOS'
+  expect_true(all(analysis_data$treatment_type %in% c('Pharmaceutical Therapy, NOS', 'Radiation Therapy, NOS')))
+  
+  # Test if 'Treatment_Decision" only contains 'yes' and 'no' 
+  expect_true(all(analysis_data$treatment_decision %in% c('yes', 'no')))
+}) 
 
 
