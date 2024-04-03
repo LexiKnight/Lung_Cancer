@@ -36,7 +36,6 @@ cleaned_data <- cleaned_data %>%
 cleaned_data <- cleaned_data %>%
   filter(!if_any(everything(), ~ . == "'--"))
 
-
 # clean the column names
 cleaned_data <- cleaned_data %>%
   rename(
@@ -46,6 +45,10 @@ cleaned_data <- cleaned_data %>%
     tumor_size = ajcc_pathologic_t,
     treatment_decision = treatment_or_therapy
   )
+
+# Exclude rows where treatment_decision contains "not reported" values
+cleaned_data <- cleaned_data %>%
+  filter(treatment_decision != "not reported")
 
 # view entire dataset
 print(cleaned_data, n = nrow(cleaned_data))

@@ -631,6 +631,20 @@ We first filter out rows where the "days_to_death" column is NA or cannot be con
 Then, we exclude rows where any column contains "--" values using filter() with if_any() and everything().
 This approach ensures that rows with non-numeric or NA values in the "days_to_death" column are excluded from the cleaned dataset, and rows where any column contains "--" values are also excluded completely. If you have any further questions or need additional assistance, feel free to ask!
 
+User
+Please exclude "not reported" values in the treatment_decision column
 
-
+ChatGPT
+To exclude rows where the "treatment_decision" column contains "not reported" values, you can add another filtering step after the existing cleaning steps. Here's how you can modify the code:
+# Handle missing or non-numeric values in days_to_death column
+cleaned_data <- cleaned_data %>%
+  filter(!is.na(days_to_death), !is.na(as.numeric(days_to_death)))
+# Exclude rows where any column contains "'--" values
+cleaned_data <- cleaned_data %>%
+  filter(!if_any(everything(), ~ . == "'--"))
+# Exclude rows where treatment_decision contains "not reported" values
+cleaned_data <- cleaned_data %>%
+  filter(treatment_decision != "not reported")
+This code adds a new filtering step to exclude rows where the "treatment_decision" column contains "not reported" values. After this step, the dataset will only contain rows where the "treatment_decision" column does not have "not reported" values.
+If you have any further questions or need additional assistance, feel free to ask!
 
