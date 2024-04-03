@@ -8,32 +8,12 @@
 # Pre-requisites: -
 
 
+### Steps to Download data ###
 
-#### Workspace setup ####
-# install packages 
-
-#load packages 
-
-library(tidyverse)
-library(dataverse)
-library(gutenbergr)
-library(janitor)
-library(knitr)
-library(readr)
-
-#### Download data ####
-
-lung_cancer_data <- get_dataframe_by_name(
-    filename = "Lung_Cancer_Meta.csv"
-    dataset = "https://osf.io/qk34b/"
-    server = "open.science.framework.io"
-    .f = read_csv
-  ) 
-
-
-#### Save data ####
-
-# change the_raw_data to Lung_Cancer_raw_dataset.csv
-write_csv(lung_cancer_data, "inputs/data/raw_data/Lung_Cancer_raw_dataset.csv") 
-
-      
+# 1. Go to https://osf.io/search?activeFilters=%5B%5D&sort=-relevance&view_only=
+# 2. Type in search bar "Lung Cancer"
+# 3. Select the project "Lung cancer Predictions" by Sicong Chen(Magic)
+# 4. Under files, click  plus sign on "OSF Storage (Australia - Sydney) to expand files 
+# 5. Click "Lung_Cancer_Meta.xlsx" 
+# 6. There are two tabs containing two differnt datasets, select "clinical_info" 
+# and click download the dataset as an excel file. 
