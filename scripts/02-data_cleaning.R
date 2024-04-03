@@ -8,37 +8,57 @@
 # Any other information needed? [...UPDATE THIS...]
 
 #### Workspace setup ####
+# install packages
+install.packages("readr")
+
+# load libraries 
 library(tidyverse)
+library(readr)
 
 #### Clean data ####
-raw_data <- read_csv("inputs/data/plane_data.csv")
 
-cleaned_data <-
-  raw_data |>
-  janitor::clean_names() |>
-  select(wing_width_mm, wing_length_mm, flying_time_sec_first_timer) |>
-  filter(wing_width_mm != "caw") |>
-  mutate(
-    flying_time_sec_first_timer = if_else(flying_time_sec_first_timer == "1,35",
-                                   "1.35",
-                                   flying_time_sec_first_timer)
-  ) |>
-  mutate(wing_width_mm = if_else(wing_width_mm == "490",
-                                 "49",
-                                 wing_width_mm)) |>
-  mutate(wing_width_mm = if_else(wing_width_mm == "6",
-                                 "60",
-                                 wing_width_mm)) |>
-  mutate(
-    wing_width_mm = as.numeric(wing_width_mm),
-    wing_length_mm = as.numeric(wing_length_mm),
-    flying_time_sec_first_timer = as.numeric(flying_time_sec_first_timer)
-  ) |>
-  rename(flying_time = flying_time_sec_first_timer,
-         width = wing_width_mm,
-         length = wing_length_mm
-         ) |> 
-  tidyr::drop_na()
+# read the csv file 
+raw_data <- read_csv("data/raw_data/lung_cancer_raw.csv")
+
+# check column names of raw_data
+colnames(raw_data)
+
+# select columns of interest 
+cleaned_data <- raw_data |>
+  select("days_to_death", "age_at_diagnosis", "ajcc_pathologic_m",
+         "ajcc_pathologic_n", "ajcc_pathologic_stage", "ajcc_pathologic_t",
+         "treatment_or_therapy", "treatment_type")
+
+# check data types of columns 
+str(cleaned_data)
+
+# handle missing or non-numeric values
+cleaned_data <- cleaned_data %>%
+  filter(!is.na(days_to_death), !is.na(age_at_diagnosis)) %>%
+  mutate_at(vars(days_to_death, age_at_diagnosis), as.numeric)
+
+# create new column for survival_post_diagnosis
+cleaned_data <- cleaned_data %>%
+  mutate(survival_post_diagnosis = days_to_death - age_at_diagnosis)
+
+# Delete columns "days_to_death" and "age_at_diagnosis"
+cleaned_data <- cleaned_data %>%
+  select(-c(days_to_death, age_at_diagnosis))
+
+# clean the column names
+cleaned_data <- cleaned_data %>%
+  rename(
+    lymph_node_involvement = ajcc_pathologic_n,
+    presence_of_distant_metastasis = ajcc_pathologic_m,
+    pathogenic_stage = ajcc_pathologic_stage,
+    tumor_size = ajcc_pathologic_t,
+    treatment_decision = treatment_or_therapy
+  )
+
+# view first few rows of cleaned dataset
+head(cleaned_data)
+  
+
 
 #### Save data ####
-write_csv(cleaned_data, "outputs/data/analysis_data.csv")
+write_csv(cleaned_data, "data/analysis_data/lung_cancer_analysis_data.csv")
