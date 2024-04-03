@@ -1,11 +1,10 @@
 #### Preamble ####
-# Purpose: Downloads and saves the lung cancer dataset from the OSF dataverse
-# database with the variables of interest. 
+# Purpose: Gives step by step instructions on how to access and download the 
+# lung cancer dataset from the OSF dataverse database. 
 # Author: Lexi Knight
 # Date: 28 March 2024
 # Contact: Lexi.Knight@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: -
 
 
 ### Steps to Download data ###

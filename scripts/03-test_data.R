@@ -4,14 +4,14 @@
 # Date: 28 March 2024
 # Contact: lexi.knight@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: run 01-download_data.R as well as 02-data_cleaning.R in scripts in order to obtain raw and cleaned data. 
+# Pre-requisites: follow 01-download_data.R and run 02-data_cleaning.R in scripts in order to obtain raw and cleaned data. 
 
 
 #### Workspace setup ####
 
 #install packages 
-install.packages("tidyverse")
-install.packages("testthat")
+#install.packages("tidyverse")
+#install.packages("testthat")
 
 # load packages
 library(tidyverse)
@@ -19,7 +19,6 @@ library(testthat)
 
 
 #### Test data ####
-
 
 # Test if the dataset has 981 entries 
 test_that("Dataset has 981 entries", {
@@ -53,11 +52,6 @@ test_that("Age at diagnosis variable is numeric", {
 
 # Test if 'Days_to_Death' is numeric 
 class(simulated_data$Days_to_Death) == "numeric"
-
-# Test if 'Race' contains the correct categories 
-test_that("Race variable is correct", {
-  expect_true(all(simulated_data$Race %in% c('not reported', 'white','american indian or alaska native', 'asian', 'black or african american')))
-})
 
 # Test if 'Treatment_Type' only contains 'Pharmaceutical Therapy, NOS' and 'Radiation Therapy, NOS'
 test_that("Treatment type variable is correct", {

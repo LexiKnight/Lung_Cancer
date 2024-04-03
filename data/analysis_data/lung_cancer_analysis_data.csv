@@ -1,982 +1,383 @@
-presence_of_distant_metastasis,lymph_node_involvement,pathogenic_stage,tumor_size,treatment_decision,treatment_type,survival_post_diagnosis
-M0,N1,Stage IIA,T1,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2b,yes,"Radiation Therapy, NOS",NA
-MX,N0,Stage IB,T2a,yes,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,yes,"Pharmaceutical Therapy, NOS",-24926
-M0,N2,Stage IIIA,T2a,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",-21864
-M0,N2,Stage IIIA,T1,yes,"Pharmaceutical Therapy, NOS",-18118
-M0,NX,Stage IA,T1,not reported,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",-24411
-MX,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",-25865
-M0,N0,Stage IB,T2,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIA,T2a,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1b,no,"Radiation Therapy, NOS",NA
-M1a,N2,Stage IV,T2a,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",-25364
-M0,NX,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M1,N0,Stage IV,T2,not reported,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",-22200
-MX,N2,Stage IIIA,T1b,yes,"Radiation Therapy, NOS",NA
-MX,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",NA
-M1b,N1,Stage IV,T1a,no,"Pharmaceutical Therapy, NOS",-14659
-MX,NX,Stage IB,T2,yes,"Radiation Therapy, NOS",-30247
-MX,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS",-25101
-MX,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,no,"Radiation Therapy, NOS",-26099
-M0,N0,Stage IIB,T3,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N1,Stage IIA,T1,yes,"Radiation Therapy, NOS",NA
-MX,N0,Stage IA,T1b,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIIA,T3,yes,"Pharmaceutical Therapy, NOS",-20692
-MX,N0,Stage IIA,T2b,not reported,"Pharmaceutical Therapy, NOS",NA
-M1b,N2,Stage IV,T3,no,"Pharmaceutical Therapy, NOS",-14623
-M1,N0,Stage IV,T2,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS",-17866
-MX,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",-22662
-M0,N1,Stage IIIA,T3,not reported,"Pharmaceutical Therapy, NOS",-28947
-M0,N1,Stage IIA,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage I,T1,no,"Pharmaceutical Therapy, NOS",-30667
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS",-23692
-M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",-26463
-M0,N0,Stage IA,T1b,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIA,T1,yes,"Radiation Therapy, NOS",-17816
-M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS",-26219
-M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2b,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M1,N0,Stage IV,T2,yes,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIA,T1,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage I,T1,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",-23243
-M0,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,yes,"Pharmaceutical Therapy, NOS",-21298
-MX,N1,Stage IIB,T2b,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIA,T3,not reported,"Radiation Therapy, NOS",-25888
-M0,N0,Stage IIIA,T4,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,not reported,"Radiation Therapy, NOS",NA
-MX,N2,Stage IIIA,T1,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,not reported,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",NA
-M0,NX,Stage IA,T1b,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-MX,N1,Stage IIA,T1b,no,"Radiation Therapy, NOS",-21319
-M0,N0,Stage IA,T1b,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,'--,T1a,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIA,T2a,no,"Radiation Therapy, NOS",-25913
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",-27908
-M0,N1,Stage IIIA,T3,yes,"Radiation Therapy, NOS",-26583
-M0,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-MX,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS",-24309
-M0,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage IA,T1,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIA,T2a,no,"Pharmaceutical Therapy, NOS",-29000
-'--,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-MX,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",-20229
-MX,N0,Stage IIB,T3,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",-23396
-MX,N0,Stage IIB,T3,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N2,Stage IIIA,T1,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIIA,T4,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,yes,"Radiation Therapy, NOS",-22567
-M0,N0,Stage IB,T2,yes,"Radiation Therapy, NOS",-21711
-M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2a,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,not reported,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",-21225
-MX,N1,Stage IIIA,T3,yes,"Pharmaceutical Therapy, NOS",-27506
-M0,N0,Stage IB,T2,not reported,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,not reported,"Pharmaceutical Therapy, NOS",NA
-MX,N2,Stage IIIA,T2,no,"Radiation Therapy, NOS",-24597
-M0,N0,Stage IB,T2a,yes,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIA,T2a,yes,"Pharmaceutical Therapy, NOS",-18925
-M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",-27927
-M0,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T3,yes,"Radiation Therapy, NOS",-28554
-M0,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",-27962
-M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,yes,"Radiation Therapy, NOS",-15107
-M0,N1,Stage IIA,T2a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1b,yes,"Radiation Therapy, NOS",NA
-'--,NX,Stage IA,T1,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage IIB,T3,no,"Radiation Therapy, NOS",-22250
-M0,N1,Stage IIA,T2a,no,"Radiation Therapy, NOS",NA
-M1b,N0,Stage IV,T2b,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IA,T1,yes,"Pharmaceutical Therapy, NOS",-17664
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",-21671
-M0,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS",-25436
-M0,N2,Stage IIIA,T2,yes,"Radiation Therapy, NOS",-26786
-M0,N0,Stage IA,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,'--,T3,not reported,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",-24988
-M0,N0,Stage IA,T2,no,"Pharmaceutical Therapy, NOS",NA
-M1b,N1,Stage IV,T1a,yes,"Radiation Therapy, NOS",-21716
-M0,N0,Stage IA,T1a,yes,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,yes,"Radiation Therapy, NOS",NA
-M0,N0,Stage IIA,T2b,no,"Radiation Therapy, NOS",-24561
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",-28152
-M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS",-25003
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",-22435
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,not reported,"Pharmaceutical Therapy, NOS",-23102
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-MX,N2,Stage IIIA,T1,no,"Pharmaceutical Therapy, NOS",-26203
-M0,N1,Stage IIIB,T4,not reported,"Pharmaceutical Therapy, NOS",-27791
-M0,N0,Stage IB,T2a,not reported,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1b,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIA,T1,yes,"Radiation Therapy, NOS",-27158
-M0,N0,Stage IA,T1,yes,"Radiation Therapy, NOS",-26563
-MX,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",-27198
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS",-24908
-MX,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1b,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,no,"Pharmaceutical Therapy, NOS",-25314
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",-15622
-M0,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",NA
-MX,N1,Stage IIB,T2,yes,"Radiation Therapy, NOS",-19999
-MX,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage IA,T1b,yes,"Radiation Therapy, NOS",-22157
-M0,N0,Stage IB,T2a,not reported,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M1,N1,Stage IV,T4,yes,"Pharmaceutical Therapy, NOS",-18254
-M0,N0,'--,T2a,no,"Radiation Therapy, NOS",-27343
-M0,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage IA,T1,no,"Radiation Therapy, NOS",-25425
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIA,T2b,yes,"Pharmaceutical Therapy, NOS",NA
-M1,NX,Stage IV,TX,yes,"Radiation Therapy, NOS",-26686
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",-18095
-M0,N0,Stage IB,T2,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1b,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS",-24133
-M0,N2,Stage IIIB,T4,yes,"Radiation Therapy, NOS",-23984
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M1,N2,Stage IV,T4,yes,"Pharmaceutical Therapy, NOS",-21688
-M0,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",-21358
-MX,N0,Stage IA,T1,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IIA,T2b,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N1,Stage IIA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-MX,N2,Stage IIIA,T3,yes,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M1,N2,Stage IV,T2a,yes,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS",NA
-MX,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIIB,T4,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIA,T2a,yes,"Pharmaceutical Therapy, NOS",-24673
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",-18338
-M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIB,T4,no,"Radiation Therapy, NOS",-21563
-M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS",-20234
-M0,N0,Stage IA,T1b,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIB,T4,no,"Radiation Therapy, NOS",-20789
-M0,N0,Stage IA,T1b,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,not reported,"Radiation Therapy, NOS",NA
-MX,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M1,N0,Stage IV,T1,yes,"Radiation Therapy, NOS",NA
-MX,N0,Stage IIB,T3,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M1,N0,Stage IV,T2,no,"Pharmaceutical Therapy, NOS",-27436
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-MX,N1,Stage IIA,T2a,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,no,"Pharmaceutical Therapy, NOS",-18673
-M0,N1,Stage IIIB,T4,yes,"Pharmaceutical Therapy, NOS",-25943
-M0,N2,Stage IIIA,T1,no,"Radiation Therapy, NOS",-28397
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",-25055
-MX,N0,Stage IIB,T3,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIB,T3,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,not reported,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",-21896
-M0,N0,Stage IIA,T2b,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS",-27854
-MX,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",-16202
-M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",-25728
-MX,NX,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M1,N0,Stage IV,T2,no,"Radiation Therapy, NOS",-25614
-M0,N0,Stage IIIA,T4,no,"Radiation Therapy, NOS",-25996
-M0,N0,Stage IIIA,T4,not reported,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS",-24223
-M0,N2,Stage IIIA,T3,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,no,"Radiation Therapy, NOS",NA
-MX,N1,Stage IIA,T1b,no,"Radiation Therapy, NOS",-26972
-M0,N2,Stage IIIA,T2b,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,yes,"Pharmaceutical Therapy, NOS",-25172
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T3,not reported,"Radiation Therapy, NOS",-27306
-M0,N0,Stage IB,T2,not reported,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIB,T4,yes,"Pharmaceutical Therapy, NOS",-23619
-M0,N2,Stage IIIA,T3,no,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IIB,T3,not reported,"Radiation Therapy, NOS",NA
-M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS",-19754
-M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS",-23185
-M0,N0,Stage IIA,T2b,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIB,T1,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IIB,T3,no,"Pharmaceutical Therapy, NOS",-26844
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1b,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIA,T1b,not reported,"Radiation Therapy, NOS",NA
-MX,N2,Stage IIIA,T2a,yes,"Radiation Therapy, NOS",NA
-MX,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,yes,"Pharmaceutical Therapy, NOS",-25156
-M0,N1,Stage IIA,T2a,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIA,T2b,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS",-17862
-M0,N0,Stage IB,T2,yes,"Radiation Therapy, NOS",-26594
-M1,N0,Stage IV,T2,yes,"Radiation Therapy, NOS",-13751
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIB,T2b,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2b,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIA,T2a,yes,"Radiation Therapy, NOS",-16465
-M0,N1,Stage IIA,T2a,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS",-20947
-MX,N0,Stage IIB,T3,not reported,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIA,T2b,yes,"Pharmaceutical Therapy, NOS",-21051
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",-22596
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",-17712
-M0,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS",-25676
-MX,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T3,not reported,"Pharmaceutical Therapy, NOS",-25143
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,not reported,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IA,T1,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IIB,T3,yes,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",-18735
-M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-MX,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",-17969
-MX,N1,Stage II,T1,no,"Pharmaceutical Therapy, NOS",-22693
-M0,N2,Stage IIIA,T2,yes,"Radiation Therapy, NOS",-16956
-M0,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIA,T2a,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N1,Stage IIA,T2a,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IA,T1,yes,"Radiation Therapy, NOS",NA
-M1b,NX,Stage IV,TX,yes,"Radiation Therapy, NOS",NA
-MX,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",NA
-MX,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",NA
-'--,N2,Stage IIIA,T2b,no,"Radiation Therapy, NOS",NA
-MX,N1,Stage IIA,T2a,yes,"Pharmaceutical Therapy, NOS",NA
-M1,N1,Stage IV,T4,not reported,"Pharmaceutical Therapy, NOS",-24015
-M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS",-21663
-M0,N0,Stage IIIB,T4,no,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS",-19753
-M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS",-24240
-M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage I,T1a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,not reported,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,yes,"Pharmaceutical Therapy, NOS",-22708
-MX,N0,Stage IB,T2,no,"Radiation Therapy, NOS",-27583
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",-23708
-M0,N0,Stage IB,T2,yes,"Pharmaceutical Therapy, NOS",-23399
-M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",-24424
-MX,N1,Stage IIA,T1b,no,"Radiation Therapy, NOS",-25918
-M0,N0,Stage IB,T2,not reported,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,yes,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,yes,"Radiation Therapy, NOS",-30611
-M0,N1,Stage IIA,T2a,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS",-23542
-MX,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",-27299
-MX,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,not reported,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1b,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage I,T2,no,"Radiation Therapy, NOS",NA
-MX,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",NA
-M0,NX,Stage IA,T1,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IIA,T2b,yes,"Pharmaceutical Therapy, NOS",-17491
-MX,N0,Stage IB,T2a,yes,"Radiation Therapy, NOS",-23965
-MX,N0,Stage IIA,T2b,no,"Radiation Therapy, NOS",-28629
-M0,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",-19874
-MX,NX,Stage IV,TX,no,"Pharmaceutical Therapy, NOS",-17702
-MX,N0,Stage IB,T2a,yes,"Pharmaceutical Therapy, NOS",NA
-M1,N1,Stage IV,T4,no,"Pharmaceutical Therapy, NOS",-21744
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1b,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",-21765
-M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,yes,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,yes,"Radiation Therapy, NOS",-27008
-M1,N1,Stage IV,T2,no,"Radiation Therapy, NOS",-14061
-MX,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIB,T4,not reported,"Pharmaceutical Therapy, NOS",-27971
-M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-MX,N2,Stage IIIA,T2,not reported,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS",-21543
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,no,"Radiation Therapy, NOS",NA
-M0,N1,'--,T2,yes,"Pharmaceutical Therapy, NOS",-18787
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,yes,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIA,T2a,no,"Radiation Therapy, NOS",NA
-M0,N0,'--,T2b,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T1b,no,"Pharmaceutical Therapy, NOS",-21994
-M0,N2,Stage IIIA,T2,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIA,T1b,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T2b,yes,"Radiation Therapy, NOS",NA
-M1,N0,Stage IV,T2,no,"Radiation Therapy, NOS",-22948
-M0,N0,'--,T2b,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIA,T3,not reported,"Radiation Therapy, NOS",-18644
-M0,N1,Stage IIA,T1b,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T2a,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",-24993
-M0,N0,Stage IA,T1,yes,"Radiation Therapy, NOS",-30957
-MX,N0,Stage IA,T1b,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIA,T2a,yes,"Pharmaceutical Therapy, NOS",-26136
-M0,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",-22565
-'--,'--,'--,T2b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS",NA
-MX,N2,Stage IIIA,T1a,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IIB,T3,yes,"Radiation Therapy, NOS",NA
-MX,N0,Stage IA,T1,no,"Radiation Therapy, NOS",-19470
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",-15873
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",-25640
-M0,N0,Stage IA,T1b,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",-25414
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",-30776
-M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-MX,N1,Stage IIA,T2a,no,"Pharmaceutical Therapy, NOS",-27858
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",-24097
-M0,N1,Stage IIA,T1b,no,"Radiation Therapy, NOS",-22363
-M0,N2,Stage IIIA,T3,not reported,"Radiation Therapy, NOS",-21791
-MX,N0,Stage IB,T2,yes,"Pharmaceutical Therapy, NOS",NA
-M1,N2,Stage IV,T2,not reported,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IA,T1,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS",-20442
-MX,N2,Stage IIIA,T3,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",NA
-MX,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS",-18060
-MX,N2,Stage IIIA,T1a,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",NA
-M0,N3,Stage IIIB,T4,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N2,Stage IIIA,T2,yes,"Radiation Therapy, NOS",-18502
-M0,N1,Stage IIA,T1,no,"Radiation Therapy, NOS",-27095
-M0,N0,Stage IIB,T3,yes,"Pharmaceutical Therapy, NOS",-14822
-MX,N0,Stage IB,T2,yes,"Radiation Therapy, NOS",NA
-MX,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",NA
-M1,N0,Stage IV,T1,yes,"Radiation Therapy, NOS",-21051
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M1,NX,Stage IV,T2,yes,"Pharmaceutical Therapy, NOS",-20575
-M0,N1,Stage IIA,T1b,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,yes,"Radiation Therapy, NOS",-25491
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-MX,N0,'--,T4,no,"Radiation Therapy, NOS",NA
-MX,N3,Stage IIIB,T1a,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",-28637
-M0,N0,Stage IA,T1,not reported,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIA,T2b,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IIB,T3,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",-26184
-MX,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",-22869
-M0,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IIA,T2b,no,"Radiation Therapy, NOS",-19731
-MX,N0,Stage IA,T1a,yes,"Radiation Therapy, NOS",NA
-MX,N1,Stage IIA,T1a,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IIA,T2b,no,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",-31992
-M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIA,T1,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage IIB,T3,no,"Pharmaceutical Therapy, NOS",-27443
-M0,N0,Stage I,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T3,yes,"Radiation Therapy, NOS",-16249
-M0,N0,Stage IIIB,T4,no,"Pharmaceutical Therapy, NOS",-19598
-M0,N0,Stage IB,T2,not reported,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIA,T1b,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS",-27962
-M0,N2,Stage IIIA,T2a,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",-22707
-M0,N2,Stage IIIA,T2,yes,"Radiation Therapy, NOS",-23742
-M0,N1,Stage IIA,T2a,not reported,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",-22507
-M0,N0,Stage IIB,T3,yes,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIA,T2a,no,"Pharmaceutical Therapy, NOS",-24814
-M0,N1,Stage IIA,T2a,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage IA,T1,yes,"Radiation Therapy, NOS",-20114
-M0,N0,Stage IA,T1b,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIA,T1b,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIIA,T3,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IIB,T3,no,"Pharmaceutical Therapy, NOS",-24613
-M0,N0,Stage IB,T2a,yes,"Pharmaceutical Therapy, NOS",-25209
-M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",-25773
-M0,N0,Stage IIA,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS",-29681
-M0,N1,Stage IIA,T2a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIA,T2b,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,not reported,"Pharmaceutical Therapy, NOS",NA
-MX,N1,Stage IIA,T2a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage II,T2a,not reported,"Radiation Therapy, NOS",-25643
-M1,N1,Stage IV,T2,yes,"Pharmaceutical Therapy, NOS",-22922
-M0,N0,Stage IIB,T3,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N2,'--,T2,yes,"Pharmaceutical Therapy, NOS",-24052
-M0,N0,Stage IIIA,T4,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IIA,T2b,no,"Radiation Therapy, NOS",NA
-M0,NX,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",-32872
-M0,N1,Stage IIA,T1b,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIA,T2a,no,"Pharmaceutical Therapy, NOS",-26332
-M0,N1,Stage IIA,T1a,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS",-24671
-MX,N2,Stage IIIA,T2a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N3,Stage IIIB,T1,not reported,"Pharmaceutical Therapy, NOS",-26630
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",-28583
-M0,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IIB,T3,not reported,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1b,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",-23084
-MX,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS",-27920
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",-23256
-M0,N0,Stage IIA,T2b,yes,"Pharmaceutical Therapy, NOS",-30338
-MX,N0,Stage IIB,T3,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,yes,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage IIA,T2b,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",-25329
-M0,N1,Stage IIIB,T4,no,"Pharmaceutical Therapy, NOS",-26495
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIIA,T4,not reported,"Radiation Therapy, NOS",-25880
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage IB,T2a,yes,"Radiation Therapy, NOS",-23902
-M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",-26364
-M0,N1,Stage IIB,T2,not reported,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-'--,N0,Stage IB,T2,no,"Radiation Therapy, NOS",-26887
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",-25356
-M0,N0,Stage IIB,T3,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",-21554
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",-20938
-M0,N1,Stage IIIA,T3,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,yes,"Radiation Therapy, NOS",-25156
-MX,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,yes,"Radiation Therapy, NOS",-27649
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",-24007
-M0,N0,Stage IIA,T2b,yes,"Radiation Therapy, NOS",-26501
-MX,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2a,yes,"Pharmaceutical Therapy, NOS",-18120
-M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M1b,N0,Stage IV,T2a,yes,"Radiation Therapy, NOS",-24516
-M0,N0,Stage IIA,T2,no,"Pharmaceutical Therapy, NOS",-27882
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",-27651
-M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIA,T1,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIB,T4,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,not reported,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIIA,T3,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N1,Stage IIIA,T3,yes,"Pharmaceutical Therapy, NOS",-23873
-M0,N2,Stage IIIA,T2,not reported,"Pharmaceutical Therapy, NOS",NA
-'--,N2,Stage IIIA,T3,no,"Pharmaceutical Therapy, NOS",-20412
-M0,N0,Stage IIA,T2b,no,"Radiation Therapy, NOS",-21549
-M0,N1,Stage IIA,T2a,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIA,T1,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS",-25432
-M0,N3,Stage IIIB,T2,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2b,no,"Pharmaceutical Therapy, NOS",-22304
-MX,N2,Stage III,T4,yes,"Radiation Therapy, NOS",-20795
-M0,N0,Stage IIIA,T4,not reported,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",-28954
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS",-17784
-M0,N0,Stage IA,T1a,not reported,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,not reported,"Pharmaceutical Therapy, NOS",-25764
-M0,N0,Stage IB,T1b,no,"Radiation Therapy, NOS",-25431
-M0,N1,Stage IIIB,T4,not reported,"Radiation Therapy, NOS",-24805
-M0,N1,Stage IIA,T1,yes,"Radiation Therapy, NOS",NA
-M0,N0,Stage IIIB,T4,not reported,"Radiation Therapy, NOS",-27300
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",-20490
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",-27014
-M0,NX,Stage IB,T2a,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS",-16275
-M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2a,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",-26479
-M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS",NA
-M0,NX,Stage IB,T2,not reported,"Pharmaceutical Therapy, NOS",-26228
-M0,N1,Stage IIA,T1b,no,"Radiation Therapy, NOS",-25227
-M0,NX,Stage IA,T1a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS",-21312
-M0,N1,Stage IIA,T1,no,"Pharmaceutical Therapy, NOS",-25499
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",-25224
-M0,N0,Stage IIA,T2b,no,"Radiation Therapy, NOS",-16603
-M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",-22937
-MX,N1,Stage IIIA,T3,yes,"Radiation Therapy, NOS",-25708
-M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,yes,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",-26679
-MX,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",-25539
-MX,N1,Stage IIA,T2a,yes,"Pharmaceutical Therapy, NOS",-22098
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,yes,"Radiation Therapy, NOS",NA
-MX,N0,Stage IA,T1b,no,"Radiation Therapy, NOS",NA
-MX,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS",-28388
-M0,N1,Stage IIB,T2,not reported,"Radiation Therapy, NOS",NA
-MX,N0,Stage IB,T2,no,"Radiation Therapy, NOS",-18579
-M0,N1,Stage IIIA,T3,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIA,T2a,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",-25110
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",-20572
-MX,N2,Stage IIIA,T2b,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N1,Stage IIA,T2a,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,yes,"Pharmaceutical Therapy, NOS",-22676
-MX,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIIA,T3,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIA,T1b,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IIA,T2b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T3,not reported,"Pharmaceutical Therapy, NOS",-20645
-M0,N2,Stage IIIA,T2,yes,"Radiation Therapy, NOS",-20425
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIIA,T3,yes,"Radiation Therapy, NOS",-21819
-MX,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS",-20720
-MX,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS",-20822
-M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IB,T2a,yes,"Radiation Therapy, NOS",-19691
-M0,N1,Stage IIB,T2b,yes,"Pharmaceutical Therapy, NOS",-26404
-M0,N1,Stage IIB,T2b,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1,yes,"Pharmaceutical Therapy, NOS",-17915
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",-23809
-M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",-24010
-MX,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIA,T1,no,"Radiation Therapy, NOS",-25067
-MX,N0,Stage IA,T1,yes,"Pharmaceutical Therapy, NOS",-20561
-M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS",-25872
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",-22709
-M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1a,not reported,"Radiation Therapy, NOS",-25432
-MX,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2a,yes,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IIB,T3,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N1,Stage IIA,T2a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IIIA,T3,no,"Pharmaceutical Therapy, NOS",-25211
-M0,N3,Stage IIIB,T2,not reported,"Radiation Therapy, NOS",-23985
-MX,N0,Stage IIA,T2b,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,not reported,"Radiation Therapy, NOS",NA
-MX,N1,Stage III,T3,yes,"Radiation Therapy, NOS",-16316
-MX,N0,Stage IB,T2a,not reported,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T2a,yes,"Pharmaceutical Therapy, NOS",-21271
-MX,N1,Stage IIIA,T4,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IB,T2,no,"Radiation Therapy, NOS",-30886
-MX,N1,Stage IIIA,T3,yes,"Pharmaceutical Therapy, NOS",-23846
-M0,N2,Stage IIIA,T1b,yes,"Pharmaceutical Therapy, NOS",-23973
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIB,T4,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",-26177
-M0,N1,Stage IIIA,T3,no,"Radiation Therapy, NOS",-25486
-MX,N0,Stage IIA,T2b,yes,"Pharmaceutical Therapy, NOS",NA
-MX,NX,Stage IA,T1b,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",-21706
-M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",-23219
-M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,not reported,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIB,T3,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-'--,N1,Stage IIIB,T4,no,"Radiation Therapy, NOS",-24042
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIA,T2,no,"Pharmaceutical Therapy, NOS",-20260
-M0,N0,Stage IIA,T2b,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T3,no,"Radiation Therapy, NOS",-28627
-M0,N0,Stage IIA,T2b,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIA,T1b,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage IIA,T2b,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIA,T2a,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIIA,T3,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIB,T3,yes,"Pharmaceutical Therapy, NOS",-24246
-M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS",-22934
-M0,N2,Stage IIIA,T3,yes,"Radiation Therapy, NOS",-25333
-M0,N0,Stage IA,T1a,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1b,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N1,Stage IIB,T2b,not reported,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T1,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage IIA,T2b,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IB,T2a,not reported,"Radiation Therapy, NOS",-22125
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",-25091
-M0,N1,Stage IIA,T1b,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS",-28844
-MX,N0,Stage IA,T1b,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIA,T1,no,"Radiation Therapy, NOS",-25603
-MX,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage IB,T2,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IIIB,T4,no,"Pharmaceutical Therapy, NOS",-26900
-M0,N1,Stage IIIA,T3,no,"Radiation Therapy, NOS",-20642
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",NA
-MX,N1,Stage IIA,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",-24541
-M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",-29462
-M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1,yes,"Radiation Therapy, NOS",-17253
-M0,N0,Stage IIB,T3,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N3,Stage IIIB,T2,yes,"Radiation Therapy, NOS",NA
-MX,N0,Stage IB,T2,no,"Radiation Therapy, NOS",-21406
-M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS",-20812
-M0,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IIA,T2b,no,"Pharmaceutical Therapy, NOS",-27237
-M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS",-23342
-MX,N0,Stage IA,T1,no,"Radiation Therapy, NOS",-24993
-M0,N1,Stage IIA,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS",-28857
-MX,N1,Stage IIB,T2,yes,"Radiation Therapy, NOS",-22621
-M0,N0,Stage IB,T2,not reported,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIB,T3,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS",-22465
-MX,N1,Stage IIA,T1a,no,"Radiation Therapy, NOS",-24577
-M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS",-24892
-M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",-22075
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",-22309
-M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIB,T3,not reported,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IIB,T3,yes,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS",-22489
-M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS",-25575
-MX,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",-24438
-M0,N1,Stage IIB,T2b,not reported,"Radiation Therapy, NOS",-27223
-MX,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIIA,T3,no,"Radiation Therapy, NOS",-26455
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IIB,T3,no,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IIB,T3,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,not reported,"Pharmaceutical Therapy, NOS",-25263
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",-22198
-M0,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",-26265
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T3,not reported,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,not reported,"Radiation Therapy, NOS",NA
-M0,N0,Stage IIIA,T4,yes,"Pharmaceutical Therapy, NOS",-25964
-M0,N0,Stage IIB,T3,no,"Pharmaceutical Therapy, NOS",-28914
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage II,T2,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIA,T2,no,"Radiation Therapy, NOS",-14612
-M0,N0,Stage IA,T1b,yes,"Pharmaceutical Therapy, NOS",-20135
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",-26097
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage IA,T1,no,"Radiation Therapy, NOS",-28374
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",-21537
-MX,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIA,T2b,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",-28693
-M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",-24058
-MX,N0,Stage IA,T1b,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",-24064
-M0,N0,Stage IA,T1a,no,"Radiation Therapy, NOS",-28205
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",-23089
-M0,N0,Stage IB,T2,not reported,"Pharmaceutical Therapy, NOS",NA
-MX,N1,Stage IIB,T2b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIA,T2a,no,"Radiation Therapy, NOS",-26553
-M0,N1,Stage IIB,T2a,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",-21245
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,not reported,"Pharmaceutical Therapy, NOS",-27067
-M0,N1,Stage IIA,T2a,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,no,"Radiation Therapy, NOS",-23537
-MX,N0,'--,T2b,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",-21369
-M0,N1,Stage IIA,T2a,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIIA,T3,no,"Pharmaceutical Therapy, NOS",-24936
-M0,N1,Stage IIIA,T3,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIA,T2a,not reported,"Radiation Therapy, NOS",-25698
-M0,N1,Stage IIIA,T3,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IIB,T3,no,"Radiation Therapy, NOS",-26814
-M0,N0,Stage IA,T1a,not reported,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIB,T2,not reported,"Radiation Therapy, NOS",NA
-MX,N0,Stage I,T2,no,"Pharmaceutical Therapy, NOS",-27514
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",-23475
-M0,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,no,"Radiation Therapy, NOS",-21195
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIA,T2b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS",NA
-MX,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",-21606
-M0,N1,Stage IIA,T2a,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N3,Stage IIIB,T2,not reported,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,yes,"Pharmaceutical Therapy, NOS",-25627
-M0,N0,Stage IA,T1b,not reported,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T2,no,"Radiation Therapy, NOS",-20836
-MX,N2,Stage IIIA,T1,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIIA,T3,yes,"Radiation Therapy, NOS",-21681
-MX,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIB,T2b,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIIA,T3,no,"Radiation Therapy, NOS",-24627
-M0,N0,Stage IIB,T3,not reported,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIB,T3,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",-26198
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",-26686
-M0,N0,Stage I,T1,no,"Radiation Therapy, NOS",-24667
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",-26393
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIA,T2b,no,"Pharmaceutical Therapy, NOS",-27318
-MX,N0,Stage IB,T2a,not reported,"Radiation Therapy, NOS",NA
-M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",-29553
-MX,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIB,T3,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2b,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,yes,"Pharmaceutical Therapy, NOS",-21395
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS",-23589
-M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS",-22106
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",-26797
-M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,yes,"Radiation Therapy, NOS",-25867
-M0,N0,Stage IA,T1b,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",-27447
-M0,N1,Stage IIA,T2a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IIB,T3,yes,"Radiation Therapy, NOS",-28332
-M0,N0,Stage IIB,T3,yes,"Radiation Therapy, NOS",-18228
-M0,N0,Stage IIB,T3,yes,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",-29300
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",-24254
-'--,N0,Stage IB,T2,not reported,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",-24106
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,not reported,"Pharmaceutical Therapy, NOS",-9356
-M0,N1,Stage IIIA,T3,yes,"Radiation Therapy, NOS",NA
-MX,N0,Stage IA,T1b,not reported,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",-22910
-M0,N2,Stage IIIA,T2,yes,"Radiation Therapy, NOS",-26969
-M0,N0,Stage IA,T1b,not reported,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IIB,T3,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS",-25546
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS",-25494
-M0,N1,Stage IIA,T2a,no,"Radiation Therapy, NOS",NA
-M0,N2,Stage IIIB,T4,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIIA,T4,no,"Radiation Therapy, NOS",-27655
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",NA
-M1,N0,Stage IV,T2,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage I,T2,no,"Radiation Therapy, NOS",-22895
-M0,N1,Stage IIIA,T3,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",-26826
-M0,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage II,T3,no,"Pharmaceutical Therapy, NOS",-26114
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS",NA
-M0,N0,Stage IIA,T2b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",-29958
-M0,N0,Stage IIIB,T4,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIIB,T4,not reported,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS",-25228
-M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2a,not reported,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-MX,N0,Stage IIA,T2b,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,'--,T3,no,"Radiation Therapy, NOS",-26893
-M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS",-26004
-M0,N0,Stage IIA,T2b,no,"Pharmaceutical Therapy, NOS",-26889
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1b,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIB,T2,not reported,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIA,T1a,yes,"Pharmaceutical Therapy, NOS",-26536
-M0,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIB,T4,no,"Pharmaceutical Therapy, NOS",-20730
-MX,N0,Stage IA,T1b,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIIA,T3,no,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIB,T2,not reported,"Pharmaceutical Therapy, NOS",-24904
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",-21535
-M0,N0,Stage IIA,T3,no,"Pharmaceutical Therapy, NOS",NA
-MX,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-MX,N1,Stage IIB,T2b,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS",-21063
-M0,N1,Stage IIB,T2b,yes,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IIIA,T3,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IIB,T3,yes,"Radiation Therapy, NOS",-21659
-M0,N1,Stage IIA,T1b,yes,"Pharmaceutical Therapy, NOS",-28076
-M0,N1,Stage IIA,T2a,not reported,"Radiation Therapy, NOS",NA
-M0,N1,Stage IIA,T2a,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2,not reported,"Pharmaceutical Therapy, NOS",-19634
-M0,N0,Stage IB,T2,yes,"Pharmaceutical Therapy, NOS",-18680
-M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",-24516
-MX,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIIA,T3,yes,"Pharmaceutical Therapy, NOS",-21008
-M1,N1,Stage IV,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIIB,T4,not reported,"Pharmaceutical Therapy, NOS",NA
-M1a,N0,Stage IV,T4,no,"Pharmaceutical Therapy, NOS",-24501
-M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",-24138
-M0,N0,Stage IIB,T3,no,"Pharmaceutical Therapy, NOS",NA
-M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS",-23646
-M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIA,T1a,no,"Radiation Therapy, NOS",NA
-MX,N1,Stage III,T3,no,"Pharmaceutical Therapy, NOS",-25871
-MX,N0,Stage IB,T2,no,"Radiation Therapy, NOS",-23972
-M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS",-26378
-M0,N1,Stage IIB,T2b,no,"Pharmaceutical Therapy, NOS",NA
-M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS",NA
-M0,N2,Stage IIIA,T2a,no,"Pharmaceutical Therapy, NOS",-29834
-M1,N1,Stage IV,T4,no,"Radiation Therapy, NOS",-26222
-M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS",NA
-M0,N0,'--,T4,yes,"Radiation Therapy, NOS",NA
-M1,NX,Stage IV,T3,no,"Radiation Therapy, NOS",-27454
-MX,N0,Stage IA,T1b,no,"Radiation Therapy, NOS",NA
-M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS",NA
+days_to_death,presence_of_distant_metastasis,lymph_node_involvement,pathogenic_stage,tumor_size,treatment_decision,treatment_type
+557,M0,N0,Stage IB,T2a,yes,"Pharmaceutical Therapy, NOS"
+550,MX,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS"
+1379,M0,N2,Stage IIIA,T1,yes,"Pharmaceutical Therapy, NOS"
+409,MX,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS"
+33,MX,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS"
+626,M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS"
+428,M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS"
+607,M1b,N1,Stage IV,T1a,no,"Pharmaceutical Therapy, NOS"
+987,MX,NX,Stage IB,T2,yes,"Radiation Therapy, NOS"
+321,M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS"
+173,M0,N2,Stage IIIA,T2,no,"Radiation Therapy, NOS"
+922,M0,N1,Stage IIIA,T3,yes,"Pharmaceutical Therapy, NOS"
+58,M1b,N2,Stage IV,T3,no,"Pharmaceutical Therapy, NOS"
+896,M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS"
+503,MX,N0,Stage IA,T1a,no,"Radiation Therapy, NOS"
+121,M0,N1,Stage IIIA,T3,not reported,"Pharmaceutical Therapy, NOS"
+22,M0,N0,Stage I,T1,no,"Pharmaceutical Therapy, NOS"
+1171,M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS"
+760,M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS"
+869,MX,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS"
+336,M0,N2,Stage IIIA,T1,yes,"Radiation Therapy, NOS"
+1235,M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS"
+1197,M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS"
+808,M0,N0,Stage IB,T2a,yes,"Pharmaceutical Therapy, NOS"
+593,M0,N2,Stage IIIA,T3,not reported,"Radiation Therapy, NOS"
+574,MX,N1,Stage IIA,T1b,no,"Radiation Therapy, NOS"
+87,M0,N1,Stage IIA,T2a,no,"Radiation Therapy, NOS"
+1600,M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS"
+268,M0,N1,Stage IIIA,T3,yes,"Radiation Therapy, NOS"
+464,MX,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS"
+124,M0,N1,Stage IIA,T2a,no,"Pharmaceutical Therapy, NOS"
+1499,MX,N1,Stage IIB,T2,no,"Radiation Therapy, NOS"
+1421,M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS"
+1215,M0,N0,Stage IB,T2,yes,"Radiation Therapy, NOS"
+210,M0,N0,Stage IB,T2,yes,"Radiation Therapy, NOS"
+666,M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS"
+952,MX,N1,Stage IIIA,T3,yes,"Pharmaceutical Therapy, NOS"
+905,MX,N2,Stage IIIA,T2,no,"Radiation Therapy, NOS"
+376,M0,N1,Stage IIA,T2a,yes,"Pharmaceutical Therapy, NOS"
+118,M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS"
+1268,M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS"
+370,M0,N2,Stage IIIA,T3,yes,"Radiation Therapy, NOS"
+18,MX,N0,Stage IA,T1a,no,"Radiation Therapy, NOS"
+1516,M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS"
+478,M0,N2,Stage IIIA,T2,yes,"Radiation Therapy, NOS"
+260,MX,N0,Stage IIB,T3,no,"Radiation Therapy, NOS"
+1229,MX,N0,Stage IA,T1,yes,"Pharmaceutical Therapy, NOS"
+308,M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS"
+1498,M0,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS"
+250,M0,N2,Stage IIIA,T2,yes,"Radiation Therapy, NOS"
+1622,M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS"
+701,M0,N0,Stage IA,T2,no,"Pharmaceutical Therapy, NOS"
+375,M1b,N1,Stage IV,T1a,yes,"Radiation Therapy, NOS"
+164,M0,N0,Stage IIA,T2b,no,"Radiation Therapy, NOS"
+1531,M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS"
+291,M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS"
+2617,M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS"
+731,M0,N1,Stage IIB,T2,not reported,"Pharmaceutical Therapy, NOS"
+1790,MX,N2,Stage IIIA,T1,no,"Pharmaceutical Therapy, NOS"
+303,M0,N1,Stage IIIB,T4,not reported,"Pharmaceutical Therapy, NOS"
+1830,M0,N1,Stage IIA,T1,yes,"Radiation Therapy, NOS"
+950,M0,N0,Stage IA,T1,yes,"Radiation Therapy, NOS"
+434,MX,N0,Stage IA,T1a,no,"Radiation Therapy, NOS"
+161,M0,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS"
+244,M0,N2,Stage IIIA,T2,no,"Pharmaceutical Therapy, NOS"
+949,M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS"
+582,MX,N1,Stage IIB,T2,yes,"Radiation Therapy, NOS"
+469,MX,N0,Stage IA,T1b,yes,"Radiation Therapy, NOS"
+826,M1,N1,Stage IV,T4,yes,"Pharmaceutical Therapy, NOS"
+1798,MX,N0,Stage IA,T1,no,"Radiation Therapy, NOS"
+656,M1,NX,Stage IV,TX,yes,"Radiation Therapy, NOS"
+761,M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS"
+2027,M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS"
+999,M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS"
+2393,M0,N2,Stage IIIB,T4,yes,"Radiation Therapy, NOS"
+697,M1,N2,Stage IV,T4,yes,"Pharmaceutical Therapy, NOS"
+1167,M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS"
+1046,M0,N1,Stage IIA,T2a,yes,"Pharmaceutical Therapy, NOS"
+1725,M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS"
+179,M0,N2,Stage IIIB,T4,no,"Radiation Therapy, NOS"
+1209,M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS"
+91,M0,N2,Stage IIIB,T4,no,"Radiation Therapy, NOS"
+167,M1,N0,Stage IV,T2,no,"Pharmaceutical Therapy, NOS"
+807,M0,N2,Stage IIIA,T2,no,"Pharmaceutical Therapy, NOS"
+624,M0,N1,Stage IIIB,T4,yes,"Pharmaceutical Therapy, NOS"
+74,M0,N2,Stage IIIA,T1,no,"Radiation Therapy, NOS"
+1026,M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS"
+2620,M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS"
+628,M0,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS"
+3361,M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS"
+855,M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS"
+2681,M1,N0,Stage IV,T2,no,"Radiation Therapy, NOS"
+62,M0,N0,Stage IIIA,T4,no,"Radiation Therapy, NOS"
+586,M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS"
+442,MX,N1,Stage IIA,T1b,no,"Radiation Therapy, NOS"
+1653,M0,N0,Stage IB,T2,yes,"Pharmaceutical Therapy, NOS"
+1081,M0,N2,Stage IIIA,T3,not reported,"Radiation Therapy, NOS"
+139,M0,N2,Stage IIIB,T4,yes,"Pharmaceutical Therapy, NOS"
+737,M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS"
+1528,M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS"
+243,MX,N0,Stage IIB,T3,no,"Pharmaceutical Therapy, NOS"
+1288,M0,N0,Stage IB,T2,yes,"Pharmaceutical Therapy, NOS"
+1778,M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS"
+1073,M0,N0,Stage IB,T2,yes,"Radiation Therapy, NOS"
+1043,M1,N0,Stage IV,T2,yes,"Radiation Therapy, NOS"
+281,M0,N1,Stage IIA,T2a,yes,"Radiation Therapy, NOS"
+1501,M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS"
+336,M0,N0,Stage IIA,T2b,yes,"Pharmaceutical Therapy, NOS"
+1454,M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS"
+4961,M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS"
+307,M0,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS"
+274,M0,N2,Stage IIIA,T3,not reported,"Pharmaceutical Therapy, NOS"
+300,M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS"
+500,MX,N1,Stage IIB,T2,no,"Radiation Therapy, NOS"
+677,MX,N1,Stage II,T1,no,"Pharmaceutical Therapy, NOS"
+282,M0,N2,Stage IIIA,T2,yes,"Radiation Therapy, NOS"
+171,MX,N1,Stage IIA,T2a,yes,"Pharmaceutical Therapy, NOS"
+457,M1,N1,Stage IV,T4,not reported,"Pharmaceutical Therapy, NOS"
+19,M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS"
+444,M0,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS"
+864,M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS"
+995,M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS"
+995,M0,N0,Stage IB,T2a,yes,"Pharmaceutical Therapy, NOS"
+1258,MX,N0,Stage IB,T2,no,"Radiation Therapy, NOS"
+694,M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS"
+594,M0,N0,Stage IB,T2,yes,"Pharmaceutical Therapy, NOS"
+3169,M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS"
+187,MX,N1,Stage IIA,T1b,no,"Radiation Therapy, NOS"
+258,M0,N1,Stage IIB,T2,yes,"Radiation Therapy, NOS"
+711,M0,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS"
+434,M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS"
+116,M0,N0,Stage IIA,T2b,yes,"Pharmaceutical Therapy, NOS"
+719,MX,N0,Stage IB,T2a,yes,"Radiation Therapy, NOS"
+99,MX,N0,Stage IIA,T2b,no,"Radiation Therapy, NOS"
+702,M0,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS"
+468,MX,NX,Stage IV,TX,no,"Pharmaceutical Therapy, NOS"
+976,M1,N1,Stage IV,T4,no,"Pharmaceutical Therapy, NOS"
+561,MX,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS"
+189,M0,N2,Stage IIIA,T2,yes,"Radiation Therapy, NOS"
+1357,M1,N1,Stage IV,T2,no,"Radiation Therapy, NOS"
+0,M0,N2,Stage IIIB,T4,not reported,"Pharmaceutical Therapy, NOS"
+237,M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS"
+625,M0,N2,Stage IIIA,T1b,no,"Pharmaceutical Therapy, NOS"
+119,M1,N0,Stage IV,T2,no,"Radiation Therapy, NOS"
+444,M0,N2,Stage IIIA,T3,not reported,"Radiation Therapy, NOS"
+1632,M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS"
+653,M0,N0,Stage IA,T1,yes,"Radiation Therapy, NOS"
+429,M0,N1,Stage IIA,T2a,yes,"Pharmaceutical Therapy, NOS"
+1492,M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS"
+1135,MX,N0,Stage IA,T1,no,"Radiation Therapy, NOS"
+97,M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS"
+800,M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS"
+777,M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS"
+460,M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS"
+343,MX,N1,Stage IIA,T2a,no,"Pharmaceutical Therapy, NOS"
+2318,M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS"
+1147,M0,N1,Stage IIA,T1b,no,"Radiation Therapy, NOS"
+275,M0,N2,Stage IIIA,T3,not reported,"Radiation Therapy, NOS"
+321,M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS"
+879,MX,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS"
+1265,MX,N2,Stage IIIA,T2,yes,"Radiation Therapy, NOS"
+929,M0,N1,Stage IIA,T1,no,"Radiation Therapy, NOS"
+340,M0,N0,Stage IIB,T3,yes,"Pharmaceutical Therapy, NOS"
+1293,M1,N0,Stage IV,T1,yes,"Radiation Therapy, NOS"
+244,M1,NX,Stage IV,T2,yes,"Pharmaceutical Therapy, NOS"
+414,M0,N2,Stage IIIA,T2,yes,"Radiation Therapy, NOS"
+1115,M0,N2,Stage IIIA,T2,no,"Pharmaceutical Therapy, NOS"
+598,M0,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS"
+354,M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS"
+193,MX,N0,Stage IA,T1a,no,"Radiation Therapy, NOS"
+896,MX,N0,Stage IIA,T2b,no,"Radiation Therapy, NOS"
+176,MX,N0,Stage IIA,T2b,no,"Pharmaceutical Therapy, NOS"
+440,MX,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS"
+154,MX,N0,Stage IIB,T3,no,"Pharmaceutical Therapy, NOS"
+385,M0,N2,Stage IIIA,T3,yes,"Radiation Therapy, NOS"
+3838,M0,N0,Stage IIIB,T4,no,"Pharmaceutical Therapy, NOS"
+899,M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS"
+47,M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS"
+329,M0,N2,Stage IIIA,T2,yes,"Radiation Therapy, NOS"
+1975,M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS"
+840,M0,N1,Stage IIA,T2a,no,"Pharmaceutical Therapy, NOS"
+826,MX,N0,Stage IA,T1,yes,"Radiation Therapy, NOS"
+708,M0,N0,Stage IIB,T3,no,"Pharmaceutical Therapy, NOS"
+501,M0,N0,Stage IB,T2a,yes,"Pharmaceutical Therapy, NOS"
+1154,M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS"
+146,M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS"
+34,M0,N0,Stage II,T2a,not reported,"Radiation Therapy, NOS"
+1097,M1,N1,Stage IV,T2,yes,"Pharmaceutical Therapy, NOS"
+0,M0,NX,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS"
+506,M0,N2,Stage IIIA,T2a,no,"Pharmaceutical Therapy, NOS"
+632,M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS"
+123,M0,N3,Stage IIIB,T1,not reported,"Pharmaceutical Therapy, NOS"
+515,M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS"
+921,M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS"
+116,MX,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS"
+822,M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS"
+604,M0,N0,Stage IIA,T2b,yes,"Pharmaceutical Therapy, NOS"
+61,M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS"
+212,M0,N1,Stage IIIB,T4,no,"Pharmaceutical Therapy, NOS"
+1057,M0,N0,Stage IIIA,T4,not reported,"Radiation Therapy, NOS"
+543,MX,N0,Stage IB,T2a,yes,"Radiation Therapy, NOS"
+358,M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS"
+2378,M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS"
+933,M0,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS"
+2625,M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS"
+284,M0,N1,Stage IIB,T2,yes,"Radiation Therapy, NOS"
+974,M0,N0,Stage IB,T2,yes,"Radiation Therapy, NOS"
+962,M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS"
+198,M0,N0,Stage IIA,T2b,yes,"Radiation Therapy, NOS"
+1190,M0,N0,Stage IB,T2a,yes,"Pharmaceutical Therapy, NOS"
+770,M1b,N0,Stage IV,T2a,yes,"Radiation Therapy, NOS"
+109,M0,N0,Stage IIA,T2,no,"Pharmaceutical Therapy, NOS"
+474,M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS"
+315,MX,N1,Stage IIIA,T3,yes,"Pharmaceutical Therapy, NOS"
+403,M0,N0,Stage IIA,T2b,no,"Radiation Therapy, NOS"
+601,M0,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS"
+455,M0,N1,Stage IIB,T2b,no,"Pharmaceutical Therapy, NOS"
+387,MX,N2,Stage III,T4,yes,"Radiation Therapy, NOS"
+24,M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS"
+827,M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS"
+1161,M0,N0,Stage IB,T2a,not reported,"Pharmaceutical Therapy, NOS"
+17,M0,N0,Stage IB,T1b,no,"Radiation Therapy, NOS"
+306,M0,N1,Stage IIIB,T4,not reported,"Radiation Therapy, NOS"
+215,M0,N0,Stage IIIB,T4,not reported,"Radiation Therapy, NOS"
+881,M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS"
+587,M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS"
+490,M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS"
+136,M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS"
+383,M0,NX,Stage IB,T2,not reported,"Pharmaceutical Therapy, NOS"
+402,M0,N1,Stage IIA,T1b,no,"Radiation Therapy, NOS"
+418,M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS"
+1640,M0,N1,Stage IIA,T1,no,"Pharmaceutical Therapy, NOS"
+2680,M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS"
+826,M0,N0,Stage IIA,T2b,no,"Radiation Therapy, NOS"
+188,M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS"
+408,MX,N1,Stage IIIA,T3,yes,"Radiation Therapy, NOS"
+53,M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS"
+692,MX,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS"
+322,MX,N1,Stage IIA,T2a,yes,"Pharmaceutical Therapy, NOS"
+2160,MX,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS"
+3600,MX,N0,Stage IB,T2,no,"Radiation Therapy, NOS"
+552,M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS"
+916,M0,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS"
+1338,M0,N0,Stage IA,T1,yes,"Pharmaceutical Therapy, NOS"
+1470,M0,N2,Stage IIIA,T3,not reported,"Pharmaceutical Therapy, NOS"
+84,M0,N2,Stage IIIA,T2,yes,"Radiation Therapy, NOS"
+1655,M0,N1,Stage IIIA,T3,yes,"Radiation Therapy, NOS"
+428,M0,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS"
+1045,M0,N2,Stage IIIA,T2,yes,"Pharmaceutical Therapy, NOS"
+360,MX,N0,Stage IB,T2a,yes,"Radiation Therapy, NOS"
+550,M0,N1,Stage IIB,T2b,yes,"Pharmaceutical Therapy, NOS"
+1075,M0,N0,Stage IA,T1,yes,"Pharmaceutical Therapy, NOS"
+2086,M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS"
+2409,M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS"
+2224,M0,N1,Stage IIA,T1,no,"Radiation Therapy, NOS"
+1114,MX,N0,Stage IA,T1,yes,"Pharmaceutical Therapy, NOS"
+365,M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS"
+1346,M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS"
+1713,M0,N0,Stage IA,T1a,not reported,"Radiation Therapy, NOS"
+965,M0,N0,Stage IIIA,T3,no,"Pharmaceutical Therapy, NOS"
+153,M0,N3,Stage IIIB,T2,not reported,"Radiation Therapy, NOS"
+113,MX,N1,Stage III,T3,yes,"Radiation Therapy, NOS"
+519,M0,N2,Stage IIIA,T2a,yes,"Pharmaceutical Therapy, NOS"
+166,MX,N0,Stage IB,T2,no,"Radiation Therapy, NOS"
+442,MX,N1,Stage IIIA,T3,yes,"Pharmaceutical Therapy, NOS"
+740,M0,N2,Stage IIIA,T1b,yes,"Pharmaceutical Therapy, NOS"
+1679,M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS"
+307,M0,N1,Stage IIIA,T3,no,"Radiation Therapy, NOS"
+1912,M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS"
+687,M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS"
+358,M0,N1,Stage IIA,T2,no,"Pharmaceutical Therapy, NOS"
+623,M0,N2,Stage IIIA,T3,no,"Radiation Therapy, NOS"
+645,M0,N0,Stage IIB,T3,yes,"Pharmaceutical Therapy, NOS"
+294,M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS"
+448,M0,N2,Stage IIIA,T3,yes,"Radiation Therapy, NOS"
+143,MX,N0,Stage IB,T2a,not reported,"Radiation Therapy, NOS"
+667,M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS"
+429,M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS"
+669,M0,N1,Stage IIA,T1,no,"Radiation Therapy, NOS"
+138,MX,N0,Stage IIIB,T4,no,"Pharmaceutical Therapy, NOS"
+195,M0,N1,Stage IIIA,T3,no,"Radiation Therapy, NOS"
+1984,M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS"
+973,M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS"
+3149,M0,N0,Stage IA,T1,yes,"Radiation Therapy, NOS"
+1656,MX,N0,Stage IB,T2,no,"Radiation Therapy, NOS"
+3253,M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS"
+544,M0,N0,Stage IIA,T2b,no,"Pharmaceutical Therapy, NOS"
+1695,M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS"
+1736,MX,N0,Stage IA,T1,no,"Radiation Therapy, NOS"
+274,M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS"
+1344,MX,N1,Stage IIB,T2,yes,"Radiation Therapy, NOS"
+1058,M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS"
+9,MX,N1,Stage IIA,T1a,no,"Radiation Therapy, NOS"
+456,M0,N1,Stage IIB,T2,yes,"Pharmaceutical Therapy, NOS"
+2170,M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS"
+2639,M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS"
+311,M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS"
+1107,M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS"
+3,MX,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS"
+532,M0,N1,Stage IIB,T2b,not reported,"Radiation Therapy, NOS"
+94,M0,N1,Stage IIIA,T3,no,"Radiation Therapy, NOS"
+92,M0,N0,Stage IB,T2,not reported,"Pharmaceutical Therapy, NOS"
+4601,M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS"
+1841,M0,N0,Stage IA,T1a,no,"Radiation Therapy, NOS"
+1001,M0,N0,Stage IIIA,T4,yes,"Pharmaceutical Therapy, NOS"
+2,M0,N0,Stage IIB,T3,no,"Pharmaceutical Therapy, NOS"
+372,M0,N2,Stage IIA,T2,no,"Radiation Therapy, NOS"
+89,M0,N0,Stage IA,T1b,yes,"Pharmaceutical Therapy, NOS"
+1423,M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS"
+2249,MX,N0,Stage IA,T1,no,"Radiation Therapy, NOS"
+412,M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS"
+151,M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS"
+2945,M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS"
+351,M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS"
+6,M0,N0,Stage IA,T1a,no,"Radiation Therapy, NOS"
+1426,M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS"
+399,M0,N1,Stage IIA,T2a,no,"Radiation Therapy, NOS"
+3924,M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS"
+166,M0,N0,Stage IB,T2,not reported,"Pharmaceutical Therapy, NOS"
+678,M0,N2,Stage IIIA,T2,no,"Radiation Therapy, NOS"
+1953,M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS"
+2284,M0,N1,Stage IIIA,T3,no,"Pharmaceutical Therapy, NOS"
+383,M0,N1,Stage IIA,T2a,not reported,"Radiation Therapy, NOS"
+397,MX,N0,Stage IIB,T3,no,"Radiation Therapy, NOS"
+1006,MX,N0,Stage I,T2,no,"Pharmaceutical Therapy, NOS"
+5,M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS"
+2979,M0,N2,Stage IIIA,T2,no,"Radiation Therapy, NOS"
+302,MX,N0,Stage IA,T1a,no,"Pharmaceutical Therapy, NOS"
+2803,M0,N0,Stage IB,T2,yes,"Pharmaceutical Therapy, NOS"
+1150,M0,N2,Stage IIIA,T2,no,"Radiation Therapy, NOS"
+951,M0,N1,Stage IIIA,T3,yes,"Radiation Therapy, NOS"
+161,M0,N1,Stage IIIA,T3,no,"Radiation Therapy, NOS"
+1874,M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS"
+539,M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS"
+1856,M0,N0,Stage I,T1,no,"Radiation Therapy, NOS"
+1315,M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS"
+1067,M0,N0,Stage IIA,T2b,no,"Pharmaceutical Therapy, NOS"
+291,M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS"
+1485,M0,N0,Stage IA,T1,yes,"Pharmaceutical Therapy, NOS"
+366,M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS"
+223,M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS"
+5,M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS"
+2304,M0,N0,Stage IB,T2,yes,"Radiation Therapy, NOS"
+454,M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS"
+345,M0,N0,Stage IIB,T3,yes,"Radiation Therapy, NOS"
+1143,M0,N0,Stage IIB,T3,yes,"Radiation Therapy, NOS"
+357,M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS"
+340,M0,N0,Stage IB,T2,no,"Radiation Therapy, NOS"
+371,M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS"
+5287,M0,N0,Stage IB,T2,not reported,"Pharmaceutical Therapy, NOS"
+180,M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS"
+803,M0,N2,Stage IIIA,T2,yes,"Radiation Therapy, NOS"
+236,M0,N0,Stage IIB,T3,no,"Radiation Therapy, NOS"
+80,M0,N1,Stage IIB,T2,no,"Pharmaceutical Therapy, NOS"
+52,M0,N1,Stage IIIA,T4,no,"Radiation Therapy, NOS"
+261,MX,N0,Stage I,T2,no,"Radiation Therapy, NOS"
+445,M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS"
+1335,MX,N0,Stage II,T3,no,"Pharmaceutical Therapy, NOS"
+1000,M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS"
+131,M0,N0,Stage IA,T1,no,"Pharmaceutical Therapy, NOS"
+1189,M0,N1,Stage IIB,T2,no,"Radiation Therapy, NOS"
+88,M0,N0,Stage IIA,T2b,no,"Pharmaceutical Therapy, NOS"
+573,M0,N1,Stage IIA,T1a,yes,"Pharmaceutical Therapy, NOS"
+2133,M0,N2,Stage IIIB,T4,no,"Pharmaceutical Therapy, NOS"
+198,M0,N1,Stage IIB,T2,not reported,"Pharmaceutical Therapy, NOS"
+562,M0,N0,Stage IB,T2a,no,"Radiation Therapy, NOS"
+684,M0,N0,Stage IA,T1,no,"Radiation Therapy, NOS"
+276,M0,N0,Stage IIB,T3,yes,"Radiation Therapy, NOS"
+559,M0,N1,Stage IIA,T1b,yes,"Pharmaceutical Therapy, NOS"
+516,M0,N0,Stage IB,T2,not reported,"Pharmaceutical Therapy, NOS"
+345,M0,N0,Stage IB,T2,yes,"Pharmaceutical Therapy, NOS"
+266,M0,N0,Stage IB,T2,no,"Pharmaceutical Therapy, NOS"
+299,M0,N1,Stage IIIA,T3,yes,"Pharmaceutical Therapy, NOS"
+123,M1a,N0,Stage IV,T4,no,"Pharmaceutical Therapy, NOS"
+927,M0,N0,Stage IB,T2a,no,"Pharmaceutical Therapy, NOS"
+85,M0,N0,Stage IB,T2,not reported,"Radiation Therapy, NOS"
+340,MX,N1,Stage III,T3,no,"Pharmaceutical Therapy, NOS"
+211,MX,N0,Stage IB,T2,no,"Radiation Therapy, NOS"
+23,M0,N0,Stage IA,T1b,no,"Pharmaceutical Therapy, NOS"
+59,M0,N2,Stage IIIA,T2a,no,"Pharmaceutical Therapy, NOS"
+716,M1,N1,Stage IV,T4,no,"Radiation Therapy, NOS"
+1,M1,NX,Stage IV,T3,no,"Radiation Therapy, NOS"

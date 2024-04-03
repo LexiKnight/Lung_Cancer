@@ -4,8 +4,6 @@
 # Date: 26 March 2024
 # Contact: lexi.knight@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: -
-# Any other information needed? -
 
 
 #### Workspace setup ####
@@ -14,7 +12,6 @@
 
 # load packages
 library(tidyverse)
-
 
 
 #### Simulate data ####
@@ -51,7 +48,6 @@ simulated_data <- simulated_data %>%
     Treatment_Decision = treatment
   )
 
-
 simulated_data <- simulated_data |> select( Pathogenic_Stage,
                                             Lymph_Node_Involvement,
                                             Presence_of_Metastasis, Tumor_Size,
@@ -59,10 +55,6 @@ simulated_data <- simulated_data |> select( Pathogenic_Stage,
                                             Days_to_Death, Treatment_Type,
                                             Treatment_Decision)
 
-
-
-# View first few rows of the simulated data
-head(simulated_data)
 
 # Show a summary of the data
 summary(simulated_data)
