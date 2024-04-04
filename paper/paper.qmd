@@ -186,6 +186,7 @@ ggplot(treatment_type_counts, aes(x = reorder(treatment_type, -percentage), y = 
     text = element_text(family = "patrick") # Set font to Patrick Hand
   )
 
+
 ```
 
 Talk more about it.
@@ -248,6 +249,110 @@ Our results are summarized in @.
 #| warning: false
 #| message: false
 
+# Load required libraries
+library(ggplot2)
+
+
+
+# Scatter plot survival time vs. pathogenic stage - to compare survival probabilities
+ggplot(analysis_data, aes(x = pathogenic_stage, y = days_to_death)) +
+  geom_point(size = 3, color = "lightpink") +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +  
+  # Add a linear trend line
+  labs(title = "Survival Time vs. Pathogenic Stage Post-Diagnosis",
+       x = "Pathogenic Stage",
+       y = "Survival Time (days)") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  # Rotate x-axis labels for better readability
+  theme(text = element_text(family = "patrick") 
+  # Set font to Patrick Hand
+  )
+
+# Plotting
+ggplot(analysis_data, aes(x = pathogenic_stage, y = days_to_death)) +
+  geom_boxplot(fill = "lightblue") +
+  labs(title = "Days to Death Distribution by Pathogenic Stage for Lung Cancer Patients",
+       x = "Pathogenic Stage",
+       y = "Days to Death") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))  # Rotate x-axis labels for better readability
+
+
+# Scatter plot survival time vs. Presence of Distant Metastasis
+ggplot(analysis_data, aes(x = presence_of_distant_metastasis, y = days_to_death)) +
+  geom_point(size = 3, color = "gold") +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +  
+  # Add a linear trend line
+  labs(title = "Survival Time vs. Presence of Distant Metastasis Post-Diagnosis",
+       x = "Presence of Distant Metastasis",
+       y = "Survival Time (days)") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  # Rotate x-axis labels for better readability
+  theme(text = element_text(family = "patrick") 
+  # Set font to Patrick Hand
+  )
+
+# Scatter plot survival time vs. Lymph node involvement
+ggplot(analysis_data, aes(x = lymph_node_involvement, y = days_to_death)) +
+  geom_point(size = 3, color = "cyan") +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +  
+  # Add a linear trend line
+  labs(title = "Survival Time vs. Lymph Node Involvement Post-Diagnosis",
+       x = "Lymph Node Involvement",
+       y = "Survival Time (days)") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  # Rotate x-axis labels for better readability
+  theme(text = element_text(family = "patrick") 
+  # Set font to Patrick Hand
+  )
+
+# Scatter plot survival time vs. Tumor Size
+ggplot(analysis_data, aes(x = tumor_size, y = days_to_death)) +
+  geom_point(size = 3, color = "purple") +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +  
+  # Add a linear trend line
+  labs(title = "Survival Time vs. Tumor Size Post-Diagnosis",
+       x = "Tumor Size",
+       y = "Survival Time (days)") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  # Rotate x-axis labels for better readability
+  theme(text = element_text(family = "patrick") 
+  # Set font to Patrick Hand
+  )
+
+# Scatter plot survival time vs. Treatment Decision
+ggplot(analysis_data, aes(x = treatment_decision, y = days_to_death)) +
+  geom_point(size = 3, color = "blue") +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +  
+  # Add a linear trend line
+  labs(title = "Survival Time vs. Treatment Decision Post-Diagnosis",
+       x = "Treatment Decision",
+       y = "Survival Time (days)") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  # Rotate x-axis labels for better readability
+  theme(text = element_text(family = "patrick") 
+  # Set font to Patrick Hand
+  )
+
+# Scatter plot survival time vs. Treatment Type
+ggplot(analysis_data, aes(x = treatment_type, y = days_to_death)) +
+  geom_point(size = 3, color = "cyan") +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +  
+  # Add a linear trend line
+  labs(title = "Survival Time vs. Treatment Type Post-Diagnosis",
+       x = "Treatment Type",
+       y = "Survival Time (days)") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+  # Rotate x-axis labels for better readability
+  theme(text = element_text(family = "patrick") 
+  # Set font to Patrick Hand
+  )
 
 ```
 
