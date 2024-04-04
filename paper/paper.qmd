@@ -54,7 +54,7 @@ Our data is
 # install.packages("dplyr")
 # install.packages("showtext")
 
-# load packaged
+# load packages
 library(ggplot2)
 library(dplyr)
 library(showtext)
