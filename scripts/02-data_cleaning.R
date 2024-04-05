@@ -47,11 +47,12 @@ cleaned_data <- cleaned_data %>%
     tumor_size = ajcc_pathologic_t,
   )
 
+
 # Convert the days_to_death column to numeric
-analysis_data$days_to_death <- as.numeric(analysis_data$days_to_death)
+cleaned_data$days_to_death <- as.numeric(analysis_data$days_to_death)
 
 # Check the data types again
-#print(class(analysis_data$days_to_death))
+# print(class(analysis_data$days_to_death))
 
 
 # view entire dataset
