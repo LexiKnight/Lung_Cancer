@@ -21,9 +21,10 @@ library(broom.mixed)
 library(dplyr)
 library(rstanarm)
 library(tidyverse)
+library(arrow) # needed to read parquet
 
 #### Read data ####
-analysis_data <- read.csv(file = here::here("data/analysis_data/lung_cancer_analysis_data.csv"))
+analysis_data <- read_parquet(file = here::here("data/analysis_data/lung_cancer_analysis_data.parquet"))
 
 ### Model data ####
 set.seed(123) # setting seed for reproducibility
@@ -38,7 +39,7 @@ set.seed(123) # setting seed for reproducibility
 # Fit a linear regression model to predict continuous outcome variable 
 # 'days_to_death', using stan_glm
 linear_model <- stan_glm( # Bayesian generalized linear models via Stan
-  formula = days_to_death ~  pathogenic_stage + lymph_node_involvement +
+  formula = days_to_death ~  pathologic_stage + lymph_node_involvement +
     presence_of_distant_metastasis + tumor_size + treatment_type,
   data = analysis_data,
   family = gaussian(),

@@ -9,10 +9,12 @@
 #### Workspace setup ####
 # install packages
 # install.packages("readr")
+# install.packages("arrow")
 
 # load libraries 
 library(tidyverse)
 library(readr)
+library(arrow)
 
 #### Clean data ####
 
@@ -45,8 +47,15 @@ cleaned_data <- cleaned_data %>%
     tumor_size = ajcc_pathologic_t,
   )
 
+# Convert the days_to_death column to numeric
+analysis_data$days_to_death <- as.numeric(analysis_data$days_to_death)
+
+# Check the data types again
+#print(class(analysis_data$days_to_death))
+
+
 # view entire dataset
 print(cleaned_data, n = nrow(cleaned_data))
 
 #### Save data ####
-write_csv(cleaned_data, "data/analysis_data/lung_cancer_analysis_data.csv")
+write_parquet(cleaned_data, "data/analysis_data/lung_cancer_analysis_data.parquet")
