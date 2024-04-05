@@ -26,7 +26,7 @@ colnames(raw_data)
 cleaned_data <- raw_data |>
   select("days_to_death", "ajcc_pathologic_m",
          "ajcc_pathologic_n", "ajcc_pathologic_stage", "ajcc_pathologic_t",
-         "treatment_or_therapy", "treatment_type")
+         "treatment_type")
 
 # Handle missing or non-numeric values in days_to_death column
 cleaned_data <- cleaned_data %>%
@@ -41,14 +41,9 @@ cleaned_data <- cleaned_data %>%
   rename(
     lymph_node_involvement = ajcc_pathologic_n,
     presence_of_distant_metastasis = ajcc_pathologic_m,
-    pathogenic_stage = ajcc_pathologic_stage,
+    pathologic_stage = ajcc_pathologic_stage,
     tumor_size = ajcc_pathologic_t,
-    treatment_decision = treatment_or_therapy
   )
-
-# Exclude rows where treatment_decision contains "not reported" values
-cleaned_data <- cleaned_data %>%
-  filter(treatment_decision != "not reported")
 
 # view entire dataset
 print(cleaned_data, n = nrow(cleaned_data))

@@ -27,33 +27,26 @@ simulated_data <- data.frame(
   ajcc_pathologic_n = sample(c("N0", "N1", "N2", "NX"), num_entries, replace = TRUE),
   ajcc_pathologic_m = sample(c("M0", "MX", "M1a", "M1b"), num_entries, replace = TRUE),
   ajcc_pathologic_t = sample(c("T1", "T1a", "T1b", "T2", "T2a", "T2b", "T3", "T4", "TX"), num_entries, replace = TRUE),
-  age_at_diagnosis = round(runif(num_entries, min = 14681, max = 32872)),
   days_to_death = round(runif(num_entries, min = 0, max = 6236)),
   ajcc_pathologic_stage = sample(c("Stage IA", "Stage IIA", "Stage IIIA", "Stage IB", "Stage IIB", "Stage IV", "Stage I"), num_entries, replace = TRUE),
-  treatment_type = sample(c("Pharmaceutical Therapy, NOS", "Radiation Therapy, NOS"), num_entries, replace = TRUE),
-  treatment = sample(c("yes", "no", "not reported"), num_entries, replace = TRUE)
-) 
+  treatment_type = sample(c("Pharmaceutical Therapy, NOS", "Radiation Therapy, NOS"), num_entries, replace = TRUE)
+)
 
 
 # Renaming variables for clarity 
 simulated_data <- simulated_data %>%
   rename(
-    Pathogenic_Stage = ajcc_pathologic_stage,
-    Lymph_Node_Involvement = ajcc_pathologic_n,
-    Presence_of_Metastasis = ajcc_pathologic_m,
-    Tumor_Size = ajcc_pathologic_t,
-    Age_at_Diagnosis_in_Days = age_at_diagnosis,
-    Days_to_Death = days_to_death,
-    Treatment_Type = treatment_type,
-    Treatment_Decision = treatment
+    pathologic_stage = ajcc_pathologic_stage,
+    lymph_node_involvement = ajcc_pathologic_n,
+    presence_of_distant_metastasis = ajcc_pathologic_m,
+    tumor_size = ajcc_pathologic_t,
   )
 
-simulated_data <- simulated_data |> select( Pathogenic_Stage,
-                                            Lymph_Node_Involvement,
-                                            Presence_of_Metastasis, Tumor_Size,
-                                            Age_at_Diagnosis_in_Days,
-                                            Days_to_Death, Treatment_Type,
-                                            Treatment_Decision)
+simulated_data <- simulated_data |> select(pathologic_stage,
+                                            lymph_node_involvement,
+                                            presence_of_distant_metastasis,
+                                            tumor_size, days_to_death,
+                                            treatment_type)
 
 
 # Show a summary of the data
