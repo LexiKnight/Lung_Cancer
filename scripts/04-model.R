@@ -7,7 +7,6 @@
 # Pre-requisites: follow 01-download_data.R and run 02-data_cleaning.R in scripts in order to obtain raw and cleaned data. Run 03-test_data.R to test cleaned dataset.  
 
 # note about approach: linear model (ch. 13.2, logistic regression model )
-# note, must delete treatment_decision from entire analysis. 
 
 #### Workspace setup ####
 # install packages
