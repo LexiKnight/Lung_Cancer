@@ -3452,3 +3452,144 @@ We specify priors for the coefficients and intercept using prior = normal() and 
 After fitting the model, we can summarize it using summary() to view model coefficients and other information.
 Finally, we save the fitted model using saveRDS().
 Make sure to replace "path_to_your_data/analysis_data.csv" with the actual path to your data file and "path_to_save/models/linear_model.rds" with the location where you want to save the model. Adjust the formula and model settings as needed based on your specific modeling goals and dataset characteristics.
+
+Date: 5 April 2024 
+
+User: 
+patients post-diagnosis?  Please see the outline that my prof gave us: # Model
+## Model set-up
+Define $y_i$ as the number of seconds that the plane remained aloft. Then $\beta_i$ is the wing width and $\gamma_i$ is the wing length, both measured in millimeters.  
+\begin{align} 
+y_i|\mu_i, \sigma &\sim \mbox{Normal}(\mu_i, \sigma) \\
+\mu_i &= \alpha + \beta_i + \gamma_i\\
+\alpha &\sim \mbox{Normal}(0, 2.5) \\
+\beta &\sim \mbox{Normal}(0, 2.5) \\
+\gamma &\sim \mbox{Normal}(0, 2.5) \\
+\sigma &\sim \mbox{Exponential}(1)
+\end{align}
+We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use the default priors from `rstanarm`.
+### Model justification
+We expect a positive relationship between the size of the wings and time spent aloft. In particular...
+We can use maths by including latex between dollar signs, for instance $\theta$.
+Please see my model section in the scripts file: #### Workspace setup ####
+# install packages
+# install.packages("broom.mixed")
+# install.packages("dplyr")
+# install.packages("rstanarm")
+# install.packages("tidyverse")
+# load packages
+library(broom.mixed)
+library(dplyr)
+library(rstanarm)
+library(tidyverse)
+library(arrow) # needed to read parquet
+#### Read data ####
+analysis_data <- read_parquet(file = here::here("data/analysis_data/lung_cancer_analysis_data.parquet"))
+### Model data ####
+set.seed(123) # setting seed for reproducibility
+## Linear Regression Model 
+# interested in predicting days_to_death, a continuous outcome variable based on
+# multiple predictor variables  (pathogenic_stage, lymph_node_involvement, 
+# presence_of_distant_metastasis, tumor_size, treatment_decision, treatment_type)
+# Linear regression model are suitable for predicting continuous outcomes
+# quantifying relationship between predictor variables and outcome variable. 
+# Fit a linear regression model to predict continuous outcome variable 
+# 'days_to_death', using stan_glm
+linear_model <- stan_glm( # Bayesian generalized linear models via Stan
+  formula = days_to_death ~  pathologic_stage + lymph_node_involvement +
+    presence_of_distant_metastasis + tumor_size + treatment_type,
+  data = analysis_data,
+  family = gaussian(),
+  prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
+  prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
+  seed = 123
+)
+# summarize the model 
+summary(linear_model)
+#### Save model ####
+saveRDS(
+ linear_model,
+ file = "models/linear_model.rds"
+)
+
+ChatGPT
+Based on the outline provided by your professor and the model section in your script file, it seems like you're working on a linear regression model to predict survival outcomes in lung cancer patients post-diagnosis. Here's a draft for the model section of your stats paper:
+Model
+Model set-up
+In this study, we aim to investigate the survival outcomes of lung cancer patients post-diagnosis. Let 
+�
+�
+y 
+i
+​
+  denote the number of days from diagnosis to death for patient 
+�
+i. We consider several predictors including pathogenic stage, lymph node involvement, presence of distant metastasis, tumor size, and treatment type.
+We model the survival time 
+�
+�
+y 
+i
+​
+  using a linear regression framework:
+�
+�
+∣
+�
+�
+,
+�
+∼
+Normal
+(
+�
+�
+,
+�
+)
+y 
+i
+​
+ ∣μ 
+i
+​
+ ,σ∼Normal(μ 
+i
+​
+ ,σ)
+where 
+�
+�
+μ 
+i
+​
+  is the expected survival time for patient 
+�
+i, and 
+�
+σ represents the standard deviation of the survival times. The linear predictor 
+�
+�
+μ 
+i
+​
+  is specified as:
+\mu_i = \alpha + \beta_{\text{pathologic_stage}} \times \text{pathologic_stage}_i + \beta_{\text{lymph_node}} \times \text{lymph_node_involvement}_i + \beta_{\text{metastasis}} \times \text{presence_of_distant_metastasis}_i + \beta_{\text{tumor_size}} \times \text{tumor_size}_i + \beta_{\text{treatment_type}} \times \text{treatment_type}_i
+Here, 
+�
+α represents the intercept term, 
+�
+β coefficients denote the effects of respective predictors, and subscripts 
+�
+i denote individual patients.
+Priors are specified for the model parameters as follows:
+\begin{align*}
+\alpha &\sim \text{Normal}(0, 2.5) \\
+\beta_{\text{pathologic_stage}}, \beta_{\text{lymph_node}}, \beta_{\text{metastasis}}, \beta_{\text{tumor_size}}, \beta_{\text{treatment_type}} &\sim \text{Normal}(0, 2.5) \\
+\sigma &\sim \text{Exponential}(1)
+\end{align*}
+We employ the rstanarm package in R to fit the model, utilizing its default priors.
+Model justification
+We anticipate that the survival time of lung cancer patients post-diagnosis will be influenced by various clinical factors such as pathologic stage, extent of lymph node involvement, presence of distant metastasis, tumor size, and treatment type. Specifically, we expect that advanced pathologic stages, increased lymph node involvement, presence of distant metastasis, larger tumor sizes, and certain treatment types will be associated with shorter survival times.
+The linear regression model allows us to quantify the relationships between these predictors and survival outcomes, providing valuable insights into the factors influencing the prognosis of lung cancer patients.
+This draft outlines the model set-up, including the regression equation and the specification of priors, as well as provides justification for the chosen model. Feel free to adjust the content according to your specific study and any additional details you want to include.

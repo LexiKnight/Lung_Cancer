@@ -162,7 +162,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
-  pdftitle={Survival Compass: Statistical Insights into Lung Cancer Patients' Journey Post-Diagnosis},
+  pdftitle={Survival Compass},
   pdfauthor={Lexi Knight},
   colorlinks=true,
   linkcolor={blue},
@@ -171,11 +171,18 @@
   urlcolor={Blue},
   pdfcreator={LaTeX via pandoc}}
 
-\title{Survival Compass: Statistical Insights into Lung Cancer Patients'
-Journey Post-Diagnosis\thanks{Code and data are available at:
+\title{Survival Compass\thanks{Code and data are available at:
 https://github.com/LexiKnight/Lung\_Cancer/tree/main}}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Statistical Insights into Lung Cancer Patients Journey Post
+Diagnosis}
 \author{Lexi Knight}
-\date{April 4, 2024}
+\date{April 5, 2024}
 
 \begin{document}
 \maketitle
@@ -190,7 +197,7 @@ demonstrate lower survival rates. These findings underscore the critical
 importance of early detection, tailored treatment strategies and ongoing
 research efforts to enhance lung cancer survival rates globally.
 \end{abstract}
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, interior hidden, breakable, frame hidden, enhanced]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, interior hidden, breakable, sharp corners, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
@@ -423,96 +430,95 @@ Talk more about it.
 \hypertarget{sec-model}{%
 \section{Model}\label{sec-model}}
 
-\hypertarget{linear-regression-model}{%
-\subsection{Linear Regression Model}\label{linear-regression-model}}
-
-\hypertarget{interested-in-predicting-days_to_death-a-continuous-outcome-variable-based-on}{%
-\section{interested in predicting days\_to\_death, a continuous outcome
-variable based
-on}\label{interested-in-predicting-days_to_death-a-continuous-outcome-variable-based-on}}
-
-\hypertarget{multiple-predictor-variables-pathogenic_stage-lymph_node_involvement}{%
-\section{multiple predictor variables (pathogenic\_stage,
-lymph\_node\_involvement,}\label{multiple-predictor-variables-pathogenic_stage-lymph_node_involvement}}
-
-\hypertarget{presence_of_distant_metastasis-tumor_size-treatment_decision-treatment_type}{%
-\section{presence\_of\_distant\_metastasis, tumor\_size,
-treatment\_decision,
-treatment\_type)}\label{presence_of_distant_metastasis-tumor_size-treatment_decision-treatment_type}}
-
-\hypertarget{linear-regression-model-are-suitable-for-predicting-continuous-outcomes}{%
-\section{Linear regression model are suitable for predicting continuous
-outcomes}\label{linear-regression-model-are-suitable-for-predicting-continuous-outcomes}}
-
-\hypertarget{quantifying-relationship-between-predictor-variables-and-outcome-variable.}{%
-\section{quantifying relationship between predictor variables and
-outcome
-variable.}\label{quantifying-relationship-between-predictor-variables-and-outcome-variable.}}
-
-\hypertarget{fit-a-linear-regression-model-to-predict-continuous-outcome-variable}{%
-\section{Fit a linear regression model to predict continuous outcome
-variable}\label{fit-a-linear-regression-model-to-predict-continuous-outcome-variable}}
-
-\hypertarget{days_to_death}{%
-\section{`days\_to\_death'}\label{days_to_death}}
-
 \hypertarget{model-set-up}{%
 \subsection{Model set-up}\label{model-set-up}}
 
-In this study, we aim to investigate the survival outcomes of lung
-cancer patients post-diagnosis. Let \(y_i\) denote the number of days
-from diagnosis to death for patient \(i\). We consider several
-predictors including pathogenic stage, lymph node involvement, presence
-of distant metastasis, tumor size, and treatment type.
+In this section, we aim to predict the survival outcomes of lung cancer
+patients post-diagnosis with a linear regression model framework. We
+consider several predictors including pathogenic stage, lymph node
+involvement, presence of distant metastasis, tumor size, and treatment
+type.We specify the model and subsequently justify its appropriateness
+for our analysis.
 
-We model the survival time \(y_i\) using a linear regression framework:
+\hypertarget{model-specifications}{%
+\subsubsection{Model Specifications}\label{model-specifications}}
 
-y\_i\textbar{}\mu\_i, \sigma \&\sim \mbox{Normal}(\mu\_i, \sigma)
-\textbackslash{}
+We employ a linear regression model to predict the number of days from
+diagnosis to death for each lung cancer patient. The model is defined as
+follows:
 
-where \(mi_i\) is the expected survival time for patient \(i\), and
-\(σ\) represents the standard deviation of the survival times. The
-linear predictor \(mu_i\) is specified as:
+\(y_i\) \textbar{} \mu\_i, \sigma \&\sim \text{Normal}(\mu\_i, \sigma)
 
-\mu\emph{i = \alpha + \beta}\{\text{pathologic\_stage}\}
-\times \text{pathologic\_stage}\emph{i + \beta}\{\text{lymph\_node}\}
-\times \text{lymph\_node\_involvement}\emph{i +
+where: * \(y_i\) represents the number of days from diagnosis to death
+for patient \(i\). * \(mu_i\) denotes the expected number of days to
+death for patient \(i\). * \(σ\) represesents the standard deviation of
+the survival times.
+
+The linear predictor \(mu_i\) is specified as:
+
+\mu\emph{i = \alpha + \beta}\{\text{pathologic_stage}\}
+\times \text{pathologic_stage}\emph{i + \beta}\{\text{lymph_node}\}
+\times \text{lymph_node_involvement}\emph{i +
 \beta}\{\text{metastasis}\}
-\times \text{presence\_of\_distant\_metastasis}\emph{i +
-\beta}\{\text{tumor\_size}\} \times \text{tumor\_size}\emph{i +
-\beta}\{\text{treatment\_type}\} \times \text{treatment\_type}\_i
+\times \text{presence_of_distant_metastasis}\emph{i +
+\beta}\{\text{tumor_size}\} \times \text{tumor_size}\emph{i +
+\beta}\{\text{treatment_type}\} \times \text{treatment_type}\_i
 
-Here, \alpha represents the intercept term, \beta coefficients denote
-the effect of respective predictors, and subscripts \(i\) denote
-individual patients.
+where:
 
-Priors are specified for the model parameters as follows:
-
-\begin{align*}
-\alpha &\sim \text{Normal}(0, 2.5) \\
-\beta_{\text{pathologic_stage}}, \beta_{\text{lymph_node}}, \beta_{\text{metastasis}}, \beta_{\text{tumor_size}}, \beta_{\text{treatment_type}} &\sim \text{Normal}(0, 2.5) \\
-\sigma &\sim \text{Exponential}(1)
-\end{align*}
-
-TEMPLATE: Define \(y_i\) as the number of seconds that the plane
-remained aloft. Then \(\beta_i\) is the wing width and \(\gamma_i\) is
-the wing length, both measured in millimeters.
-
-\begin{align} 
-
-\mu_i &= \alpha + \beta_i + \gamma_i\\
-\alpha &\sim \mbox{Normal}(0, 2.5) \\
-\beta &\sim \mbox{Normal}(0, 2.5) \\
-\gamma &\sim \mbox{Normal}(0, 2.5) \\
-\sigma &\sim \mbox{Exponential}(1)
-\end{align}
-
-We run the model in R (R Core Team 2023) using the \texttt{rstanarm}
-package of Goodrich et al. (2022). We use the default priors from
-\texttt{rstanarm}.
+\begin{itemize}
+\tightlist
+\item
+  \alpha represents the intercept term, capturing the baseline number of
+  days to death.
+\item
+  \beta\emph{\{\text{pathologic_stage}\}, \beta}\{\text{lymph_node}\},
+  \beta\emph{\{\text{metastasis}\}, \beta}\{\text{tumor_size}\},
+  \beta\_\{\text{treatment_type}\} are the coefficients associated with
+  each predictor variable.
+\end{itemize}
 
 \hypertarget{model-justification}{%
 \subsubsection{Model justification}\label{model-justification}}
+
+Linear regression models are most appropritate in predicting continuous
+outcomes. As survival time is continuous, this model allows us to
+quantify the relationships between these predictors and survival
+outcomes, providing valuable insights into the factors influencing the
+prognosis of lung cancer patients.
+
+\hypertarget{response-variable}{%
+\paragraph{Response Variable}\label{response-variable}}
+
+Out variable of interest is survival time in lung cancer patient afte
+they have been diagnosed
+
+We model the survival time (\(y_i\)) as a continuous variable,
+reflecting the duration from diagnosis to death for each patient. This
+continuous characterization is appropriate for capturing the temporal
+aspect of survival outcomes in medical contexts.
+
+\hypertarget{input-variables}{%
+\paragraph{Input Variables}\label{input-variables}}
+
+We consider several clinically relevant predictors including pathologic
+stage, lymph node involvement, presence of distant metastasis, tumor
+size, and treatment type. These variables are chosen based on their
+established associations with lung cancer prognosis, encompassing key
+aspects of disease severity and treatment strategies.
+
+\hypertarget{model-structure}{%
+\paragraph{Model Structure}\label{model-structure}}
+
+The linear regression model relates the expected survival time (\(μ_i\))
+to the linear combination of predictor variables, allowing us to
+quantify the impact of each predictor on the expected duration of
+survival. This framework facilitates interpretation of the associations
+between clinical variables and survival outcomes, providing valuable
+insights for patient prognosis.
+
+\hypertarget{parameter-estimation}{%
+\paragraph{Parameter Estimation}\label{parameter-estimation}}
 
 We anticipate that the survival time of lung cancer patients
 post-diagnosis will be influenced by various clinical factors such as
@@ -522,10 +528,13 @@ advanced pathologic stages, increased lymph node involvement, presence
 of distant metastasis, larger tumor sizes, and certain treatment types
 will be associated with shorter survival times.
 
-The linear regression model allows us to quantify the relationships
-between these predictors and survival outcomes, providing valuable
-insights into the factors influencing the prognosis of lung cancer
-patients.
+We run the model in R (R Core Team 2023) estimating the model
+coefficients (\(/alpha\) and \(/beta\)) using Bayesian inference via the
+`stan\_glm()' function from the Goodrich et al. (2022) package. This
+approach leverages Markov Chain Monte Carlo (MCMC) algorithms to obtain
+posterior distributions for the model parameters, enabling robust
+estimation of parameter uncertainties and inference on the effects of
+predictor variables.
 
 \hypertarget{sec-results}{%
 \section{Results}\label{sec-results}}
