@@ -56,14 +56,13 @@ The data for this study were collected from a comprehensive database comprising 
 We obtained data on lung cancer patients meeting the following criteria: histologically confirmed lung cancer diagnosis, availability of complete clinical data, treatment-naive patients, single malignancy and located in Australia. Patients with missing or incomplete information were excluded from the analysis. 
 
 ### Data Cleaning
-After obtaining the dataset, there were a series of rigorous preprocessing steps undertaken to ensure data quality and consistency. This included selecting the columns of interest namely; days to death post diagnosis, presence of distant metastasis, lymph node involvement, pathogenic stage, tumor size and treatment type. Next, we cleaned the column names and excluded missing values. Additionally, we converted the days to death column to numeric.Tests where included to ensure accuracy, reliability and validity of the datset for subsequent analysis and interpretation.
+After obtaining the dataset, we selected the columns of interest namely; days to death post diagnosis, presence of distant metastasis, lymph node involvement, pathogenic stage, tumor size and treatment type. Next, we renamed the columns, giving them meaningful names and excluded the data containing missing values. This left us with a sample of 382 lung cancer patients. Additionally, we converted the days to death column to numeric.Tests where included to ensure accuracy, reliability and validity of the datset for subsequent analysis and interpretation.
 
 ### Data Analysis
-Descriptive and inferential statistical analyses were conducted to explore the dataset and derive meaningful insights. These included linear regression modeling.
+Descriptive and inferential statistical analyses were conducted to explore the dataset and derive meaningful insights. These included linear regression modeling, see @sec-model.
 
 ## Features
 The dataset comprised several key features relevant to lung cancer prognosis, including pathogenic stage, presence of distant metastasis, lymph node involvement, tumor size, and treatment type.
-
 
 ```{r}
 #| warning: false
@@ -97,20 +96,27 @@ showtext_auto()
 ggplot(analysis_data, aes(x = days_to_death)) +
   geom_histogram(binwidth = 50, fill = "forestgreen", color = "black") +
   labs(title = "Distribution of Survival Time in Lung Cancer Patients Post-Diagnosis",
-       x = "Survival Time (days)", y = "Frequency") +
+       x = "Days to Death", y = "Frequency") +
+  scale_x_continuous(breaks = seq(0, max(analysis_data$days_to_death),
+                                  by = 500)) +  # Set breaks every 500 days
   theme_minimal() +
   theme(
     text = element_text(family = "patrick") # Set font to Patrick Hand
-  )
+  ) 
 
 ```
 
 ### Days to Death
 
-One of the critical features analyzed in this study is the duration between the date of lung cancer diagnosis and the date of death, referred to as "days to death." This metric serves as a key indicator of patient survival and provides valuable insights into the disease trajectory and prognosis. By examining the distribution of survival times among lung cancer patients post-diagnosis, we aim to characterize the temporal patterns of disease progression and assess the impact of various clinical and demographic factors on survival outcomes. Understanding the time course from diagnosis to death is crucial for guiding treatment decisions, predicting patient outcomes, and identifying opportunities for intervention to improve survival rates. Through comprehensive analysis of days to death data, we seek to elucidate the factors influencing patient survival in lung cancer and contribute to the refinement of prognostic models for clinical practice.
+The main feature analyzed in this study is the duration between the date of lung cancer diagnosis and the date of death, referred to as "days to death." This metric serves as a key indicator of patient survival and provides valuable insights into the disease trajectory and prognosis. By examining the distribution of survival times among lung cancer patients post-diagnosis, we aim to characterize the temporal patterns of disease progression and assess the impact of various clinical factors on survival outcomes. Understanding the time course from diagnosis to death is crucial for guiding treatment decisions, predicting patient outcomes, and identifying opportunities for intervention to improve survival rates. Through comprehensive analysis of days to death data, we seek to elucidate the factors influencing patient survival in lung cancer and contribute to the refinement of prognostic models for clinical practice.
+
+@fig-one illustrates the survival curve for lung cancer patients post-diagnosis where frequency is on the y-axis and survival time in days is on the x-axis. There is a clear trend of a decrease in frequency of survival as time increases. Mortality is most abundant 500 days after diagnosis, that is equivalent to about a year and four months. After about 1500 days, just over four years, the trend line plateus.
+
+@fig-one, the distribution of survival time post-diagnosis suggests that there is a high mortality rate shortly after diagnosis, thus most lung cancer patients die within one year of diagnosis (500 days). There is a steady decline in death and hence incline in survial up until four years (1500 days). The plateu after this indicates that there is a subgroup of patients who survive beyond four years. @sec-results explores which patients had longer survival. 
 
 ### Pathogenic Stage
 Pathogenic stage, a critical determinant of lung cancer prognosis, was classified according to the [mention staging system used, e.g., TNM classification]. As depicted in Figure 1, the distribution of patients varied across different stages, with [mention any notable trends, e.g., a higher proportion of patients diagnosed at advanced stages].
+
 
 ### Presence of Distant Metastasis
 The presence of distant metastasis, indicative of disease spread beyond the primary tumor site, significantly influences treatment decisions and patient outcomes. Figure 2 illustrates the percentage of patients with and without distant metastasis, highlighting the impact of metastatic disease on prognosis.
