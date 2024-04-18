@@ -106,16 +106,16 @@ The main feature analyzed in this study is the duration between the date of lung
 @fig-one, the distribution of survival time post-diagnosis suggests that there is a high mortality rate shortly after diagnosis, thus most lung cancer patients die within one year of diagnosis (500 days). There is a steady decline in death and hence incline in survial up until four years (1500 days). The plateu after this indicates that there is a subgroup of patients who survive beyond four years. @sec-results explores which patients had longer survival. 
 
 ### pathologic Stage
-Pathologic stage, a critical determinant of lung cancer prognosis, was classified according to the TNM (tumor, lymph node, metastasis) Cancer Staging. As depicted in @fig-two, illustrating the the distribution of pathologic stages with pathologic stage on the x-axis and percentage on the y-axis. The distribution of patients varied across different stages, with the highest proportion of patients diagnosed at StageIB. At this stage, the cancer is still found early however the tumor has regional spread to nearby lymph nodes. Interestingly, at diagnosis, patients had a fairly even spread across the different stages.
+Pathologic stage, a critical determinant of lung cancer prognosis, was classified according to the TNM (tumor, lymph node, metastasis) Cancer Staging. As depicted in Graph 1 of @fig-two, illustrating the the distribution of pathologic stages with pathologic stage on the x-axis and percentage on the y-axis. The distribution of patients varied across different stages, with the highest proportion of patients diagnosed at StageIB. At this stage, the cancer is still found early however the tumor has regional spread to nearby lymph nodes. Interestingly, at diagnosis, patients had a fairly even spread across the different stages.
 
 ### Presence of Distant Metastasis
-The presence of distant metastasis, indicative of cancer spread beyond the site of origin to nearby lymph nodes, significantly influences treatment decisions and patient outcomes. @fig-three illustrates the percentage of patients with distant metastasis where the x-axis is the classification and the y-axis is the percentage of patients. The figure indicates that when patients are diagnosed, most are found in category 'M0' having no distant metastasis and thus cancer has not spread beyond the site of origin. It is important to note that category 'MX', where tumor could not be evaluated has the next largest proprotion of patients. Additionally, category 'M1a' appears to show no data however this is because only 1 out of the 382 patients were classified this way. 
+The presence of distant metastasis, indicative of cancer spread beyond the site of origin to nearby lymph nodes, significantly influences treatment decisions and patient outcomes. Graph 2 of @fig-two illustrates the percentage of patients with distant metastasis where the x-axis is the classification and the y-axis is the percentage of patients. The figure indicates that when patients are diagnosed, most are found in category 'M0' having no distant metastasis and thus cancer has not spread beyond the site of origin. It is important to note that category 'MX', where tumor could not be evaluated has the next largest proportion of patients. Additionally, category 'M1a' appears to show no data however this is because only 1 out of the 382 patients were classified this way. 
 
 ### Lymph Node Involvement
-Lymph node involvement is another key prognostic factor in lung cancer, reflecting the extent of disease spread to regional lymph nodes. @fig-four presents the distribution of patients based on lymph node involvement where lymph node involvement is on the x-axis and percentage is on the y-axis. Here, there is a clear trend that as lymph node involvement becomes more severe, the proportion of patients decline. This demonstrates that upon diagnosis, most patients fall under the category 'N0' where there is no regional lymph node metastasis hence cancer has not spread to the lymph nodes. 
+Lymph node involvement is another key prognostic factor in lung cancer, reflecting the extent of disease spread to regional lymph nodes. Graph 3 of @fig-two presents the distribution of patients based on lymph node involvement where lymph node involvement is on the x-axis and percentage is on the y-axis. Here, there is a clear trend that as lymph node involvement becomes more severe, the proportion of patients decline. This demonstrates that upon diagnosis, most patients fall under the category 'N0' where there is no regional lymph node metastasis hence cancer has not spread to the lymph nodes. 
 
 ### Tumor Size
-Tumor size is measured based on the diameter of the primary tumor in lung cancer patients. @fig-five showcases the distribution of patients across different tumor size categories with tumor size on the x-axis and percentage of patients on the y-axis. The highest proportion of patients were categorized as 'T2' where the tumor is between 3 to 5 centimeters in diameter has grown into the inner lining of the lung, possibly leads to swelling and or collapse of the lung. This category was overwhelmingly more prominent than all others by twofold. All other categories were relatively evenly distributed. 
+Tumor size is measured based on the diameter of the primary tumor in lung cancer patients. Graph 4 of @fig-two showcases the distribution of patients across different tumor size categories with tumor size on the x-axis and percentage of patients on the y-axis. The highest proportion of patients were categorized as 'T2' where the tumor is between 3 to 5 centimeters in diameter has grown into the inner lining of the lung, possibly leads to swelling and or collapse of the lung. This category was overwhelmingly more prominent than all others by twofold. All other categories were relatively evenly distributed. 
 
 
 
@@ -123,13 +123,9 @@ Tumor size is measured based on the diameter of the primary tumor in lung cancer
 #| warning: false
 #| echo: false
 #| message: false
-#| label: fig-two, fig-three, fig-four, fig-five
-#| fig-cap: |
-#|   fig-two: "Percentage of Lung Cancer Patients by Pathologic Stage"
-#|   fig-three: "Percentage of Lung Cancer Patients by Presence of Distant Metastasis"
-#|   fig-four: "Percentage of Lung Cancer Patients by Lymph Node Involvement"
-#|   fig-five: "Percentage of Lung Cancer Patients by Tumor Size"
-
+#| label: fig-two
+#| fig-title: Percentage of Lung Cancer Patients by
+#| fig-cap: Percentage of Lung Cancer Patients by Pathologic Stage, Presence of Distant Metastasis, Lymph Node Involvement, Tumor Size
 
 
 # install.packages("patchwork")
@@ -187,7 +183,7 @@ tumor_size_counts <- analysis_data %>%
 plots <- list(
   ggplot(pathologic_stage_counts, aes(x = pathologic_stage, y = percentage)) +
     geom_bar(stat = "identity", fill = "lightpink") +
-    labs(title = "Figure 2: Pathologic Stage",
+    labs(title = "Graph 1: Pathologic Stage",
          x = "",
          y = "Percentage") +
     theme_minimal() +
@@ -199,7 +195,7 @@ plots <- list(
   
    ggplot(presence_of_distant_metastasis_counts, aes(x = presence_of_distant_metastasis, y = percentage)) +
     geom_bar(stat = "identity", fill = "gold") +
-    labs(title = "Figure 3: Presence of Distant Metastasis",
+    labs(title = "Graph 2: Presence of Distant Metastasis",
          x = "",
          y = "") +  # Remove y-axis label 
     theme_minimal() +
@@ -210,7 +206,7 @@ plots <- list(
 
    ggplot(lymph_node_involvement_counts, aes(x = lymph_node_involvement, y = percentage)) +
     geom_bar(stat = "identity", fill = "cyan") +
-    labs(title = "Figure 4: Lymph Node Involvement",
+    labs(title = "Graph 3: Lymph Node Involvement",
          x = "",
          y = "Percentage") +  # Keep y-axis label for this plot
     theme_minimal() +
@@ -221,7 +217,7 @@ plots <- list(
   
   ggplot(tumor_size_counts, aes(x = tumor_size, y = percentage)) +
     geom_bar(stat = "identity", fill = "purple") +
-    labs(title = "Figure 5: Tumor Size",
+    labs(title = "Graph 4: Tumor Size",
          x = "",
          y = "") +  # Remove y-axis label 
     theme_minimal() +
