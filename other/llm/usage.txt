@@ -4449,9 +4449,6 @@ ERROR: YAMLException: bad indentation of a mapping entry (paper.qmd, 127:50)
 
 ChatGPT
 The error indicates an indentation problem within the YAML metadata block, specifically with the fig-cap key. Let's correct the indentation:
-
-markdown
-Copy code
 #| warning: false
 #| echo: false
 #| message: false
@@ -4463,7 +4460,6 @@ Copy code
 #|   fig-five: "Percentage of Lung Cancer Patients by Tumor Size"
 #| fig-title: "Percentage of Lung Cancer Patients by:"
 In this corrected version:
-
 The fig-cap key is indented properly, and each sub-key (fig-two, fig-three, fig-four, fig-five) is indented one level deeper.
 Each sub-key is followed by its respective caption, enclosed in double quotes.
 Ensure that the indentation is consistent throughout the YAML metadata block to avoid YAML parsing errors.

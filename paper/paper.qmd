@@ -305,6 +305,47 @@ Our results are summarized in @.
 #| warning: false
 #| message: false
 
+# install.packages
+# install.packages("reshape2")
+# install.packages("vcd")
+
+# Load required libraries
+library(ggplot2)
+library(arrow)
+library(dplyr)
+library(reshape2)
+library(vcd)
+
+### read in data ###
+analysis_data <- read_parquet(file = here::here("data/analysis_data/lung_cancer_analysis_data.parquet"))
+
+
+
+
+# Create a contingency table
+contingency_table <- table(analysis_data$pathologic_stage, 
+                           analysis_data$presence_of_distant_metastasis, 
+                           analysis_data$lymph_node_involvement, 
+                           analysis_data$tumor_size, 
+                           analysis_data$treatment_type)
+
+
+# Plot mosaic plot for pathologic_stage and treatment_type with y-axis labels on the right side
+mosaic(~pathologic_stage + treatment_type, data = analysis_data, shade = TRUE, labeling_args = list(rot_labels = c(90, 0)), gp = gpar(mar = c(5, 5, 5, 5)), split_vertical = TRUE)
+
+
+```
+
+
+
+
+
+```{r}
+#| echo: false
+#| eval: true
+#| warning: false
+#| message: false
+
 # Load required libraries
 library(ggplot2)
 library(arrow)
