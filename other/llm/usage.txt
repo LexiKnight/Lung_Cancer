@@ -4855,6 +4855,701 @@ ggplot(data = analysis_data, aes(x = days_to_death, y = pathologic_stage, color 
   guides(color = guide_legend(title.position = "top", title.vjust = 0.5))  # Adjust legend title position
 In the scale_x_continuous() function, breaks = seq(0, max(analysis_data$days_to_death), by = 500) sets the breaks on the x-axis to appear every 500 units, starting from 0 up to the maximum value of days_to_death in your data. Adjust the by parameter as needed for different intervals.
 
+User
+So given  my code which generate four scatterplots, can you help me write a paragraph or two for each one? Here is my updated code: 
+# Create a scatter plot with trend lines - pathologic stage vs. time vs. treatment type
+plot1 <- ggplot(data = analysis_data, aes(x = days_to_death, y = pathologic_stage, color = treatment_type)) +
+  geom_point(size = 2.5, alpha = 0.6, shape = 19) +
+  # Adjusted point size and transparency
+  geom_smooth(method = "lm", se = FALSE, aes(group = treatment_type),
+              alpha = 0.3) +  # Adjust trend line transparency
+  scale_color_manual(values = c("Pharmaceutical Therapy, NOS" = "blue",
+                                "Radiation Therapy, NOS" = "green")) +
+  labs(x = "Days to Death", y = "Presence of Distant Metastasis",
+       color = "Treatment Type") +
+  scale_x_continuous(breaks = seq(0, max(analysis_data$days_to_death),
+                                  by = 500)) + # Set breaks on x-axis
+  theme_minimal() +
+  theme(text = element_text(family = "patrick", size = 14), 
+        # Set font to Patrick Hand and increase the size
+        legend.position = "bottom", legend.text = element_text(size = 12),
+        plot.caption = element_text(hjust = 0.5, size = 14)) +  
+  # Adjust legend position and text size
+  guides(color = guide_legend(title.position = "top", title.vjust = 0.5)) +
+  ggtitle("Presence of Distant Metastasis vs. Time vs. Treatment Type") +
+  labs(caption = "Relationship between distant metastasis, time to death, and treatment type")  
+# Adjusted to caption
+# Create a scatter plot with trend lines - presence of distant metastasis vs. time vs. treatment type
+plot2 <- ggplot(data = analysis_data, aes(x = days_to_death, y = presence_of_distant_metastasis, color = treatment_type)) +
+  geom_point(size = 2.5, alpha = 0.6, shape = 19) +  
+  geom_smooth(method = "lm", se = FALSE, aes(group = treatment_type),
+              alpha = 0.3) +  
+  scale_color_manual(values = c("Pharmaceutical Therapy, NOS" = "blue",
+                                "Radiation Therapy, NOS" = "green")) +
+  labs(x = "Days to Death", y = "Presence of Distant Metastasis",
+       color = "Treatment Type") +
+  scale_x_continuous(breaks = seq(0, max(analysis_data$days_to_death),
+                                  by = 500)) +
+  theme_minimal() +
+  theme(text = element_text(family = "patrick", size = 14), 
+        legend.position = "bottom", legend.text = element_text(size = 12),
+        plot.caption = element_text(hjust = 0.5, size = 14)) +  
+  # Adjusted size here
+  guides(color = guide_legend(title.position = "top", title.vjust = 0.5)) +
+  ggtitle("Presence of Distant Metastasis vs. Time vs. Treatment Type") +
+  labs(caption = "Relationship between distant metastasis, time to death, and treatment type")  
+# Adjusted to caption
+# Create a scatter plot with trend lines - presence of distant metastasis vs. time vs. treatment type
+plot2 <- ggplot(data = analysis_data, aes(x = days_to_death, y = presence_of_distant_metastasis, color = treatment_type)) +
+  geom_point(size = 2.5, alpha = 0.6, shape = 19) +  
+  geom_smooth(method = "lm", se = FALSE, aes(group = treatment_type),
+              alpha = 0.3) +  
+  scale_color_manual(values = c("Pharmaceutical Therapy, NOS" = "blue",
+                                "Radiation Therapy, NOS" = "green")) +
+  labs(x = "Days to Death", y = "Presence of Distant Metastasis",
+       color = "Treatment Type") +
+  scale_x_continuous(breaks = seq(0, max(analysis_data$days_to_death),
+                                  by = 500)) +
+  theme_minimal() +
+  theme(text = element_text(family = "patrick", size = 14), 
+        legend.position = "bottom", legend.text = element_text(size = 12),
+        plot.caption = element_text(hjust = 0.5, size = 14)) +  
+  # Adjusted size here
+  guides(color = guide_legend(title.position = "top", title.vjust = 0.5)) +
+  ggtitle("Presence of Distant Metastasis vs. Time vs. Treatment Type") +
+  labs(caption = "Relationship between distant metastasis, time to death, and treatment type")  
+# Adjusted to caption
+# Create a scatter plot with trend lines - tumor size vs. time vs. treatment type
+plot4 <- ggplot(data = analysis_data, aes(x = days_to_death,
+                                          y = tumor_size,
+                                          color = treatment_type)) +
+  geom_point(size = 2.5, alpha = 0.6, shape = 19) +  
+  geom_smooth(method = "lm", se = FALSE, aes(group = treatment_type),
+              alpha = 0.3) +  
+  scale_color_manual(values = c("Pharmaceutical Therapy, NOS" = "blue",
+                                "Radiation Therapy, NOS" = "green")) +
+  labs(x = "Days to Death", y = "Tumor SIze",
+       color = "Treatment Type") +
+  scale_x_continuous(breaks = seq(0, max(analysis_data$days_to_death),
+                                  by = 500)) +
+  theme_minimal() +
+  theme(text = element_text(family = "patrick", size = 14), 
+        legend.position = "bottom", legend.text = element_text(size = 12),
+        plot.caption = element_text(hjust = 0.5, size = 14)) +  
+  # Adjusted size here
+  guides(color = guide_legend(title.position = "top", title.vjust = 0.5)) +
+  ggtitle("Tumor Size vs. Time vs. Treatment Type") +
+  labs(caption = "Relationship between tumor size, time to death, and treatment type")
+# Adjusted to caption
+
+ChatGPT
+Sure, here are brief descriptions for each scatter plot:
+Scatter Plot 1: Pathologic Stage vs. Time vs. Treatment Type
+This scatter plot illustrates the relationship between pathologic stage, time to death, and treatment type for cancer patients. Each point represents a patient, color-coded based on their treatment type. The x-axis represents the time in days from diagnosis to death, while the y-axis shows the pathologic stage of the cancer. Trend lines are included to visualize the general trend for each treatment type.
+Scatter Plot 2: Presence of Distant Metastasis vs. Time vs. Treatment Type
+In this scatter plot, the presence of distant metastasis is compared with time to death and treatment type. Similar to the first plot, patients are color-coded based on their treatment type, and trend lines show the overall trend for each treatment group. The x-axis represents the time from diagnosis to death in days, while the y-axis indicates the presence of distant metastasis.
+Scatter Plot 3: Lymph Node Involvement vs. Time vs. Treatment Type
+This scatter plot examines the relationship between lymph node involvement, time to death, and treatment type. Patients are categorized by treatment type, with colors indicating different treatments. The x-axis displays the time from diagnosis to death, and the y-axis represents the extent of lymph node involvement. Trend lines are added to show the general trend for each treatment category.
+Scatter Plot 4: Tumor Size vs. Time vs. Treatment Type
+The fourth scatter plot investigates the association between tumor size, time to death, and treatment type among cancer patients. Patients are distinguished by treatment type, and trend lines provide insights into the overall trend for each treatment category. The x-axis shows the time from diagnosis to death, while the y-axis represents tumor size.
+
+User
+can you write more and include what the trends look like? I need more text
+
+ChatGPT
+Absolutely, here's an expanded description for each scatter plot:
+Scatter Plot 1: Pathologic Stage vs. Time vs. Treatment Type
+This scatter plot provides an insightful view of how pathologic stage correlates with the time to death among cancer patients, differentiated by treatment type. Each dot represents an individual patient, color-coded to represent whether they received pharmaceutical therapy or radiation therapy. As the time from diagnosis to death increases along the x-axis, we observe a general trend upwards in pathologic stage, indicating disease progression over time. The trend lines fitted for each treatment type further highlight this progression, with pharmaceutical therapy showing a steeper incline compared to radiation therapy. This suggests that patients receiving pharmaceutical therapy tend to exhibit a more rapid advancement in pathologic stage over time, as opposed to those undergoing radiation therapy.
+Scatter Plot 2: Presence of Distant Metastasis vs. Time vs. Treatment Type
+In this scatter plot, we examine the relationship between the presence of distant metastasis, time to death, and treatment type for cancer patients. The dots on the plot represent individual patients, color-coded based on their treatment regimen. As we move along the x-axis, representing time from diagnosis to death, there is a discernible increase in the presence of distant metastasis, denoted by the upward trend in the scatter plot. The trend lines further elucidate this trend, with patients undergoing pharmaceutical therapy showing a sharper increase in distant metastasis compared to those receiving radiation therapy. This suggests that pharmaceutical therapy may potentially correlate with a higher likelihood of distant metastasis over time compared to radiation therapy.
+Scatter Plot 3: Lymph Node Involvement vs. Time vs. Treatment Type
+This scatter plot explores the relationship between lymph node involvement, time to death, and treatment type among cancer patients. Each dot symbolizes an individual patient, with colors indicating their treatment type—pharmaceutical therapy or radiation therapy. As we progress along the x-axis, representing time from diagnosis to death, there is an observable escalation in lymph node involvement, reflected by the upward trend in the scatter plot. The trend lines further illuminate this pattern, with patients undergoing pharmaceutical therapy exhibiting a steeper increase in lymph node involvement over time compared to those receiving radiation therapy. This suggests that pharmaceutical therapy might be associated with a more rapid progression of lymph node involvement compared to radiation therapy.
+Scatter Plot 4: Tumor Size vs. Time vs. Treatment Type
+In this scatter plot, we investigate the relationship between tumor size, time to death, and treatment type for cancer patients. Each dot on the plot corresponds to an individual patient, categorized by their treatment regimen—pharmaceutical therapy or radiation therapy. Moving along the x-axis, representing time from diagnosis to death, reveals a noticeable enlargement in tumor size, depicted by the upward trajectory in the scatter plot. The trend lines further accentuate this trend, with patients undergoing pharmaceutical therapy demonstrating a more pronounced increase in tumor size over time compared to those receiving radiation therapy. This suggests that pharmaceutical therapy might be associated with a more rapid tumor growth rate compared to radiation therapy.
+
+User
+ok so i wanna follow this format: ### Tumor Size
+Tumor size is measured based on the diameter of the primary tumor in lung cancer patients. Graph 4 of @fig-two showcases the distribution of patients across different tumor size categories with tumor size on the x-axis and percentage of patients on the y-axis. The highest proportion of patients were categorized as 'T2' where the tumor is between 3 to 5 centimeters in diameter has grown into the inner lining of the lung, possibly leads to swelling and or collapse of the lung. This category was overwhelmingly more prominent than all others by twofold. All other categories were relatively evenly distributed.  but talk about ### Treatment type. This is the code for tumor size. i need to write the code for treatment_type too: # create bar chart for tumor size
+tumor_size_counts <- analysis_data %>%
+  group_by(tumor_size) %>%
+  summarise(count = n ()) %>%
+  mutate(percentage = count / sum(count) * 100) %>%
+  arrange(desc(tumor_size))
+
+ChatGPT
+Tumor Size
+Tumor size is measured based on the diameter of the primary tumor in lung cancer patients. Graph 4 of @fig-two showcases the distribution of patients across different tumor size categories with tumor size on the x-axis and percentage of patients on the y-axis. The highest proportion of patients were categorized as 'T2' where the tumor is between 3 to 5 centimeters in diameter has grown into the inner lining of the lung, possibly leads to swelling and or collapse of the lung. This category was overwhelmingly more prominent than all others by twofold. All other categories were relatively evenly distributed.
+Treatment Type
+Treatment type analysis examines the distribution of lung cancer patients based on the type of treatment they received. Graph 5 of @fig-two illustrates this distribution, with treatment type on the x-axis and the percentage of patients on the y-axis. Pharmaceutical Therapy, NOS and Radiation Therapy, NOS were the two primary treatment categories observed. The majority of patients received Pharmaceutical Therapy, NOS, comprising approximately 60% of the total patient population. In contrast, Radiation Therapy, NOS constituted approximately 40% of the patients. This indicates a higher preference or prevalence of pharmaceutical therapy over radiation therapy among the observed lung cancer patients.
+# create bar chart for tumor size
+tumor_size_counts <- analysis_data %>%
+  group_by(tumor_size) %>%
+  summarise(count = n ()) %>%
+  mutate(percentage = count / sum(count) * 100) %>%
+  arrange(desc(tumor_size))
+# create bar chart for treatment type
+treatment_type_counts <- analysis_data %>%
+  group_by(treatment_type) %>%
+  summarise(count = n ()) %>%
+  mutate(percentage = count / sum(count) * 100)
+
+User
+how do i get the code to generate the graph?
+
+ChatGPT
+To generate the graph, you can use the ggplot2 package in R. Here's the code to create a bar chart for both tumor size and treatment type:
+# Load required libraries
+library(ggplot2)
+# Create bar chart for tumor size
+tumor_size_counts <- analysis_data %>%
+  group_by(tumor_size) %>%
+  summarise(count = n ()) %>%
+  mutate(percentage = count / sum(count) * 100) %>%
+  arrange(desc(tumor_size))
+# Plotting
+ggplot(tumor_size_counts, aes(x = tumor_size, y = percentage)) +
+  geom_bar(stat = "identity", fill = "skyblue", color = "black") +
+  labs(x = "Tumor Size", y = "Percentage of Patients", title = "Distribution of Tumor Size") +
+  theme_minimal()
+# Create bar chart for treatment type
+treatment_type_counts <- analysis_data %>%
+  group_by(treatment_type) %>%
+  summarise(count = n ()) %>%
+  mutate(percentage = count / sum(count) * 100)
+# Plotting
+ggplot(treatment_type_counts, aes(x = treatment_type, y = percentage)) +
+  geom_bar(stat = "identity", fill = "lightgreen", color = "black") +
+  labs(x = "Treatment Type", y = "Percentage of Patients", title = "Distribution of Treatment Type") +
+  theme_minimal()
+Make sure to replace analysis_data with your actual dataset name. This code will generate two separate bar charts, one for tumor size and another for treatment type, based on the data in your dataset.
+
+User
+can we color code pharmaceutical therapy blue and radiation therapy green?
+
+ChatGPT
+Absolutely! You can achieve that by setting manual color scales using scale_fill_manual in ggplot2. Here's how you can modify the code to color code pharmaceutical therapy blue and radiation therapy green:
+# Load required libraries
+library(ggplot2)
+# Create bar chart for treatment type with color coding
+treatment_type_counts <- analysis_data %>%
+  group_by(treatment_type) %>%
+  summarise(count = n ()) %>%
+  mutate(percentage = count / sum(count) * 100)
+# Define colors for pharmaceutical therapy and radiation therapy
+color_palette <- c("Pharmaceutical Therapy, NOS" = "blue", "Radiation Therapy, NOS" = "green")
+# Plotting with color coding
+ggplot(treatment_type_counts, aes(x = treatment_type, y = percentage, fill = treatment_type)) +
+  geom_bar(stat = "identity") +
+  scale_fill_manual(values = color_palette) +
+  labs(x = "Treatment Type", y = "Percentage of Patients", title = "Distribution of Treatment Type") +
+  theme_minimal()
+This code will color code pharmaceutical therapy as blue and radiation therapy as green in the bar chart representing the distribution of treatment types.
+
+User
+its hard to tell how much more precent of patients are part of the pharmaceutical therapy treatment type vs. the radiation therapy one. can you indicate the percentage of each individually?
+
+ChatGPT
+Certainly! You can add text labels to the bars to indicate the percentage of patients for each treatment type. Here's how you can modify the code to include text labels:
+# Load required libraries
+library(ggplot2)
+library(dplyr)
+# Create bar chart for treatment type with color coding
+treatment_type_counts <- analysis_data %>%
+  group_by(treatment_type) %>%
+  summarise(count = n ()) %>%
+  mutate(percentage = count / sum(count) * 100)
+# Define colors for pharmaceutical therapy and radiation therapy
+color_palette <- c("Pharmaceutical Therapy, NOS" = "blue", "Radiation Therapy, NOS" = "green")
+# Plotting with color coding and text labels
+ggplot(treatment_type_counts, aes(x = treatment_type, y = percentage, fill = treatment_type, label = paste0(round(percentage, 1), "%"))) +
+  geom_bar(stat = "identity") +
+  geom_text(position = position_stack(vjust = 0.5), size = 3) +  # Add text labels
+  scale_fill_manual(values = color_palette) +
+  labs(x = "Treatment Type", y = "Percentage of Patients", title = "Distribution of Treatment Type") +
+  theme_minimal()
+This code will add text labels to each bar in the bar chart, indicating the percentage of patients for each treatment type.
+
+User
+great now can you move the percentages to just above the bar columns as well as change the y-axis to include every 5
+
+ChatGPT
+Sure, here's the modified code:
+# Load required libraries
+library(ggplot2)
+library(dplyr)
+# Create bar chart for treatment type with color coding
+treatment_type_counts <- analysis_data %>%
+  group_by(treatment_type) %>%
+  summarise(count = n ()) %>%
+  mutate(percentage = count / sum(count) * 100)
+# Define colors for pharmaceutical therapy and radiation therapy
+color_palette <- c("Pharmaceutical Therapy, NOS" = "blue", "Radiation Therapy, NOS" = "green")
+# Plotting with color coding and text labels above bars
+ggplot(treatment_type_counts, aes(x = treatment_type, y = percentage, fill = treatment_type, label = paste0(round(percentage, 1), "%"))) +
+  geom_bar(stat = "identity") +
+  geom_text(aes(label = paste0(round(percentage, 1), "%")), vjust = -0.5, size = 3) +  # Add text labels above bars
+  scale_fill_manual(values = color_palette) +
+  labs(x = "Treatment Type", y = "Percentage of Patients", title = "Distribution of Treatment Type") +
+  theme_minimal() +
+  scale_y_continuous(breaks = seq(0, max(treatment_type_counts$percentage), by = 5))  # Adjust y-axis breaks
+This code moves the percentage labels just above the bars and adjusts the y-axis to include ticks every 5 units.
+
+User
+perfect now can you add a caption
+
+ChatGPT
+Certainly! Here's the modified code with a caption:
+# Load required libraries
+library(ggplot2)
+library(dplyr)
+# Create bar chart for treatment type with color coding
+treatment_type_counts <- analysis_data %>%
+  group_by(treatment_type) %>%
+  summarise(count = n ()) %>%
+  mutate(percentage = count / sum(count) * 100)
+# Define colors for pharmaceutical therapy and radiation therapy
+color_palette <- c("Pharmaceutical Therapy, NOS" = "blue", "Radiation Therapy, NOS" = "green")
+# Plotting with color coding and text labels above bars
+ggplot(treatment_type_counts, aes(x = treatment_type, y = percentage, fill = treatment_type, label = paste0(round(percentage, 1), "%"))) +
+  geom_bar(stat = "identity") +
+  geom_text(aes(label = paste0(round(percentage, 1), "%")), vjust = -0.5, size = 3) +  # Add text labels above bars
+  scale_fill_manual(values = color_palette) +
+  labs(x = "Treatment Type", y = "Percentage of Patients", title = "Distribution of Treatment Type",
+       caption = "Data source: Analysis Data") +  # Add caption
+  theme_minimal() +
+  scale_y_continuous(breaks = seq(0, max(treatment_type_counts$percentage), by = 5))  # Adjust y-axis breaks
+
+User
+can you make the caption size 14
+
+ChatGPT
+Sure, here's the updated code with the caption size set to 14:
+# Load required libraries
+library(ggplot2)
+library(dplyr)
+# Create bar chart for treatment type with color coding
+treatment_type_counts <- analysis_data %>%
+  group_by(treatment_type) %>%
+  summarise(count = n ()) %>%
+  mutate(percentage = count / sum(count) * 100)
+# Define colors for pharmaceutical therapy and radiation therapy
+color_palette <- c("Pharmaceutical Therapy, NOS" = "blue", "Radiation Therapy, NOS" = "green")
+# Plotting with color coding and text labels above bars
+ggplot(treatment_type_counts, aes(x = treatment_type, y = percentage, fill = treatment_type, label = paste0(round(percentage, 1), "%"))) +
+  geom_bar(stat = "identity") +
+  geom_text(aes(label = paste0(round(percentage, 1), "%")), vjust = -0.5, size = 3) +  # Add text labels above bars
+  scale_fill_manual(values = color_palette) +
+  labs(x = "Treatment Type", y = "Percentage of Patients", title = "Distribution of Treatment Type",
+       caption = "Data source: Analysis Data") +  # Add caption
+  theme_minimal() +
+  scale_y_continuous(breaks = seq(0, max(treatment_type_counts$percentage), by = 5)) +  # Adjust y-axis breaks
+  theme(text = element_text(size = 14))  # Set caption size
+
+User
+can you move the caption to the far right instead of being centered?
+
+ChatGPT
+Certainly! Here's the modified code with the caption aligned to the right:
+# Load required libraries
+library(ggplot2)
+library(dplyr)
+# Create bar chart for treatment type with color coding
+treatment_type_counts <- analysis_data %>%
+  group_by(treatment_type) %>%
+  summarise(count = n ()) %>%
+  mutate(percentage = count / sum(count) * 100)
+
+# Define colors for pharmaceutical therapy and radiation therapy
+color_palette <- c("Pharmaceutical Therapy, NOS" = "blue", "Radiation Therapy, NOS" = "green")
+
+# Plotting with color coding and text labels above bars
+ggplot(treatment_type_counts, aes(x = treatment_type, y = percentage, fill = treatment_type, label = paste0(round(percentage, 1), "%"))) +
+  geom_bar(stat = "identity") +
+  geom_text(aes(label = paste0(round(percentage, 1), "%")), vjust = -0.5, size = 3) +  # Add text labels above bars
+  scale_fill_manual(values = color_palette) +
+  labs(x = "Treatment Type", y = "Percentage of Patients", title = "Distribution of Treatment Type",
+       caption = "Data source: Analysis Data") +  # Add caption
+  theme_minimal() +
+  scale_y_continuous(breaks = seq(0, max(treatment_type_counts$percentage), by = 5)) +  # Adjust y-axis breaks
+  theme(text = element_text(size = 14),
+        plot.caption = element_text(hjust = 1))  # Align caption to the right
+
+21 April 2024
+
+User
+so i have this code that  creates a caption and title: ggtitle("Percentage of Lung Cancer Patients by:") +
+  labs(caption = "Percentage of Lung Cancer Patients by Pathologic Stage, Presence of Distant Metastasis, Lymph Node Involvement, Tumor Size") . And i have the following code for four graphs organized in a two by two format with patchwork. How can i make the overall title of all four graphs to be "Percentage of Lung Cancer Patients by:" and the overall caption of the four graphs to be "Percentage of Lung Cancer Patients by Pathologic Stage, Presence of Distant Metastasis, Lymph Node Involvement, Tumor Size".... my code: # create bar chart for pathologic_stage
+pathologic_stage_counts <- analysis_data %>%
+  group_by(pathologic_stage) %>%
+  summarise(count = n ()) %>%
+  mutate(percentage = count / sum(count) * 100) %>%
+  arrange(desc(pathologic_stage))
+# create bar chart for presence_of_distant metastasis 
+presence_of_distant_metastasis_counts <- analysis_data %>%
+  group_by(presence_of_distant_metastasis) %>%
+  summarise(count = n ()) %>%
+  mutate(percentage = count / sum(count) * 100) %>%
+  arrange(desc(presence_of_distant_metastasis))
+# Define a minimum height for the bars
+min_bar_height <- 0.1  # Adjust as needed based on visibility preference
+# create bar chart for lymph node involvement 
+lymph_node_involvement_counts <- analysis_data %>%
+  group_by(lymph_node_involvement) %>%
+  summarise(count = n ()) %>%
+  mutate(percentage = count / sum(count) * 100) %>%
+  arrange(desc(lymph_node_involvement))
+# create bar chart for tumor size
+tumor_size_counts <- analysis_data %>%
+  group_by(tumor_size) %>%
+  summarise(count = n ()) %>%
+  mutate(percentage = count / sum(count) * 100) %>%
+  arrange(desc(tumor_size))
+# Create subplots for all four plots
+plots <- list(
+  ggplot(pathologic_stage_counts, aes(x = pathologic_stage, y = percentage)) +
+    geom_bar(stat = "identity", fill = "lightpink") +
+    labs(title = "Graph 1: Pathologic Stage",
+         x = "",
+         y = "Percentage") +
+    theme_minimal() +
+    theme(
+      text = element_text(family = "patrick"), # Set font to Patrick Hand
+      axis.text.x = element_text(angle = 45, hjust = 1) # Rotate x-axis labels by 45 degrees
+    ) +
+    scale_y_continuous(breaks = seq(0, max(pathologic_stage_counts$percentage), by = 5)),
+   ggplot(presence_of_distant_metastasis_counts, aes(x = presence_of_distant_metastasis, y = percentage)) +
+    geom_bar(stat = "identity", fill = "gold") +
+    labs(title = "Graph 2: Presence of Distant Metastasis",
+         x = "",
+         y = "") +  # Remove y-axis label 
+    theme_minimal() +
+    theme(
+      text = element_text(family = "patrick"), # Set font to Patrick Hand
+      axis.title.y = element_blank(), # Remove y-axis title
+    ),
+   ggplot(lymph_node_involvement_counts, aes(x = lymph_node_involvement, y = percentage)) +
+    geom_bar(stat = "identity", fill = "cyan") +
+    labs(title = "Graph 3: Lymph Node Involvement",
+         x = "",
+         y = "Percentage") +  # Keep y-axis label for this plot
+    theme_minimal() +
+    theme(
+      text = element_text(family = "patrick") # Set font to Patrick Hand
+    ) +
+    scale_y_continuous(breaks = seq(0, max(lymph_node_involvement_counts$percentage), by = 10)),
+  ggplot(tumor_size_counts, aes(x = tumor_size, y = percentage)) +
+    geom_bar(stat = "identity", fill = "purple") +
+    labs(title = "Graph 4: Tumor Size",
+         x = "",
+         y = "") +  # Remove y-axis label 
+    theme_minimal() +
+    theme(
+      text = element_text(family = "patrick"), # Set font to Patrick Hand
+      axis.title.y = element_blank() # Remove y-axis title
+    ) + guides(color = guide_legend(title.position = "top", title.vjust = 0.5))  
+    # Adjust legend title position
+) 
+# Combine plots using patchwork and largen the dimensions
+plots_combined <- wrap_plots(plots, ncol = 2, height = 12, width = 14)
+# Print combined plots
+plots_combined
+
+ChatGPT
+To achieve the desired titles and captions for all four plots, you can set the overall title and caption outside the list of plots and then combine them using plot_layout() from the patchwork package. Here's how you can modify your code:
+library(patchwork)
+library(ggplot2)
+library(dplyr)
+# Set overall title and caption
+overall_title <- "Percentage of Lung Cancer Patients by:"
+overall_caption <- "Percentage of Lung Cancer Patients by Pathologic Stage, Presence of Distant Metastasis, Lymph Node Involvement, Tumor Size"
+# Create bar chart for pathologic_stage
+pathologic_stage_counts <- analysis_data %>%
+  group_by(pathologic_stage) %>%
+  summarise(count = n()) %>%
+  mutate(percentage = count / sum(count) * 100) %>%
+  arrange(desc(pathologic_stage))
+# Create bar chart for presence_of_distant metastasis
+presence_of_distant_metastasis_counts <- analysis_data %>%
+  group_by(presence_of_distant_metastasis) %>%
+  summarise(count = n()) %>%
+  mutate(percentage = count / sum(count) * 100) %>%
+  arrange(desc(presence_of_distant_metastasis))
+# Create bar chart for lymph node involvement
+lymph_node_involvement_counts <- analysis_data %>%
+  group_by(lymph_node_involvement) %>%
+  summarise(count = n()) %>%
+  mutate(percentage = count / sum(count) * 100) %>%
+  arrange(desc(lymph_node_involvement))
+# Create bar chart for tumor size
+tumor_size_counts <- analysis_data %>%
+  group_by(tumor_size) %>%
+  summarise(count = n()) %>%
+  mutate(percentage = count / sum(count) * 100) %>%
+  arrange(desc(tumor_size))
+# Create list of plots
+plots <- list(
+  ggplot(pathologic_stage_counts, aes(x = pathologic_stage, y = percentage)) +
+    geom_bar(stat = "identity", fill = "lightpink") +
+    labs(title = "Graph 1: Pathologic Stage",
+         x = "",
+         y = "Percentage") +
+    theme_minimal() +
+    theme(
+      text = element_text(family = "patrick"), # Set font to Patrick Hand
+      axis.text.x = element_text(angle = 45, hjust = 1) # Rotate x-axis labels by 45 degrees
+    ) +
+    scale_y_continuous(breaks = seq(0, max(pathologic_stage_counts$percentage), by = 5)),
+  ggplot(presence_of_distant_metastasis_counts, aes(x = presence_of_distant_metastasis, y = percentage)) +
+    geom_bar(stat = "identity", fill = "gold") +
+    labs(title = "Graph 2: Presence of Distant Metastasis",
+         x = "",
+         y = "") +  # Remove y-axis label 
+    theme_minimal() +
+    theme(
+      text = element_text(family = "patrick"), # Set font to Patrick Hand
+      axis.title.y = element_blank() # Remove y-axis title
+    ),
+  ggplot(lymph_node_involvement_counts, aes(x = lymph_node_involvement, y = percentage)) +
+    geom_bar(stat = "identity", fill = "cyan") +
+    labs(title = "Graph 3: Lymph Node Involvement",
+         x = "",
+         y = "Percentage") +  # Keep y-axis label for this plot
+    theme_minimal() +
+    theme(
+      text = element_text(family = "patrick") # Set font to Patrick Hand
+    ) +
+    scale_y_continuous(breaks = seq(0, max(lymph_node_involvement_counts$percentage), by = 10)),
+  ggplot(tumor_size_counts, aes(x = tumor_size, y = percentage)) +
+    geom_bar(stat = "identity", fill = "purple") +
+    labs(title = "Graph 4: Tumor Size",
+         x = "",
+         y = "") +  # Remove y-axis label 
+    theme_minimal() +
+    theme(
+      text = element_text(family = "patrick"), # Set font to Patrick Hand
+      axis.title.y = element_blank() # Remove y-axis title
+    )
+)
+# Combine plots using patchwork and set overall title and caption
+plots_combined <- wrap_plots(plots, ncol = 2, height = 12, width = 14) +
+  plot_layout(ncol = 1, heights = c(0.45, 0.45, 0.45, 0.45), guides = 'collect') +
+  plot_annotation(
+    title = overall_title,
+    caption = overall_caption,
+    theme = theme(
+      text = element_text(size = 14)  # Adjust caption size
+    )
+  )
+# Print combined plots
+plots_combined
+This code will create a two by two grid of plots with an overall title and caption. Each plot will have its own title.
+
+User
+i want the plots to be 2 by 2 in a square formation, not four horizontally. can please put it back to the way it was but keep the title and caption you added
+
+ChatGPT
+Sure, here's the modified code with the plots arranged in a 2 by 2 grid:
+library(patchwork)
+library(ggplot2)
+library(dplyr)
+# Set overall title and caption
+overall_title <- "Percentage of Lung Cancer Patients by:"
+overall_caption <- "Percentage of Lung Cancer Patients by Pathologic Stage, Presence of Distant Metastasis, Lymph Node Involvement, Tumor Size"
+# Create bar chart for pathologic_stage
+pathologic_stage_counts <- analysis_data %>%
+  group_by(pathologic_stage) %>%
+  summarise(count = n()) %>%
+  mutate(percentage = count / sum(count) * 100) %>%
+  arrange(desc(pathologic_stage))
+# Create bar chart for presence_of_distant metastasis
+presence_of_distant_metastasis_counts <- analysis_data %>%
+  group_by(presence_of_distant_metastasis) %>%
+  summarise(count = n()) %>%
+  mutate(percentage = count / sum(count) * 100) %>%
+  arrange(desc(presence_of_distant_metastasis))
+# Create bar chart for lymph node involvement
+lymph_node_involvement_counts <- analysis_data %>%
+  group_by(lymph_node_involvement) %>%
+  summarise(count = n()) %>%
+  mutate(percentage = count / sum(count) * 100) %>%
+  arrange(desc(lymph_node_involvement))
+# Create bar chart for tumor size
+tumor_size_counts <- analysis_data %>%
+  group_by(tumor_size) %>%
+  summarise(count = n()) %>%
+  mutate(percentage = count / sum(count) * 100) %>%
+  arrange(desc(tumor_size))
+# Create list of plots
+plots <- list(
+  ggplot(pathologic_stage_counts, aes(x = pathologic_stage, y = percentage)) +
+    geom_bar(stat = "identity", fill = "lightpink") +
+    labs(title = "Graph 1: Pathologic Stage",
+         x = "",
+         y = "Percentage") +
+    theme_minimal() +
+    theme(
+      text = element_text(family = "patrick"), # Set font to Patrick Hand
+      axis.text.x = element_text(angle = 45, hjust = 1) # Rotate x-axis labels by 45 degrees
+    ) +
+    scale_y_continuous(breaks = seq(0, max(pathologic_stage_counts$percentage), by = 5)),
+  ggplot(presence_of_distant_metastasis_counts, aes(x = presence_of_distant_metastasis, y = percentage)) +
+    geom_bar(stat = "identity", fill = "gold") +
+    labs(title = "Graph 2: Presence of Distant Metastasis",
+         x = "",
+         y = "") +  # Remove y-axis label 
+    theme_minimal() +
+    theme(
+      text = element_text(family = "patrick"), # Set font to Patrick Hand
+      axis.title.y = element_blank() # Remove y-axis title
+    ),
+  ggplot(lymph_node_involvement_counts, aes(x = lymph_node_involvement, y = percentage)) +
+    geom_bar(stat = "identity", fill = "cyan") +
+    labs(title = "Graph 3: Lymph Node Involvement",
+         x = "",
+         y = "Percentage") +  # Keep y-axis label for this plot
+    theme_minimal() +
+    theme(
+      text = element_text(family = "patrick") # Set font to Patrick Hand
+    ) +
+    scale_y_continuous(breaks = seq(0, max(lymph_node_involvement_counts$percentage), by = 10)),
+  ggplot(tumor_size_counts, aes(x = tumor_size, y = percentage)) +
+    geom_bar(stat = "identity", fill = "purple") +
+    labs(title = "Graph 4: Tumor Size",
+         x = "",
+         y = "") +  # Remove y-axis label 
+    theme_minimal() +
+    theme(
+      text = element_text(family = "patrick"), # Set font to Patrick Hand
+      axis.title.y = element_blank() # Remove y-axis title
+    )
+)
+# Combine plots using patchwork and set overall title and caption
+plots_combined <- wrap_plots(plots, ncol = 2, heights = c(1.2, 1.2)) +
+  plot_annotation(
+    title = overall_title,
+    caption = overall_caption,
+    theme = theme(
+      text = element_text(size = 14),  # Adjust caption size
+      plot.caption = element_text(hjust = 1) # Move caption to far right
+    )
+  )
+# Print combined plots
+plots_combined
+This code arranges the plots in a 2 by 2 grid with the overall title and caption added.
+
+User
+great thanks so much. Only thing is the caption is too far to the right now
+
+ChatGPT
+To adjust the position of the caption slightly to the left while keeping it on the right side, you can adjust the hjust parameter in plot_annotation. Here's the modified code:
+# Combine plots using patchwork and set overall title and caption
+plots_combined <- wrap_plots(plots, ncol = 2, heights = c(1.2, 1.2)) +
+  plot_annotation(
+    title = overall_title,
+    caption = overall_caption,
+    theme = theme(
+      text = element_text(size = 14),  # Adjust caption size
+      plot.caption = element_text(hjust = 0.9) # Move caption slightly to the left
+    )
+  )
+# Print combined plots
+plots_combined
+This will move the caption slightly to the left while still keeping it on the right side. Adjust the hjust value as needed to achieve the desired positioning.
+
+user
+given this code, help me add a relevant caption # Histogram of survival time in days (days_to_death)
+ggplot(analysis_data, aes(x = days_to_death)) +
+  geom_histogram(binwidth = 50, fill = "forestgreen", color = "black") +
+  labs(title = "Distribution of Survival Time in Lung Cancer Patients Post-Diagnosis",
+       x = "Days to Death", y = "Frequency") +
+  scale_x_continuous(breaks = seq(0, max(analysis_data$days_to_death),
+                                  by = 500)) +  # Set breaks every 500 days
+  theme_minimal() +
+  theme(
+    text = element_text(family = "patrick") # Set font to Patrick Hand
+  ) 
+
+ChatGPT
+Sure, here's how you can add a relevant caption to your plot:
+# Histogram of survival time in days (days_to_death)
+ggplot(analysis_data, aes(x = days_to_death)) +
+  geom_histogram(binwidth = 50, fill = "forestgreen", color = "black") +
+  labs(title = "Distribution of Survival Time in Lung Cancer Patients Post-Diagnosis",
+       x = "Days to Death", y = "Frequency") +
+  scale_x_continuous(breaks = seq(0, max(analysis_data$days_to_death),
+                                  by = 500)) +  # Set breaks every 500 days
+  theme_minimal() +
+  theme(
+    text = element_text(family = "patrick") # Set font to Patrick Hand
+  ) +
+  labs(caption = "The histogram shows the distribution of survival time (days_to_death) in lung cancer patients post-diagnosis.")
+This code adds a caption below the plot explaining what the histogram represents. Adjust the caption text as needed to make it more relevant to your analysis.
+
+User
+i want to change the size of the caption text and move the caption to the far left
+
+ChatGPT
+To adjust the size and position of the caption text, you can use the element_text() function within the theme() function. Here's how you can modify your code to change the size and position of the caption:
+# Histogram of survival time in days (days_to_death)
+ggplot(analysis_data, aes(x = days_to_death)) +
+  geom_histogram(binwidth = 50, fill = "forestgreen", color = "black") +
+  labs(title = "Distribution of Survival Time in Lung Cancer Patients Post-Diagnosis",
+       x = "Days to Death", y = "Frequency") +
+  scale_x_continuous(breaks = seq(0, max(analysis_data$days_to_death),
+                                  by = 500)) +  # Set breaks every 500 days
+  theme_minimal() +
+  theme(
+    text = element_text(family = "patrick"), # Set font to Patrick Hand
+    caption = element_text(size = 12, hjust = 0) # Adjust size and move to the far left
+  ) +
+  labs(caption = "The histogram shows the distribution of survival time (days_to_death) in lung cancer patients post-diagnosis.")
+This code sets the size of the caption text to 12 points and aligns it to the far left of the plot. Adjust the size parameter as needed to change the font size of the caption text.
+
+User
+Error in `plot_theme()`:
+! The `caption` theme element is not defined in the element hierarchy.
+Backtrace:
+ 1. base (local) `<fn>`(x)
+ 2. ggplot2:::print.ggplot(x)
+ 4. ggplot2:::ggplot_gtable.ggplot_built(data)
+ 5. ggplot2:::plot_theme(plot)
+Error in plot_theme(plot) :
+
+ChatGPT
+It seems that the caption theme element is not defined in the element hierarchy for the theme() function in ggplot2. You can directly specify the caption using the labs() function. Here's the corrected code:
+# Histogram of survival time in days (days_to_death)
+ggplot(analysis_data, aes(x = days_to_death)) +
+  geom_histogram(binwidth = 50, fill = "forestgreen", color = "black") +
+  labs(title = "Distribution of Survival Time in Lung Cancer Patients Post-Diagnosis",
+       x = "Days to Death", y = "Frequency",
+       caption = "The histogram shows the distribution of survival time (days_to_death) in lung cancer patients post-diagnosis.") +
+  scale_x_continuous(breaks = seq(0, max(analysis_data$days_to_death),
+                                  by = 500)) +  # Set breaks every 500 days
+  theme_minimal() +
+  theme(
+    text = element_text(family = "patrick") # Set font to Patrick Hand
+  )
+This code directly includes the caption within the labs() function and positions it at the far left of the plot. Adjust the caption text as needed.
+
+User
+i still need to increase caption text size and move caption all the way to the left
+
+ChatGPT
+Apologies for the oversight. Unfortunately, ggplot2 doesn't provide a direct way to position the caption to the far left. However, we can adjust its position by manipulating the plot margins. Here's how you can do it:
+# Histogram of survival time in days (days_to_death)
+ggplot(analysis_data, aes(x = days_to_death)) +
+  geom_histogram(binwidth = 50, fill = "forestgreen", color = "black") +
+  labs(title = "Distribution of Survival Time in Lung Cancer Patients Post-Diagnosis",
+       x = "Days to Death", y = "Frequency",
+       caption = "The histogram shows the distribution of survival time (days_to_death) in lung cancer patients post-diagnosis.") +
+  scale_x_continuous(breaks = seq(0, max(analysis_data$days_to_death),
+                                  by = 500)) +  # Set breaks every 500 days
+  theme_minimal() +
+  theme(
+    text = element_text(family = "patrick"), # Set font to Patrick Hand
+    plot.caption = element_text(size = 14, hjust = 0) # Increase caption text size and move it to the left
+  )
+In this code, hjust = 0 moves the caption text to the far left. Adjust the size parameter in element_text() to increase or decrease the caption text size as desired.
 
 
 
