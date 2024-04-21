@@ -302,14 +302,17 @@ We run the model in R [@citeR] estimating the model coefficients ($\alpha$ and $
 Our results are summarized in @.
 
 ```{r}
-##| echo: false
-#| eval: true
 #| warning: false
+#| echo: false
 #| message: false
+#| label: fig-two
+#| fig-title: Pathologic Stage
+#| fig-cap: TO DO
 
 # install.packages
 # install.packages("reshape2")
 # install.packages("vcd")
+# install.packages("cowplot")
 
 # Load required libraries
 library(ggplot2)
@@ -319,6 +322,7 @@ library(showtext)
 library(reshape2)
 library(vcd)
 library(patchwork)
+library(cowplot)
 
 ### read in data ###
 analysis_data <- read_parquet(file = here::here("data/analysis_data/lung_cancer_analysis_data.parquet"))
@@ -330,76 +334,99 @@ font_add_google("Patrick Hand", "patrick")
 showtext_auto()
 
 # Create a scatter plot with trend lines - pathologic stage vs. time vs. treatment type
-ggplot(data = analysis_data, aes(x = days_to_death, y = pathologic_stage, color = treatment_type)) +
-  geom_point(size = 2.5, alpha = 0.6, shape = 19) +  
+plot1 <- ggplot(data = analysis_data, aes(x = days_to_death, y = pathologic_stage, color = treatment_type)) +
+  geom_point(size = 2.5, alpha = 0.6, shape = 19) +
   # Adjusted point size and transparency
-  geom_smooth(method = "lm", se = FALSE, aes(group = treatment_type), alpha = 0.3) +  
-  # Adjust trend line transparency
-  scale_color_manual(values = c("Pharmaceutical Therapy, NOS" = "blue", "Radiation Therapy, NOS" = "green")) +
-  labs(x = "Days to Death", y = "Pathologic Stage", color = "Treatment Type") +
+  geom_smooth(method = "lm", se = FALSE, aes(group = treatment_type),
+              alpha = 0.3) +  # Adjust trend line transparency
+  scale_color_manual(values = c("Pharmaceutical Therapy, NOS" = "blue",
+                                "Radiation Therapy, NOS" = "green")) +
+  labs(x = "Days to Death", y = "Pathologic Stage",
+       color = "Treatment Type") +
   scale_x_continuous(breaks = seq(0, max(analysis_data$days_to_death),
-                                  by = 500))+  # Set breaks on x-axis
+                                  by = 500)) + # Set breaks on x-axis
   theme_minimal() +
-  theme(text = element_text(family = "patrick", size = 14), 
+  theme(text = element_text(family = "patrick", size = 14),
         # Set font to Patrick Hand and increase the size
-      legend.position = "bottom", legend.text = element_text(size = 12)) +  
+        legend.position = "bottom", legend.text = element_text(size = 12)) +
   # Adjust legend position and text size
-  guides(color = guide_legend(title.position = "top", title.vjust = 0.5))  
-  # Adjust legend title position
+  guides(color = guide_legend(title.position = "top", title.vjust = 0.5)) +
+  ggtitle("Pathologic Stage vs. Time vs. Treatment Type") +
+  labs(caption = "Relationship between pathologic stage, time to death, and treatment type")
 
 # Create a scatter plot with trend lines - presence of distant metastasis vs. time vs. treatment type
-ggplot(data = analysis_data, aes(x = days_to_death, y = presence_of_distant_metastasis, color = treatment_type)) +
+plot2 <- ggplot(data = analysis_data, aes(x = days_to_death, y = presence_of_distant_metastasis, color = treatment_type)) +
   geom_point(size = 2.5, alpha = 0.6, shape = 19) +  
-  # Adjusted point size and transparency
-  geom_smooth(method = "lm", se = FALSE, aes(group = treatment_type), alpha = 0.3) +  
-  # Adjust trend line transparency
-  scale_color_manual(values = c("Pharmaceutical Therapy, NOS" = "blue", "Radiation Therapy, NOS" = "green")) +
-  labs(x = "Days to Death", y = "Presence of Distant Metastasis", color = "Treatment Type") +
+  geom_smooth(method = "lm", se = FALSE, aes(group = treatment_type),
+              alpha = 0.3) +  
+  scale_color_manual(values = c("Pharmaceutical Therapy, NOS" = "blue",
+                                "Radiation Therapy, NOS" = "green")) +
+  labs(x = "Days to Death", y = "Presence of Distant Metastasis",
+       color = "Treatment Type") +
   scale_x_continuous(breaks = seq(0, max(analysis_data$days_to_death),
-                                  by = 500)) +  # Set breaks on x-axis
+                                  by = 500)) +
   theme_minimal() +
   theme(text = element_text(family = "patrick", size = 14), 
-        # Set font to Patrick Hand
-      legend.position = "bottom", legend.text = element_text(size = 12)) +  
-  # Adjust legend position and text size
-  guides(color = guide_legend(title.position = "top", title.vjust = 0.5))  
-  # Adjust legend title position
+        legend.position = "bottom", legend.text = element_text(size = 12),
+        plot.caption = element_text(hjust = 0.5, size = 14)) +  
+  # Adjusted size here
+  guides(color = guide_legend(title.position = "top", title.vjust = 0.5)) +
+  ggtitle("Presence of Distant Metastasis vs. Time vs. Treatment Type") +
+  labs(caption = "Relationship between distant metastasis, time to death, and treatment type")  
+# Adjusted to caption
+
 
 # Create a scatter plot with trend lines - lymph node involvement vs. time vs. treatment type
-ggplot(data = analysis_data, aes(x = days_to_death, y = lymph_node_involvement, color = treatment_type)) +
+plot3 <- ggplot(data = analysis_data, aes(x = days_to_death,
+                                          y = lymph_node_involvement,
+                                          color = treatment_type)) +
   geom_point(size = 2.5, alpha = 0.6, shape = 19) +  
-  # Adjusted point size and transparency
-  geom_smooth(method = "lm", se = FALSE, aes(group = treatment_type), alpha = 0.3) +  
-  # Adjust trend line transparency
-  scale_color_manual(values = c("Pharmaceutical Therapy, NOS" = "blue", "Radiation Therapy, NOS" = "green")) +
-  labs(x = "Days to Death", y = "Lymph Node Involvement", color = "Treatment Type") +
+  geom_smooth(method = "lm", se = FALSE, aes(group = treatment_type),
+              alpha = 0.3) +  
+  scale_color_manual(values = c("Pharmaceutical Therapy, NOS" = "blue",
+                                "Radiation Therapy, NOS" = "green")) +
+  labs(x = "Days to Death", y = "Lymph Node Involvement",
+       color = "Treatment Type") +
   scale_x_continuous(breaks = seq(0, max(analysis_data$days_to_death),
-                                  by = 500)) +  # Set breaks on x-axis
+                                  by = 500)) +
   theme_minimal() +
-  theme(text = element_text(family = "patrick", size = 14), # Set font to Patrick Hand
-      legend.position = "bottom", legend.text = element_text(size = 12)) +  
-  # Adjust legend position and text size
-  guides(color = guide_legend(title.position = "top", title.vjust = 0.5))  
-  # Adjust legend title position
+  theme(text = element_text(family = "patrick", size = 14), 
+        legend.position = "bottom", legend.text = element_text(size = 12),
+        plot.caption = element_text(hjust = 0.5, size = 14)) +  
+  # Adjusted size here
+  guides(color = guide_legend(title.position = "top", title.vjust = 0.5)) +
+  ggtitle("Lymph Node Involvement vs. Time vs. Treatment Type") +
+  labs(caption = "Relationship between lymph node involvement, time to death, and treatment type")  
+# Adjusted to caption
 
 # Create a scatter plot with trend lines - tumor size vs. time vs. treatment type
-ggplot(data = analysis_data, aes(x = days_to_death, y = tumor_size, color = treatment_type)) +
+plot4 <- ggplot(data = analysis_data, aes(x = days_to_death,
+                                          y = tumor_size,
+                                          color = treatment_type)) +
   geom_point(size = 2.5, alpha = 0.6, shape = 19) +  
-  # Adjusted point size and transparency
-  geom_smooth(method = "lm", se = FALSE, aes(group = treatment_type), alpha = 0.3) +  
-  # Adjust trend line transparency
-  scale_color_manual(values = c("Pharmaceutical Therapy, NOS" = "blue", "Radiation Therapy, NOS" = "green")) +
-  labs(x = "Days to Death", y = "Tumor Size", color = "Treatment Type") +
+  geom_smooth(method = "lm", se = FALSE, aes(group = treatment_type),
+              alpha = 0.3) +  
+  scale_color_manual(values = c("Pharmaceutical Therapy, NOS" = "blue",
+                                "Radiation Therapy, NOS" = "green")) +
+  labs(x = "Days to Death", y = "Tumor SIze",
+       color = "Treatment Type") +
   scale_x_continuous(breaks = seq(0, max(analysis_data$days_to_death),
-                                  by = 500)) +  # Set breaks on x-axis
+                                  by = 500)) +
   theme_minimal() +
-  theme(text = element_text(family = "patrick", size = 14), # Set font to Patrick Hand
-      legend.position = "bottom", legend.text = element_text(size = 12)) +  
-  # Adjust legend position and text size
-  guides(color = guide_legend(title.position = "top", title.vjust = 0.5))  
-  # Adjust legend title position
+  theme(text = element_text(family = "patrick", size = 14), 
+        legend.position = "bottom", legend.text = element_text(size = 12),
+        plot.caption = element_text(hjust = 0.5, size = 14)) +  
+  # Adjusted size here
+  guides(color = guide_legend(title.position = "top", title.vjust = 0.5)) +
+  ggtitle("Tumor Size vs. Time vs. Treatment Type") +
+  labs(caption = "Relationship between tumor size, time to death, and treatment type")  
+# Adjusted to caption
 
-
+# Display the plots
+plot1
+plot2
+plot3
+plot4
 ```
 
 
