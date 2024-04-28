@@ -6,7 +6,7 @@ author:
 thanks: "Code and data are available at: https://github.com/LexiKnight/Lung_Cancer/tree/main"
 date: today
 date-format: long 
-abstract: "This study investigates the impact of pathologic stage and treatment modalities on lung cancer survival post-diagnosis. Analysis of patient data reveals significant correlation between the variables that make up pathologic stage, treatment type and survival outcomes. Notably, patients who demonstrate lower surivival rates are those with advanced spread, extensive lymph node involvement and tumors with extensive growth into nearby structures. Additionally pharmaceutical therapy is shown to be more effective in prolonging patient survial times than radiation therapy. These findings underscore the critical importance of early detection, tailored treatment strategies and ongoing research efforts to enhance lung cancer survival rates globally."
+abstract: "This study investigates the impact of pathologic stage and treatment modalities on lung cancer survival post-diagnosis. Analysis of patient data reveals significant correlation between the variables that make up pathologic stage, treatment type and survival outcomes. Notably, patients who demonstrate lower survival rates are those with advanced spread, extensive lymph node involvement and tumors with extensive growth into nearby structures. Additionally pharmaceutical therapy is shown to be more effective in prolonging patient survival times than radiation therapy. These findings underscore the critical importance of early detection, tailored treatment strategies and ongoing research efforts to enhance lung cancer survival rates globally."
 format:
   pdf:
     toc: true
@@ -20,7 +20,7 @@ Surviving lung cancer is a daunting challenge, where each breath marks a battle 
  
 Tumor size is often the main determinant of stage and treatment. As tumor categories increase, the tumor expands, invading nearby structures. A study involving 52,287 patients diagnosed between the years 1998 and 2003 found tumor size to be an independent prognostic factor in estimating overall survival and that larger tumors predicted a worse prognosis and  decreased survival [@Zhang]. Similarly, extensive lymph node involvement  and presence of distant metastasis signifies disease progression and is associated with reduced survival rates [@Park]. Initial spread of cancer cells are localized, then become regional, involving nearby lymph nodes and the most severe cases comprises expansion to other organs such as the brain, liver and bones. As cancer cells metastasize to distant sites, survival prospects diminish drastically [@Markman]. Additionally, patients with no regional lymph node metastases, and smaller tumors are easier to be treated and thus are associated with improved survival rates [@Zhang]. Lymph node involvement is a crucial factor in guiding treatment options. The authors of a study also noted that disease burden and anatomical location of the lymph nodes involved may influence the patients survival [@Kai]. 
 
-Following tumor size, LN involvement and presence of distant metastasis categorization, the pathologic stage of the cancer is then determined, the most valuable prognostic facor in non-small cell lung cancer [@Eldridge]. Stages ranging from localized to distant spread dictate treatment strategies and prognosis, with curative options diminishing as the disease advances (see @sec-appendix for staging). Despite advancements in treatment modalities such as radiation therapy and chemotherapy, stage IV disease remains particularly challenging, emphasizing the importance of early detection and intervention [@Denton]. The earlier the cancer is found, that is the lower the pathologic stage, the greater the likelihood curative radiation therapy is an effective treatment [@Eldridge]. 
+Following tumor size, LN involvement and presence of distant metastasis categorization, the pathologic stage of the cancer is then determined, the most valuable prognostic factor in non-small cell lung cancer [@Eldridge]. Stages ranging from localized to distant spread dictate treatment strategies and prognosis, with curative options diminishing as the disease advances (see @sec-appendix for staging). Despite advancements in treatment modalities such as radiation therapy and chemotherapy, stage IV disease remains particularly challenging, emphasizing the importance of early detection and intervention [@Denton]. The earlier the cancer is found, that is the lower the pathologic stage, the greater the likelihood curative radiation therapy is an effective treatment [@Eldridge]. 
 
 Radiation therapy is a local treatment, targeting the tumor directly, damaging the DNA within cancer cells with the aim of shrinking the tumor. Pharmaceutical therapy on the other hand is a systemic therapy utilizing drugs to kill and inhibit cancer cell growth. While radiation therapy offers promise in early-stage NSCLC and palliative care, chemotherapy demonstrates efficacy, particularly in advanced stages with lymph node involvement [@Kai]. However, treatment decisions hinge on a delicate balance between therapeutic efficacy and quality of life considerations, particularly in advanced stages where palliative care predominates [@Eldridge].
 
@@ -46,7 +46,7 @@ The data for this study were collected from a comprehensive database comprising 
 We obtained data on lung cancer patients meeting the following criteria: histologically confirmed lung cancer diagnosis, availability of complete clinical data, treatment-naive patients, single malignancy and located in Australia. Patients with missing or incomplete information were excluded from the analysis. 
 
 ### Data Cleaning
-After obtaining the dataset, we selected the columns of interest namely; days to death post diagnosis, presence of distant metastasis, lymph node involvement, pathologic stage, tumor size and treatment type. Next, we renamed the columns, giving them meaningful names and excluded the data containing missing values. This left us with a sample of 382 lung cancer patients. Additionally, we converted the days to death column to numeric.Tests where included to ensure accuracy, reliability and validity of the datset for subsequent analysis and interpretation.
+After obtaining the dataset, we selected the columns of interest namely; days to death post diagnosis, presence of distant metastasis, lymph node involvement, pathologic stage, tumor size and treatment type. Next, we renamed the columns, giving them meaningful names and excluded the data containing missing values. This left us with a sample of 382 lung cancer patients. Additionally, we converted the days to death column to numeric. Tests where included to ensure accuracy, reliability and validity of the dataset for subsequent analysis and interpretation.
 
 ### Data Analysis
 Descriptive and inferential statistical analyses were conducted to explore the dataset and derive meaningful insights. These included linear regression modeling, see @sec-model.
@@ -58,9 +58,9 @@ The dataset comprised several key features relevant to lung cancer prognosis, in
 
 The main feature analyzed in this study is the duration between the date of lung cancer diagnosis and the date of death, referred to as "days to death." This metric serves as a key indicator of patient survival and provides valuable insights into the disease trajectory and prognosis. By examining the distribution of survival times among lung cancer patients post-diagnosis, we aim to characterize the temporal patterns of disease progression and assess the impact of various clinical factors on survival outcomes. Understanding the time course from diagnosis to death is crucial for guiding treatment decisions, predicting patient outcomes, and identifying opportunities for intervention to improve survival rates. Through comprehensive analysis of days to death data, we seek to elucidate the factors influencing patient survival in lung cancer and contribute to the refinement of prognostic models for clinical practice.
 
-@fig-one illustrates the survival curve for lung cancer patients post-diagnosis where frequency is on the y-axis and survival time in days is on the x-axis. There is a clear trend of a decrease in frequency of survival as time increases. Mortality is most abundant 500 days after diagnosis, that is equivalent to about a year and four months. After about 1500 days, just over four years, the trend line plateus.
+@fig-one illustrates the survival curve for lung cancer patients post-diagnosis where frequency is on the y-axis and survival time in days is on the x-axis. There is a clear trend of a decrease in frequency of survival as time increases. Mortality is most abundant 500 days after diagnosis, that is equivalent to about a year and four months. After about 1500 days, just over four years, the trend line plateaus.
 
-@fig-one, the distribution of survival time post-diagnosis suggests that there is a high mortality rate shortly after diagnosis, thus most lung cancer patients die within one year of diagnosis (500 days). There is a steady decline in death and hence incline in survial up until four years (1500 days). The plateu after this indicates that there is a subgroup of patients who survive beyond four years. @sec-results explores which patients had longer survival. 
+@fig-one, the distribution of survival time post-diagnosis suggests that there is a high mortality rate shortly after diagnosis, thus most lung cancer patients die within one year of diagnosis (500 days). There is a steady decline in death and hence incline in survival up until four years (1500 days). The plateau after this indicates that there is a subgroup of patients who survive beyond four years. @sec-results explores which patients had longer survival. 
 
 ```{r}
 #| warning: false
@@ -107,7 +107,7 @@ ggplot(analysis_data, aes(x = days_to_death)) +
 ```
 
 ### pathologic Stage
-Pathologic stage, a critical determinant of lung cancer prognosis, was classified according to the TNM (tumor, lymph node, metastasis) Cancer Staging. As depicted in @fig-two, illustrating the the distribution of pathologic stages with pathologic stage on the x-axis and percentage on the y-axis. The distribution of patients varied across different stages, with the highest proportion of patients diagnosed at StageIB. At this stage, the cancer is still found early however the tumor has regional spread to nearby lymph nodes. Interestingly, at diagnosis, patients had a fairly even spread across the different stages.
+Pathologic stage, a critical determinant of lung cancer prognosis, was classified according to the TNM (tumor, lymph node, metastasis) Cancer Staging. As depicted in @fig-two, illustrating the distribution of pathologic stages with pathologic stage on the x-axis and percentage on the y-axis. The distribution of patients varied across different stages, with the highest proportion of patients diagnosed at Stage IB. At this stage, the cancer is still found early however the tumor has regional spread to nearby lymph nodes. Interestingly, at diagnosis, patients had a fairly even spread across the different stages.
 
 ### Presence of Distant Metastasis
 The presence of distant metastasis, indicative of cancer spread beyond the site of origin to nearby lymph nodes, significantly influences treatment decisions and patient outcomes. @fig-two illustrates the percentage of patients with distant metastasis where the x-axis is the classification and the y-axis is the percentage of patients. The figure indicates that when patients are diagnosed, most are found in category 'M0' having no distant metastasis and thus cancer has not spread beyond the site of origin. We decided to include the classification 'MX', where tumor could not be evaluated as it contained the next largest proportion of patients. If this data was omitted, there would be a large skew in the data. Additionally, category 'M1a' appears to show no data however this can be explained as only 1 out of the 382 patients were classified this way. 
@@ -258,7 +258,7 @@ Treatment type analysis examines the distribution of lung cancer patients based 
 #| echo: false
 #| message: false
 #| label: fig-three
-#| fig-cap: The histogram shows the percentage of lung cancer patients by treamtent type.
+#| fig-cap: The histogram shows the percentage of lung cancer patients by treatment type.
 
 # load packages
 library(ggplot2)
@@ -309,7 +309,7 @@ ggplot(treatment_type_counts, aes(x = treatment_type, y = percentage,
 
 ## Model set-up
 
-In this section, we aim to predict the survival outcomes of lung cancer patients post-diagnosis with a linear regression model framework. We consider several predictors including pathologic stage, lymph node involvement, presence of distant metastasis, tumor size, and treatment type.We specify the model and subsequently justify its appropriateness for our analysis.
+In this section, we aim to predict the survival outcomes of lung cancer patients post-diagnosis with a linear regression model framework. We consider several predictors including pathologic stage, lymph node involvement, presence of distant metastasis, tumor size, and treatment type. We specify the model and subsequently justify its appropriateness for our analysis.
 
 ### Model Specifications ###
 
@@ -339,11 +339,11 @@ where:
 
 ### Model justification
 
-Linear regression models are most appropritate in predicting continuous outcomes. As survival time is continuous, this model allows us to quantify the relationships between these predictors and survival outcomes, providing valuable insights into the factors influencing the prognosis of lung cancer patients.
+Linear regression models are most appropriate in predicting continuous outcomes. As survival time is continuous, this model allows us to quantify the relationships between these predictors and survival outcomes, providing valuable insights into the factors influencing the prognosis of lung cancer patients.
 
 #### Response Variable ####
 
-Out variable of interest is survival time in lung cancer patient afte they have been diagnosed
+Our variable of interest is survival time in lung cancer patient after they have been diagnosed
 
 We model the survival time ($y_i$) as a continuous variable, reflecting the duration from diagnosis to death for each patient. This continuous characterization is appropriate for capturing the temporal aspect of survival outcomes in medical contexts.
 
@@ -606,7 +606,7 @@ Stage II: found early but has spread inside or just outside of one lung
   and may have spread to nearby LN on same side of the body. Regional spread.
   
 Stage III: cancer found in one lung and has spread to the chest and LN
-  further further away from the lungs. Regional spread.
+  further away from the lungs. Regional spread.
   
 Stage IV: advanced cancer and has spread to the lining or fluid around 
   the heart or lungs, or has spread to distant parts of the body. 
@@ -644,7 +644,7 @@ M0: no distant metastasis, cancer not spread beyond site of origin/ nearby LN. L
   
 M1a: presence of metastasis to distant sites within the same lung/pleura. Regional.
   
-M1b: metastasis to distant sites beyong lung and pleura, ex. brain, liver, bones. Distant. 
+M1b: metastasis to distant sites beyond lung and pleura, ex. brain, liver, bones. Distant. 
   
 ### Lymph Node (LN) involvement ###
 NX: LN cannot be assessed
